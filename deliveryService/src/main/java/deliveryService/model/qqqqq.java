@@ -1,5 +1,5 @@
 package deliveryService.model;
 
-public class test {
+public class qqqqq {
 
 }
