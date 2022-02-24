@@ -26,10 +26,7 @@ input{
     text-align: right;
     padding-right: 10px;
 }
-/*네이버 로고설정*/
-.logo{
-    
-}
+
 /*input 아이디박스*/
 .login-id-wrap{
     margin: 0px 10px 8px 10px;
@@ -84,18 +81,7 @@ input{
     border-bottom: 1px solid gainsboro;
     margin: 0px 10px 35px 10px;
 }
-/*로그인상태유지*/
-.stay-check{
-    margin-left: 7px;
-    float: left;
-}
-/*로그인상태유지 체크박스*/
-.stay-check input[type="checkbox"] {
-    /*기존 체크박스 숨기기*/
-    position: absolute;
-    width: 0px;
-    position: absolute;
-}
+
 .stay-check input[type="checkbox"] + label {
     display: inline-block;
     position: relative;
@@ -127,101 +113,6 @@ input{
     border-color: #03c75a;
     box-shadow: 0px 1px 2px rgba(0,0,0,0.05), inset 0px -15px 10px -12px rgba(0,0,0,0.05);
 }
-/*IP보안 표시X*/
-#ip-check{
-    display: none;
-}
-/*IP보안 ON/OFF*/
-#ip-context{
-    color:rgb(160, 160, 160);
-    font-weight: 900;
-    display: inline-block;
-    width: 22px;
-}
-/*간편한 로그인 구역*/
-#easy-login-wrap{
-    height: 90px;
-    margin: 0px 10px 35px 10px;
-}
-/*간편한 로그인 텍스트*/
-.easy-login{
-    font-size: 20px;
-    font-weight: 500;
-}
-/*QR & 일회용 로그인 박스 구역*/
-.easy-login-box{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-}
-/*QR코드 로그인*/
-.qr-login{
-    float: left;
-    border: 1px solid #03c75a;
-    background-color: #fff;
-    margin: 0px 4px 0px 0px;
-    line-height: 55px;
-}
-/*일회용 번호 로그인*/
-.onetime-login{
-    float: right;
-    border: 1px solid #03c75a;
-    background-color: #fff;
-    margin: 0px 0px 0px 4px;
-    line-height: 55px;
-}
-/*더욱 간편한 로그인-en모드*/
-.qr-login-en, .facebook-login, .line-login{
-    font-family: Helvetica,Dotum,sans-serif;
-    font-size: 18px;
-    font-weight: 400;
-    text-align: left;
-    line-height: 55px;
-    border: solid 1px #dadada;
-    background: #fff;
-    margin-bottom: 10px;
-}
-/*더욱 간편한 로그인 이미지-en모드*/
-.easy-login-box-en img{
-    display: inline-block;
-    vertical-align: middle;
-    margin: 0 10px 0 10px;
-}
-/*찾기 및 회원가입*/
-.find-signup-wrap{
-    height: 100px;
-    grid-template-columns: 1fr 1fr 1fr;
-}
-/*찾기 및 회원가입 글자 희미하게 바꾸기*/
-.find-signup-wrap a{
-    color: rgb(150, 150, 150);
-    text-decoration: none;
-    font-weight: 500;
-}
-.find-signup-wrap span{
-    color: rgb(150, 150, 150);
-    font-weight: 500;
-}
-/*아이디 찾기*/
-.find-id{
-    margin: 3px;
-    font-size: 14px;
-    border-right: 1px solid gainsboro;
-}
-/*아이디 찾기-en모드*/
-.find-id-en{
-    font-size: 14px;
-}
-/*비밀번호 찾기*/
-.find-pw{
-    margin: 3px;
-    font-size: 14px;
-    border-right: 1px solid gainsboro;
-}
-/*회원가입*/
-.sign-up{
-    margin: 3px;
-    font-size: 14px;
-}
 
 /*가로 800px 이상일때*/
 @media(min-width : 800px)
@@ -232,31 +123,18 @@ input{
     }
 
 /*언어설정*/
-.select-lang{
+/*.select-lang{
     margin-top: 20px;
     width: 550px;
     padding-right: 10px;
-}
-/*네이버 로고설정*/
-.image{
+}*/
+
+/*로고*/
+/*.image{
     margin-top: 40px;
     height: 44px;
     padding: 20px;
-}
-
-/*IP보안 표시*/
-#ip-check{
-    margin-right: 7px;
-    float: right;
-    display:block;
-}
-
-/*저작권 표시*/
-footer{
-    display:block;
-}
-
-
+}*/
 
 /*회원가입 부분*/
 .main-signup{
@@ -301,7 +179,7 @@ h3{
     font-family: Dotum,'돋움',Helvetica,sans-serif;
     margin-top: 8px;
 }
-.pw-lock{
+.pw-lock{ /*자물쇠 이미지*/
     /* content: ''; */
     /* display: inline-block; */
     top: 50%;
@@ -325,7 +203,7 @@ h3{
     background-size: 125px 75px;
     cursor: pointer;
 }
-
+/* 카테고리 */
 .signup-input-birth{
     display: block;
     position: relative;
@@ -336,26 +214,12 @@ h3{
     background: #fff;
     box-sizing: border-box;
 }
-#signup-birth-yy, #signup-birth-mm, #signup-birth-dd{
-    width: 113px;
-    height: 29px;
-    border: none;
-    outline:none;
-}
-#signup-name, #signup-gender, #signup-email, #signup-country, #signup-phone, #signup-cnum{
+
+#signup-email, #signup-country{
     width:100%;
     height: 29px;
     border: none;
     outline:none;
-}
-#signup-gender{
-    background-color: white;
-}
-#signup-country{
-    background-color: white;
-}
-#signup-birth-mm{
-    background-color: white;
 }
 /*본인 확인 이메일*/
 .choice{

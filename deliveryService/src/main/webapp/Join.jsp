@@ -28,13 +28,13 @@
                 <h3>비밀번호</h3>
                 <span class="signup-input">
                 	<input  id="signup-pww" type = "password" name = "pw" placeholder="Password">
-                	<span class="pw-lock"></span>
+                	<span class="pw-lock"></span><!-- 자물쇠 이미지 -->
                 </span>
 
                 <h3>비밀번호 재확인</h3>
                 <span class="signup-input">
 					<input  id="signup-pww" type = "password" name = "pw1" placeholder="Password">
-                    <span class="pww-lock"></span>
+                    <span class="pww-lock"></span><!-- 자물쇠 이미지 -->
                 </span>
 	
             <div style="margin-top: 35px;">
