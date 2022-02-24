@@ -3,6 +3,7 @@ package deliveryService.model;
 import java.io.InputStream;
 
 import org.apache.ibatis.io.Resources;
+import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 
@@ -20,5 +21,14 @@ public class DAO {
 			
 		}
     }
+	
+	public int join(MemberVO vo) {
+		
+		SqlSession session = sqlSessionFactory.openSession();
+		
+		int cnt = session.insert("joinService", vo);
+		return cnt;
+		
+	}
 
 }
