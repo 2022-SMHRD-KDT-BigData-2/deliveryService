@@ -1,79 +1,86 @@
 package deliveryService.model;
 
 public class MemberVO {
-	private String Id;
-	private String Pw;
-	private String Gender;
-	private int Major;
-	private String Nation;
-	private String Email;
-	private String Helper_check;
+	private String id;
+	private String pw;
+	private String gender;
+	private int major;
+	private String nation;
+	private String email;
+	private String helper_check;
 	
 	public MemberVO(String id, String pw, String gender, int major, String nation, String email, String helper_check) {
 	
-		Id = id;
-		Pw = pw;
-		Gender = gender;
-		Major = major;
-		Nation = nation;
-		Email = email;
-		Helper_check = helper_check;
+		this.id = id;
+		this.pw = pw;
+		this.gender = gender;
+		this.major = major;
+		this.nation = nation;
+		this.email = email;
+		this.helper_check = helper_check;
+	}
+
+	public MemberVO(String id, String pw) {
+		
+		this.id = id;
+		this.pw = pw;
 	}
 
 	public String getId() {
-		return Id;
+		return id;
 	}
 
 	public void setId(String id) {
-		Id = id;
+		this.id = id;
 	}
 
 	public String getPw() {
-		return Pw;
+		return pw;
 	}
 
 	public void setPw(String pw) {
-		Pw = pw;
+		this.pw = pw;
 	}
 
 	public String getGender() {
-		return Gender;
+		return gender;
 	}
 
 	public void setGender(String gender) {
-		Gender = gender;
+		this.gender = gender;
 	}
 
 	public int getMajor() {
-		return Major;
+		return major;
 	}
 
 	public void setMajor(int major) {
-		Major = major;
+		this.major = major;
 	}
 
 	public String getNation() {
-		return Nation;
+		return nation;
 	}
 
 	public void setNation(String nation) {
-		Nation = nation;
+		this.nation = nation;
 	}
 
 	public String getEmail() {
-		return Email;
+		return email;
 	}
 
 	public void setEmail(String email) {
-		Email = email;
+		this.email = email;
 	}
 
 	public String getHelper_check() {
-		return Helper_check;
+		return helper_check;
 	}
 
 	public void setHelper_check(String helper_check) {
-		Helper_check = helper_check;
+		this.helper_check = helper_check;
 	}
 	
 }
+	

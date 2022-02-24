@@ -2,8 +2,22 @@
 <!DOCTYPE mapper
   PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="deliveryService.model.DAO">
+<mapper namespace="model.MemberDAO">
   
- <insert id = "joinService"></insert>
+ <insert id = "joinService" parameterType="model.MemberVO">
+ 	insert into DELIVERY_MEMBER values(#{id},#{pw},#{gender},#{major},#{nation},#{email},#{helper_check})
+ </insert>
+ 
+  <insert id = "joinService" parameterType="model.MemberVO">
+ 	insert into DELIVERY_MEMBER values(#{id},#{pw},#{gender},#{major},#{nation},#{email},#{helper_check})
+ </insert>
+ 
+ <select id = "loginService" parameterType="model.MemberVO"
+  resultType = "model.MemberVO">
+ 	select * from DELIVERY_MEMBER where = #{id} and pw = #{pw}
+ </select>
+ 
+ 
  
 </mapper>
+

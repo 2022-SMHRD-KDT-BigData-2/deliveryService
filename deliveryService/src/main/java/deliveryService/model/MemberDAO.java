@@ -7,7 +7,7 @@ import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 
-public class DAO {
+public class MemberDAO {
 	private static SqlSessionFactory sqlSessionFactory;{
 		
 	}
@@ -24,11 +24,25 @@ public class DAO {
 	
 	public int join(MemberVO vo) {
 		
-		SqlSession session = sqlSessionFactory.openSession();
+		SqlSession session = sqlSessionFactory.openSession(true);
 		
 		int cnt = session.insert("joinService", vo);
+		
+		
+		session.close();
+		
 		return cnt;
 		
 	}
-
+	
+	public MemberVO login(MemberVO vo) {
+		SqlSession session = sqlSessionFactory.openSession();
+		
+		MemberVO uvo = session.selectOne("loginService", vo);
+		
+		session.close();
+		
+		return uvo;
+		
+	}
 }

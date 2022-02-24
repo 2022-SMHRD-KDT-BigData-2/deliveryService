@@ -16,6 +16,12 @@
   	<description></description>
   	<servlet-class>deliveryService.controller.dfadf</servlet-class>
   </servlet>
+  <servlet>
+  	<servlet-name>loginService</servlet-name>
+  	<display-name>loginService</display-name>
+  	<description></description>
+  	<servlet-class>deliveryService.controller.loginService</servlet-class>
+  </servlet>
   <servlet-mapping>
   	<servlet-name>joinService</servlet-name>
   	<url-pattern>/joinService</url-pattern>
@@ -23,5 +29,9 @@
   <servlet-mapping>
   	<servlet-name>dfadf</servlet-name>
   	<url-pattern>/dfadf</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>loginService</servlet-name>
+  	<url-pattern>/loginService</url-pattern>
   </servlet-mapping>
 </web-app>
