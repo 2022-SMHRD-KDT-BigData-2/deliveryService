@@ -7,7 +7,7 @@ import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 
-public class MemberDAO {
+public class ExchangeDAO{
 	private static SqlSessionFactory sqlSessionFactory;{
 		
 	}
@@ -20,29 +20,18 @@ public class MemberDAO {
 		} catch (Exception e) {
 			
 		}
+	
+	}
+		public int resi(ExchangeVO vo){
+			
+			SqlSession session = sqlSessionFactory.openSession(true);
+			
+			int cnt = session.insert("ExchangeService", vo);
+			
+			session.close();
+			
+			return cnt;
+			
+		}
+		
     }
-	
-	public int join(MemberVO vo) {
-		
-		SqlSession session = sqlSessionFactory.openSession(true);
-		
-		int cnt = session.insert("joinService", vo);
-		
-		
-		session.close();
-		
-		return cnt;
-		
-	}
-	
-	public MemberVO login(MemberVO vo) {
-		SqlSession session = sqlSessionFactory.openSession(true);
-		
-		MemberVO uvo = session.selectOne("loginService", vo);
-		
-		session.close();
-		
-		return uvo;
-		
-	}
-}

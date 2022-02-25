@@ -22,6 +22,12 @@
   	<description></description>
   	<servlet-class>deliveryService.controller.loginService</servlet-class>
   </servlet>
+  <servlet>
+  	<servlet-name>ExchangeService</servlet-name>
+  	<display-name>ExchangeService</display-name>
+  	<description></description>
+  	<servlet-class>deliveryService.controller.ExchangeService</servlet-class>
+  </servlet>
   <servlet-mapping>
   	<servlet-name>joinService</servlet-name>
   	<url-pattern>/joinService</url-pattern>
@@ -33,5 +39,9 @@
   <servlet-mapping>
   	<servlet-name>loginService</servlet-name>
   	<url-pattern>/loginService</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>ExchangeService</servlet-name>
+  	<url-pattern>/ExchangeService</url-pattern>
   </servlet-mapping>
 </web-app>

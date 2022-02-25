@@ -8,16 +8,17 @@
  	insert into DELIVERY_MEMBER values(#{id},#{pw},#{gender},#{major},#{nation},#{email},#{helper_check})
  </insert>
  
-  <insert id = "joinService" parameterType="model.MemberVO">
- 	insert into DELIVERY_MEMBER values(#{id},#{pw},#{gender},#{major},#{nation},#{email},#{helper_check})
- </insert>
+
  
  <select id = "loginService" parameterType="model.MemberVO"
   resultType = "model.MemberVO">
  	select * from DELIVERY_MEMBER where = #{id} and pw = #{pw}
  </select>
- 
- 
- 
+  <insert id = "ExchangeService" parameterType="model.ExchangeVO">
+ 	insert into EXCAHNGE values(exchange_num_seq,#{exid},#{title},#{content},sysdate,#{deadline},#{ex_finish})
+ </insert>
+
 </mapper>
+
+
 
