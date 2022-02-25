@@ -16,6 +16,7 @@
 		<img src="./images/Linesa.png" class="logo"></a>
 	</div>
 	<!--회원가입 부분-->
+	<form action="joinService" method = "post">
         <section class="signup-wrap">
                 <!--아이디,비번,비번재확인-->
                 <h3>아이디</h3>
@@ -41,7 +42,7 @@
                 <h3>학과선택</h3>
                 <span style="display: flex;">
                     <span class="signup-input-birth">
-                        <select id="signup-birth-mm" class="selectbox" name="department" onchange="">
+                        <select id="signup-birth-mm" class="selectbox" name="major" onchange="">
                             <option>학과선택</option>
                             <option value="101">간호대</option>
                             <option value="102">경영대</option>
@@ -101,5 +102,6 @@
            	 </div>
             </div>
         </section>
+        </form>
 </body>
 </html>

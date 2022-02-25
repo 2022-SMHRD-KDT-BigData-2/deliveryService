@@ -17,7 +17,7 @@ public class ExchangeService extends HttpServlet {
 		String exid = request.getParameter("id");
 		String title = request.getParameter("title");
 		String content = request.getParameter("content");
-		Date day = request.getParameter("day");
+		
 		String deadline = request.getParameter("deadline");
 		String helper_check = request.getParameter("helper_check");
 		
