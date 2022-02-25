@@ -44,21 +44,21 @@
                     <span class="signup-input-birth">
                         <select id="signup-birth-mm" class="selectbox" name="major" onchange="">
                             <option>학과선택</option>
-                            <option value="101">간호대</option>
-                            <option value="102">경영대</option>
-                            <option value="103">공과대</option>
-                            <option value="104">농업생명과학대</option>
-                            <option value="105">법과대</option>
-                            <option value="106">사범대</option>
-                            <option value="107">사회과학대</option>
-                            <option value="108">생활과학대</option>
-                            <option value="109">수의과대</option>
-                            <option value="110">약학대</option>
-                            <option value="111">예술대</option>
-                            <option value="112">의과대</option>
-                            <option value="113">인문대</option>
-                            <option value="114">자연과학대</option>
-                            <option value="115">AI융합대</option>
+                            <option value="10">간호대</option>
+                            <option value="20">경영대</option>
+                            <option value="30">공과대</option>
+                            <option value="40">농업생명과학대</option>
+                            <option value="50">법과대</option>
+                            <option value="60">사범대</option>
+                            <option value="70">사회과학대</option>
+                            <option value="80">생활과학대</option>
+                            <option value="90">수의과대</option>
+                            <option value="100">약학대</option>
+                            <option value="110">예술대</option>
+                            <option value="120">의과대</option>
+                            <option value="130">인문대</option>
+                            <option value="140">자연과학대</option>
+                            <option value="150">AI융합대</option>
                         </select>
                     </span>
 				</span>
