@@ -17,10 +17,16 @@
   	<servlet-class>deliveryService.controller.dfadf</servlet-class>
   </servlet>
   <servlet>
-  	<servlet-name>test</servlet-name>
-  	<display-name>test</display-name>
+  	<servlet-name>loginService</servlet-name>
+  	<display-name>loginService</display-name>
   	<description></description>
-  	<servlet-class>deliveryService.controller.test</servlet-class>
+  	<servlet-class>deliveryService.controller.loginService</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>ExchangeService</servlet-name>
+  	<display-name>ExchangeService</display-name>
+  	<description></description>
+  	<servlet-class>deliveryService.controller.ExchangeService</servlet-class>
   </servlet>
   <servlet-mapping>
   	<servlet-name>joinService</servlet-name>
@@ -31,7 +37,11 @@
   	<url-pattern>/dfadf</url-pattern>
   </servlet-mapping>
   <servlet-mapping>
-  	<servlet-name>test</servlet-name>
-  	<url-pattern>/test</url-pattern>
+  	<servlet-name>loginService</servlet-name>
+  	<url-pattern>/loginService</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>ExchangeService</servlet-name>
+  	<url-pattern>/ExchangeService</url-pattern>
   </servlet-mapping>
 </web-app>

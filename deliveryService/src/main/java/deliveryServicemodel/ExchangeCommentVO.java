@@ -1,4 +1,4 @@
-package deliveryService.model;
+package deliveryServicemodel;
 
 public class ExchangeCommentVO {
 	private int num;

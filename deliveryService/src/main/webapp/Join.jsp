@@ -3,8 +3,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="EUC-KR">
-<link rel="stylesheet" href="assets/css/Change.css" />
+	<meta charset="EUC-KR">
+	<meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
+	<meta name="viewport" content="width=device-width", initial-scale="1">
+<link rel="stylesheet" href="assets/css/Join.css" />
 <title>심부릉:회원가입</title>
 <style>
 	img { display: block; margin: 0px auto; }
@@ -16,6 +18,7 @@
 		<img src="./images/Linesa.png" class="logo"></a>
 	</div>
 	<!--회원가입 부분-->
+	<form action="joinService" method = "post">
         <section class="signup-wrap">
 				<!--  <h2>회원가입</h2> -->
                 <!--아이디,비번,비번재확인-->
@@ -35,30 +38,31 @@
                 <h3>비밀번호 재확인</h3>
                 <span class="signup-input">
 					<input  id="signup-pww" type = "password" name = "pw1" placeholder="Password">
-                    <span class="pww-lock"></span><!-- 자물쇠 이미지 -->
+					<button type="button" onClick="passwordCheck()">중복 확인</button>
+                    <span class="pww-lock"></span>
                 </span>
 	
             <div style="margin-top: 35px;">
                 <h3>학과선택</h3>
                 <span style="display: flex;">
                     <span class="signup-input-birth">
-                        <select id="signup-birth-mm" class="selectbox" name="department" onchange="">
+                        <select id="signup-birth-mm" class="selectbox" name="major" onchange="">
                             <option>학과선택</option>
-                            <option value="101">간호대</option>
-                            <option value="102">경영대</option>
-                            <option value="103">공과대</option>
-                            <option value="104">농업생명과학대</option>
-                            <option value="105">법과대</option>
-                            <option value="106">사범대</option>
-                            <option value="107">사회과학대</option>
-                            <option value="108">생활과학대</option>
-                            <option value="109">수의과대</option>
-                            <option value="110">약학대</option>
-                            <option value="111">예술대</option>
-                            <option value="112">의과대</option>
-                            <option value="113">인문대</option>
-                            <option value="114">자연과학대</option>
-                            <option value="115">AI융합대</option>
+                            <option value="10">간호대</option>
+                            <option value="20">경영대</option>
+                            <option value="30">공과대</option>
+                            <option value="40">농업생명과학대</option>
+                            <option value="50">법과대</option>
+                            <option value="60">사범대</option>
+                            <option value="70">사회과학대</option>
+                            <option value="80">생활과학대</option>
+                            <option value="90">수의과대</option>
+                            <option value="100">약학대</option>
+                            <option value="110">예술대</option>
+                            <option value="120">의과대</option>
+                            <option value="130">인문대</option>
+                            <option value="140">자연과학대</option>
+                            <option value="150">AI융합대</option>
                         </select>
                     </span>
 				</span>
@@ -70,7 +74,7 @@
                 <h3>성별</h3>
                 <span class="signup-input">
 					<label> 남 </label><input type="radio" name="gender" value="m">
-					<label> 여 </label><input type="radio" name="gender" value="f">
+					<label> 여 </label><input type="radio" name="gender" value="w">
 
                 </span>
                 <span class="choice">
@@ -102,5 +106,6 @@
            	 </div>
             </div>
         </section>
+        </form>
 </body>
 </html>
