@@ -6,7 +6,7 @@
 
 	<insert id="joinService" parameterType="deliveryService.model.MemberVO">
 		insert into DELIVERY_MEMBER
-		values(#{id},#{pw},#{gender},#{major},#{nation},#{email},#{helper_check})
+		values(#{id},#{pw},#{gender},#{major},#{nation},#{email},'N')
 	</insert>
 
 	<select id="loginService"

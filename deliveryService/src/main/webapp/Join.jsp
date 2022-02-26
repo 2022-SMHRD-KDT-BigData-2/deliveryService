@@ -68,13 +68,13 @@
 				</span>
 				<h3>국적</h3>
 				<span class="signup-input">
-					<label> 내국인 </label><input type="radio" name="local" value="local">
-					<label> 외국인 </label><input type="radio" name="local" value="foreigner">
+					<label> 내국인 </label><input type="radio" name="nation" value="L">
+					<label> 외국인 </label><input type="radio" name="nation" value="F">
                 </span>
                 <h3>성별</h3>
                 <span class="signup-input">
-					<label> 남 </label><input type="radio" name="gender" value="m">
-					<label> 여 </label><input type="radio" name="gender" value="w">
+					<label> 남 </label><input type="radio" name="gender" value="M">
+					<label> 여 </label><input type="radio" name="gender" value="W">
 
                 </span>
                 <span class="choice">
