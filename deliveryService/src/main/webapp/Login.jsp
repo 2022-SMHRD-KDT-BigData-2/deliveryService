@@ -23,10 +23,10 @@
 			<form action="loginService" method="post">
 			
 			<div class="login-input-wrap">	
-				<input placeholder="Username" type="text"></input>
+				<input  placeholder="Username" name ="id" type="text"></input>
 			</div>
 			<div class="login-input-wrap password-wrap">
-				<input placeholder="Password" type="password"></input>
+				<input placeholder="Password" name= "pw" type="password"></input>
 			</div>
 		
 			<div class="login-button-wrap">
@@ -37,5 +37,6 @@
 			 </form>
 		</section>
 			<p class="forget-msg">Forgot your Username or Password? | Sign up</p>
+		
 </body>
 </html>

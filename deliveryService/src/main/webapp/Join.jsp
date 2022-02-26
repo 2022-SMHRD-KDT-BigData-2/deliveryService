@@ -12,6 +12,8 @@
 	img { display: block; margin: 0px auto; }
 </style>
 </head>
+	
+			
 <body>
 	<div class="logo">
 		<a href="" target="_blank" title="심부릉">
@@ -31,17 +33,19 @@
 
                 <h3>비밀번호</h3>
                 <span class="signup-input">
-                	<input  id="signup-pww" type = "password" name = "pw" placeholder="Password">
+                	<input  id="signup-pww" type = "password" name = "pw" placeholder="Password" onchange="check_pw()">
+           
                 	<span class="pw-lock"></span><!-- 자물쇠 이미지 -->
                 </span>
+                <span id="check1"></span>
 
                 <h3>비밀번호 재확인</h3>
                 <span class="signup-input">
-					<input  id="signup-pww" type = "password" name = "pw1" placeholder="Password">
-					<button type="button" onClick="passwordCheck()">중복 확인</button>
+					<input  id="signup-pww2" type = "password" name = "pw1" placeholder="Password" onchange="check_pw()">				
                     <span class="pww-lock"></span>
                 </span>
-	
+				<span id="check"></span>
+				
             <div style="margin-top: 35px;">
                 <h3>학과선택</h3>
                 <span style="display: flex;">
@@ -89,7 +93,7 @@
                  </span>
                 <span class="signup-input">
                	 	<input class="legende" id="signup-email" type = "text" name = "emailnumber" placeholder="Certification Number">
-                <button class="btngo" type="button" >중복 확인</button>
+                <button class="btngo" type="button" >확인</button>
                 </span>
             </div>
 
@@ -106,6 +110,45 @@
            	 </div>
             </div>
         </section>
+        
         </form>
+        
+        <script type="text/javascript">
+        	
+        	
+            function check_pw(){
+     
+                var pw = document.getElementById('signup-pww').value;
+                var SC = ["!","@","#","$","%"];
+                var check_SC = 0;
+    
+                if(pw.length < 6|| pw.length > 16){
+                	document.getElementById('check1').innerHTML='비밀번호는 6글자 이상, 16글자 이하만 이용 가능합니다.'
+    
+                    document.getElementById('signup-pww').value='';
+                }
+                for(var i=0;i<SC.length;i++){
+                    if(pw.indexOf(SC[i]) != -1){
+                        check_SC = 1;
+                    }
+                }
+                if(check_SC == 0){
+                	document.getElementById('check1').innerHTML='!,@,#,$,% 의 특수문자가 들어가 있지 않습니다.'
+                    document.getElementById('check1').style.color='red';
+                    document.getElementById('signup-pww').value='';
+                }
+                if(document.getElementById('signup-pww').value !='' && document.getElementById('signup-pww2').value!=''){
+                    if(document.getElementById('signup-pww').value==document.getElementById('signup-pww2').value){
+                        document.getElementById('check').innerHTML='비밀번호가 일치합니다.'
+                        document.getElementById('check').style.color='blue';
+                    }
+                    else{
+                        document.getElementById('check').innerHTML='비밀번호가 일치하지 않습니다.';
+                        document.getElementById('check').style.color='red';
+                    }
+                }
+            }
+			</script>
+			
 </body>
 </html>

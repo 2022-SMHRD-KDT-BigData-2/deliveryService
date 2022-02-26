@@ -22,22 +22,19 @@ public class joinService extends HttpServlet {
 		String email = request.getParameter("email");
 		String helper_check = request.getParameter("helper_check");
 		
-		System.out.println("id1");
-			
+
 		MemberVO vo = new MemberVO(id, pw, gender, major, nation, email, helper_check);
-		
 		
 		MemberDAO dao = new MemberDAO();
 		
-	
-		 
-		  System.out.println("id2");
+		int cnt = dao.join(vo); 
+
 		  
-		 int cnt = dao.join(vo); 
-		 System.out.println("id3");
-		  
-		  if(cnt > 0) { // 성공 response.sendRedirect("join_success.jsp"); }else {
-		  response.sendRedirect("Main.jsp"); }
+		if(cnt > 0) { // 성공 response.sendRedirect("join_success.jsp"); }else {
+		 response.sendRedirect("Login.jsp"); }
+		else {
+			
+		}
 		
 	}
 }

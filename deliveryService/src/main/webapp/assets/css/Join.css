@@ -174,7 +174,7 @@ h3{
 .signup-input-c input{
     background: #f5f6f7;
 }
-#signup-id, #signup-pw, #signup-pww{
+#signup-id, #signup-pw, #signup-pww, #signup-pww2 {
     height: 50px;
     border: none;
     outline:none;
