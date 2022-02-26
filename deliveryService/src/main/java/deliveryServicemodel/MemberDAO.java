@@ -26,7 +26,7 @@ public class MemberDAO {
 
 	public int join(MemberVO vo) {
 
-		SqlSession session = sqlSessionFactory.openSession();
+		SqlSession session = sqlSessionFactory.openSession(true);
 		int cnt = session.insert("joinService", vo);
 
 		session.close();
