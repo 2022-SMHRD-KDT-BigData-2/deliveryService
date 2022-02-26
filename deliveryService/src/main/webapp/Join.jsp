@@ -3,7 +3,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="EUC-KR">
+	<meta charset="EUC-KR">
+	<meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
+	<meta name="viewport" content="width=device-width", initial-scale="1">
 <link rel="stylesheet" href="assets/css/Join.css" />
 <title>심부릉:회원가입</title>
 <style>
@@ -35,6 +37,7 @@
                 <h3>비밀번호 재확인</h3>
                 <span class="signup-input">
 					<input  id="signup-pww" type = "password" name = "pw1" placeholder="Password">
+					<button type="button" onClick="passwordCheck()">중복 확인</button>
                     <span class="pww-lock"></span>
                 </span>
 	
@@ -70,7 +73,7 @@
                 <h3>성별</h3>
                 <span class="signup-input">
 					<label> 남 </label><input type="radio" name="gender" value="m">
-					<label> 여 </label><input type="radio" name="gender" value="f">
+					<label> 여 </label><input type="radio" name="gender" value="w">
 
                 </span>
                 <span class="choice">

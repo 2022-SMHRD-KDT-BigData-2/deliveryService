@@ -1,4 +1,4 @@
-package deliveryService.model;
+package deliveryServicemodel;
 
 import java.io.InputStream;
 
@@ -7,10 +7,10 @@ import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 
-public class InquiryDAO {
-
+public class ExchangeCommentDAO {
+	
 	private static SqlSessionFactory sqlSessionFactory;
-
+	
 	static {
 
 		try {
@@ -23,14 +23,14 @@ public class InquiryDAO {
 		}
 
 	}
-
-	public int writeInquiry(InquiryVO vo) {
+	
+	public int writeExComment(ExchangeCommentVO vo) {
 		SqlSession session = sqlSessionFactory.openSession(true);
-
-		int cnt = session.insert("writeInquiry", vo); // mapper에서 insert id= writeInquiry
-
+		
+		int cnt= session.insert("writeExComment",vo); // mapper에서 insert id=writeExComment
+		
 		session.close();
-
+		
 		return cnt;
 	}
 }

@@ -8,8 +8,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import deliveryService.model.MemberDAO;
-import deliveryService.model.MemberVO;
+import deliveryServicemodel.MemberDAO;
+import deliveryServicemodel.MemberVO;
 
 
 public class loginService extends HttpServlet {
@@ -24,18 +24,18 @@ public class loginService extends HttpServlet {
 		MemberVO vo = new MemberVO(id, pw);
 		
 		MemberDAO dao = new MemberDAO();
-		MemberVO uvo= dao.login(vo);
-		
-		if(uvo != null) {
-			
-			HttpSession session = request.getSession();
-			session.setAttribute("vo", uvo);
-			
-		}else {
-			
-			
-		}
-		response.sendRedirect("main.jsp");
+		/*
+		 * MemberVO uvo= dao.login(vo);
+		 * 
+		 * if(uvo != null) {
+		 * 
+		 * HttpSession session = request.getSession(); session.setAttribute("vo", uvo);
+		 * 
+		 * }else {
+		 * 
+		 * 
+		 * } response.sendRedirect("main.jsp");
+		 */
 	}
 
 }

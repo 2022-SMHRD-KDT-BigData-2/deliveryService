@@ -1,4 +1,4 @@
-package deliveryService.model;
+package deliveryServicemodel;
 
 public class MemberVO {
 	private String id;
