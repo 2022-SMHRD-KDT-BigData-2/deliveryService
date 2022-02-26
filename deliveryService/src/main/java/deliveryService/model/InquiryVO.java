@@ -16,6 +16,12 @@ public class InquiryVO {
 		this.day = day;
 	}
 
+	public InquiryVO(String send_id, String receive_id, String content) {
+		this.send_id = send_id;
+		this.receive_id = receive_id;
+		this.content = content;
+	}
+
 	public int getNum() {
 		return num;
 	}

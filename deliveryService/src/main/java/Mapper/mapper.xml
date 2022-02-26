@@ -64,6 +64,24 @@
 		insert into inquiry
 		values(inquiry_num_seq.nextval,#{send_id},#{receive_id},#{content},sysdate)
 	</insert>
+	
+	<!-- 심부름 게시글 전체 보기 -->
+	<select id="selectDeliveryB"
+	parameterType="deliveryService.model.DeliveryBoardVO">
+		select * from delivery_board
+	</select>
+	
+	<!-- 심부름 게시글 하나 보기 -->
+	<select id="viewDelivery" 
+	parameterType="deliveryService.model.DeliveryBoardVO">
+		select * from delivery_board where num=#{num}
+	</select>
+	
+	<!-- 심부름 게시글 카테고리별 보기 -->
+	<select id="selectDeliveryCate" 
+	parameterType="deliveryService.model.DeliveryBoardVO">
+		select * from delivery_board where separation =#{separation}
+	</select>
 </mapper>
 
 
