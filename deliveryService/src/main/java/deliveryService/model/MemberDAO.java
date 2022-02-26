@@ -1,4 +1,4 @@
-package deliveryServicemodel;
+package deliveryService.model;
 
 import java.io.InputStream;
 
@@ -20,6 +20,7 @@ public class MemberDAO {
 			System.out.println("트라이 성공4");
 
 		} catch (Exception e) {
+			e.printStackTrace();
 			System.out.println("트라이 예외");
 		}
 	}

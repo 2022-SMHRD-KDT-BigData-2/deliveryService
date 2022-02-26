@@ -24,8 +24,8 @@
                                         <p>소개글</p>
                                             <br>
                                         <div class="home_btn">
-                                            <a href="" class="btn btn-default">회원가입</a>
-                                            <a href="" class="btn btn-default">로그인</a>
+                                            <a href="Join.jsp" class="btn btn-default">회원가입</a>
+                                            <a href="Login.jsp" class="btn btn-default">로그인</a>
                                         </div>
 
                                     </div>

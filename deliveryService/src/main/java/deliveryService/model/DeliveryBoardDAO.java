@@ -1,4 +1,4 @@
-package deliveryServicemodel;
+package deliveryService.model;
 
 import java.io.InputStream;
 
@@ -7,10 +7,11 @@ import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 
-public class InquiryDAO {
-
+public class DeliveryBoardDAO {
 	private static SqlSessionFactory sqlSessionFactory;
 
+	// 초가화 블럭 --> 기본적으로 생성자가 실행되기 직전
+	// Staitic 초기화 블럭 -->
 	static {
 
 		try {
@@ -23,14 +24,15 @@ public class InquiryDAO {
 		}
 
 	}
-
-	public int writeInquiry(InquiryVO vo) {
+	
+	public int writeBoard(DeliveryBoardVO vo) {
 		SqlSession session = sqlSessionFactory.openSession(true);
-
-		int cnt = session.insert("writeInquiry", vo); // mapper에서 insert id= writeInquiry
-
+		
+		int cnt= session.insert("writeBoard",vo); // mapper에서 insert id= writeBoard
+		
 		session.close();
-
+		
 		return cnt;
 	}
+	 
 }

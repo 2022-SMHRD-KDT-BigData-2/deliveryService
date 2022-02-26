@@ -2,25 +2,68 @@
 <!DOCTYPE mapper
   PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="deliveryServicemodel.MemberDAO">
-  
- <insert id = "joinService" parameterType="deliveryServicemodel.MemberVO">
- 	insert into DELIVERY_MEMBER values(#{id},#{pw},#{gender},#{major},#{nation},#{email},#{helper_check})
- </insert>
- 
- <select id = "loginService" parameterType="deliveryServicemodel.MemberVO"
-  resultType = "model.MemberVO">
- 	select * from DELIVERY_MEMBER where = #{id} and pw = #{pw}
- </select>
- 
-  <insert id = "ExchangeService" parameterType="deliveryServicemodel.ExchangeVO">
- 	insert into EXCAHNGE values(exchange_num_seq,#{exid},#{title},#{content},sysdate,#{deadline},#{ex_finish})
- </insert>   
- 
- <select id = "s" parameterType="deliveryServicemodel.MemberVO">
- 	select * from delivery_member
- </select>
+<mapper namespace="deliveryService.model.MemberDAO">
 
+	<insert id="joinService" parameterType="deliveryService.model.MemberVO">
+		insert into DELIVERY_MEMBER
+		values(#{id},#{pw},#{gender},#{major},#{nation},#{email},#{helper_check})
+	</insert>
+
+	<select id="loginService"
+		parameterType="deliveryService.model.MemberVO"
+		resultType="deliveryService.model.MemberVO">
+		select * from DELIVERY_MEMBER where id = #{id} and pw =
+		#{pw}
+	</select>
+
+	<insert id="ExchangeService"
+		parameterType="deliveryService.model.ExchangeVO">
+		insert into EXCAHNGE
+		values(exchange_num_seq.nextval,#{exid},#{title},#{content},sysdate,#{deadline},#{ex_finish})
+	</insert>
+
+	<select id="s" parameterType="deliveryService.model.MemberVO">
+		select * from delivery_member
+	</select>
+
+	<!-- 심부름 게시글 작성 -->
+	<insert id="writeService"
+		parameterType="deliveryService.model.DeliveryBoardVO">
+		insert into delivery_board values(board_num_seq.nextval,
+		#{title},
+		#{helper_gender},
+		#{helper_exception},
+		#{place},
+		#{money},
+		#{separation},
+		#{content},
+		sysdate,
+		#{deadline},
+		#{bid},
+		#{helper_check},
+		#{helper_id})
+	</insert>
+
+	<!-- 심부름 댓글 작성 -->
+	<insert id="writeComment"
+		parameterType="deliveryService.model.DeliveryCommentVO">
+		insert into delivery_comment
+		values(comment_num_seq.nextval,#{cnum},#{dcid},#{content},#{money},sysdate)
+	</insert>
+
+	<!-- 물물교환 댓글 작성 -->
+	<insert id="writeExComment"
+		parameterType="deliveryService.model.ExchangeCommentVO">
+		insert into exchange_comment
+		values(ex_comment_num_seq.nextval,#{exnum},#{excid},#{content},sysdate)
+	</insert>
+	
+	<!-- 문의글 작성 -->
+	<insert id="writeInquiry"
+		parameterType="deliveryService.model.InquiryVO">
+		insert into inquiry
+		values(inquiry_num_seq.nextval,#{send_id},#{receive_id},#{content},sysdate)
+	</insert>
 </mapper>
 
 

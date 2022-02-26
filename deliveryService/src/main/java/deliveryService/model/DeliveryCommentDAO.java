@@ -1,4 +1,4 @@
-package deliveryServicemodel;
+package deliveryService.model;
 
 import java.io.InputStream;
 

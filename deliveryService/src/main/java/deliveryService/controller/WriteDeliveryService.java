@@ -9,8 +9,8 @@ import javax.servlet.http.HttpServletResponse;
 import com.oreilly.servlet.MultipartRequest;
 import com.oreilly.servlet.multipart.DefaultFileRenamePolicy;
 
-import deliveryServicemodel.DeliveryBoardDAO;
-import deliveryServicemodel.DeliveryBoardVO;
+import deliveryService.model.DeliveryBoardDAO;
+import deliveryService.model.DeliveryBoardVO;
 
 public class WriteDeliveryService extends HttpServlet {
 
