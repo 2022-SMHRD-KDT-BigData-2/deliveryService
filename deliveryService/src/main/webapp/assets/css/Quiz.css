@@ -1,0 +1,57 @@
+.topmenu {
+    height: 54px;
+    border-bottom: 1px solid orange;
+    background-color: orange;
+    text-align: center;
+    color: white;
+    line-height: 50px;
+}
+
+section{
+	margin: auto;
+	min-width: 460px;
+	max-width: 750px;
+}
+.btngo{
+	width: 165px;
+    height: 48px;
+    font-size: 18px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    background: orange;
+    color: white;
+    border: none;
+    text-align: center;
+}
+.go{
+	text-align: center;
+}
+.btngo:hover{
+	width: 165px;
+	height: 48px;
+	font-size: 18px;
+	font-weight: bolder;
+	cursor: pointer;
+}
+p{
+	text-align: center;
+	font-weight: bold;
+	font-size: 15px;
+}
+.checkbox{
+	text-align: center;
+	cursor: pointer;
+}
+.checkbox input{
+	height: 20px;
+	width: 20px
+}
+.fie1{
+	/* border: solid orange;*/
+}
+.logo{
+	height: 25%;
+	width: 25%;
+}

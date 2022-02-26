@@ -12,9 +12,6 @@ select{
     background: #fff;
    /* border: 1px solid #999;*/
 }
-.selectbox{
-	border: none;
-}
 section{
 	margin: auto;
 	min-width: 460px;
@@ -297,4 +294,7 @@ h3{
 	font-size: 18px;
 	font-weight: bolder;
 	cursor: pointer;
+}
+.selectbox{
+	border: none;
 }

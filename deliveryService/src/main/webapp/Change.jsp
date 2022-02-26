@@ -5,7 +5,7 @@
 <head>
 <meta charset="EUC-KR">
 <link rel="stylesheet" href="assets/css/Change.css" />
-<title>심부릉:회원가입</title>
+<title>심부릉:회원정보수정</title>
 <style>
 	img { display: block; margin: 0px auto; }
 </style>
@@ -15,34 +15,28 @@
 		<a href="" target="_blank" title="심부릉">
 		<img src="./images/Linesa.png" class="logo"></a>
 	</div>
-	<!--회원가입 부분-->
+	<!--회원정보 부분-->
         <section class="signup-wrap">
-				<!--  <h2>회원가입</h2> -->
                 <!--아이디,비번,비번재확인-->
-                <h3>아이디</h3>
-                <span class="signup-input">
-                    <input id="signup-id" type = "text" name = "id" placeholder="ID">
-                     <span class="signup-at"></span>
-                <button class="btngo" type="button">확인</button>
-                </span>
-
-                <h3>비밀번호</h3>
+                <div class="fontgan">
+                	<h2 style="display: inline;">아이디</h2>
+                	<h2 style="display: inline;"><!--<%//vo 구간 %>--> 아이디</h2>
+				</div>
+                <h3>비밀번호 변경</h3>
                 <span class="signup-input">
                 	<input  id="signup-pww" type = "password" name = "pw" placeholder="Password">
-                	<span class="pw-lock"></span><!-- 자물쇠 이미지 -->
                 </span>
 
                 <h3>비밀번호 재확인</h3>
                 <span class="signup-input">
 					<input  id="signup-pww" type = "password" name = "pw1" placeholder="Password">
-                    <span class="pww-lock"></span><!-- 자물쇠 이미지 -->
                 </span>
 	
             <div style="margin-top: 35px;">
                 <h3>학과선택</h3>
                 <span style="display: flex;">
                     <span class="signup-input-birth">
-                        <select id="signup-birth-mm" class="selectbox" name="department" onchange="">
+                        <select class="selectbox" name="department" onchange="">
                             <option>학과선택</option>
                             <option value="101">간호대</option>
                             <option value="102">경영대</option>
@@ -78,14 +72,14 @@
                 </span>
                 <span class="signup-input">
                     <input class="legende" id="signup-email" type = "text" name = "email" placeholder="Eamil">
-                    <button class="btngo" type="button" >인증</button>
+                    <button class="btngo" type="button" >재인증</button>
                  </span>
                  <span class="choice">
                  	<h3>인증번호</h3>
                  </span>
                 <span class="signup-input">
                	 	<input class="legende" id="signup-email" type = "text" name = "emailnumber" placeholder="Certification Number">
-                <button class="btngo" type="button" >중복 확인</button>
+                <button class="btngo" type="button" >확인</button>
                 </span>
             </div>
 
@@ -97,7 +91,7 @@
                <div class="go">
                 <!--  <div class="signup-btn-wrap">-->
                     <input class = "btngo" id="btn" type ="submit" value = "취소하기" >
-                    <input class="btngo" id="btn" type ="submit" value = "가입하기" >
+                    <input class="btngo" id="btn" type ="submit" value = "변경하기" >
                 <!-- </div> -->
            	 </div>
             </div>
