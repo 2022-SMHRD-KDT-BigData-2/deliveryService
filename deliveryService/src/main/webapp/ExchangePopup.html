@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<!--  <link rel="stylesheet" href="assets/css/popup.css" />-->
+</head>
+<body class="dimmed">
+	 <form class="tab1" action = "#" method = "post" name = "exchange_form">
+        <header>
+            <div data-role="page" id="page1">
+                <div data-role="header">
+                  <h1 align="center">물물교환 작성</h1>
+                </div>
+             </div>
+        </header>
+
+    <fieldset class = "fie1" align="center">
+        <br>
+        <div data-role="content">
+            <label class = "legend"><b>제목</b> </label> <input type="text" name="title" placeholder="제목을 입력해주세요!"
+                style="text-align: left; width: 250px; height: 30px;"></p>
+            <label class = "legend"><b>등록 일자</b> </label> <input type="date" style="text-align: left; width: 250px; height: 30px;"></p>
+            <label class = "legend"><b>마감 일자</b> </label> <input type="date" style="text-align: left; width: 250px; height: 30px;"></p>
+        </div>
+
+        <div data-role="fieldcontain">
+            <label class = "legend"><b>내용</b> </label>
+            <input type="image" value="사진첨부">
+            <br>
+            <input type="text" name="content" placeholder="내용을 입력해 주세요."
+            style="text-align: left; width: 400px; height: 200px;">
+        </div>
+       
+       <br>
+    </fieldset>
+    <br>
+    <div data-role="footer" data-position="fixed" align="center">
+        <input type="submit" value="취소">
+        <input type="submit" value="올리기">
+        
+           <div data-role="footer" data-position="fixed" align="center">
+                <a href="index.html" class="button next">홈으로</a>
+                <a href="landing.html" class="button next">취소</a>
+                <a href="landing.html" class="button next">올리기</a>
+           </div>
+            
+         </div>
+            
+           
+        
+        <div class="cmd">
+            <input type="submit" name="btnclose" class="btn btn-primary" style="height:50px; font-size:20px;" value="닫기">
+            <!-- <input type="submit" class="btn btn-primary" style="margin-left:400px;" value="가입 완료"> -->
+        </div>
+    
+    
+    </form>
+   
+	
+</body>
+</html>
