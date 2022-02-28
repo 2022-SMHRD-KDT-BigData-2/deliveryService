@@ -120,7 +120,8 @@ input, select, textarea {
 /* Type */
 
 	body, input, select, textarea {
-		color: #ffffff;
+		/*color: #ffffff;*/
+		color: #fff; /*영어적는곳 */
 		font-family: "Source Sans Pro", Helvetica, sans-serif;
 		font-size: 17pt;
 		font-weight: 300;
@@ -185,7 +186,8 @@ input, select, textarea {
 	}
 
 	h1, h2, h3, h4, h5, h6 {
-		color: #ffffff;
+		/*color: #ffffff;*/
+		color: #fff; /*전대생 어서오고 글씨*/
 		font-weight: 600;
 		line-height: 1.65;
 		margin: 0 0 1em 0;
@@ -1790,7 +1792,8 @@ input, select, textarea {
 
 			header.major > :first-child:after {
 				content: '';
-				background-color: #ffffff;
+				/*background-color: #fff;*/
+				background-color: #fff;/*선색깔*/
 				display: block;
 				height: 2px;
 				margin: 0.325em 0 0.5em 0;
@@ -2522,8 +2525,10 @@ input, select, textarea {
 		background-color: transparent;
 		border: 0;
 		border-radius: 0;
-		box-shadow: inset 0 0 0 2px #ffffff;
-		color: #ffffff;
+		box-shadow: inset 0 0 0 2px #fff; /* 2528, 2529 버튼 박스 , 글자 색 */
+		color: #fff;
+		/*box-shadow: inset 0 0 0 2px black;
+		color: black;*/
 		cursor: pointer;
 		display: inline-block;
 		font-size: 0.8em;
@@ -2549,6 +2554,9 @@ input, select, textarea {
 		.button:active {
 			box-shadow: inset 0 0 0 2px #9bf1ff;
 			color: #9bf1ff;
+			/*box-shadow: inset 0 0 0 2px #008080;
+			color: #008080;*/
+			/*마우스 올리시 하늘색 변하는 구간*/
 		}
 
 		input[type="submit"]:active,
@@ -2644,6 +2652,7 @@ input, select, textarea {
 			button.next:after,
 			.button.next:after {
 				background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='36px' height='24px' viewBox='0 0 36 24' zoomAndPan='disable'%3E%3Cstyle%3Eline %7B stroke: %239bf1ff%3B stroke-width: 2px%3B %7D%3C/style%3E%3Cline x1='0' y1='12' x2='34' y2='12' /%3E%3Cline x1='25' y1='4' x2='34' y2='12.5' /%3E%3Cline x1='25' y1='20' x2='34' y2='11.5' /%3E%3C/svg%3E");
+				/*위에 화살표 이미지 */
 				opacity: 0;
 				z-index: 1;
 			}
@@ -3119,6 +3128,8 @@ input, select, textarea {
 		display: -webkit-flex;
 		display: -ms-flex;
 		display: flex;
+		/*background-color: #2a2f4a;*/
+		/*탑 메뉴바*/
 		background-color: #2a2f4a;
 		box-shadow: 0 0 0.25em 0 rgba(0, 0, 0, 0.15);
 		cursor: default;
@@ -3386,6 +3397,8 @@ input, select, textarea {
 		-ms-align-items: center;
 		align-items: center;
 		background-image: url("../../images/banner.jpg");
+		/*배경 이미지 */
+		/*background-color:#fff;*/
 		display: -moz-flex;
 		display: -webkit-flex;
 		display: -ms-flex;
@@ -3416,6 +3429,8 @@ input, select, textarea {
 			transition-delay: 0.75s;
 			pointer-events: none;
 			background-color: #242943;
+			/*배경 커버색 */
+			/*background-color: #fbf7f2;*/
 			content: '';
 			display: block;
 			height: 100%;
