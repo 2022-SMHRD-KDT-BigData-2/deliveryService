@@ -6,6 +6,14 @@
 <meta charset="EUC-KR">
 <title>심부릉:헬퍼 인증 퀴즈</title>
 <link rel="stylesheet" href="assets/css/Quiz.css" />
+
+<script language="javascript">
+	function showAlert(){
+		alert("?님\n헬퍼로 등록하여 주셔서 진심으로 감사합니다.\n\n우리 심부릉은 ?님이 안전하게 심부름을 수행할 수 있도록\n최선을 다해 도와드리겠습니다.\n감사합니다.");
+	}
+	
+</script>
+
 </head>
 <body>
 <body>
@@ -14,7 +22,7 @@
 		<img src="./images/Logooo.png" class="logo"></a>
 	</div>
 	<section>
-		<form action="login_action.jsp" method="post"
+		<form action="index.html" method="post"
 			name="login_form">
 			<h1 class="topmenu">헬퍼 인증 퀴즈</h1>
 			
@@ -35,7 +43,7 @@
 			<fieldset class="fie1">
 				<legend> <h2>질문 2</h2> </legend>
 				<fieldset>
-					<p>고객이 올린 심부름을 하기위해서는 먼저 고객에게 이메일을 보낸다.</p>
+					<p>고객이 올린 심부름을 하기 위해서는 먼저 고객에게 이메일을 보낸다.</p>
 				</fieldset>
 				<div class="checkbox">
 				<br><input type="radio" name="choice2" value="O">O &nbsp;&nbsp;&nbsp;
@@ -47,7 +55,7 @@
 			<fieldset class="fie1">
 				<legend><h2>질문 3</h2></legend>
 				<fieldset>
-					<p>심부름전 수행중 피치 못할 사정이 생기면 그냥 내버려둔다.</p>
+					<p>심부름 전 수행중 피치 못할 사정이 생기면 그냥 내버려둔다.</p>
 				</fieldset>
 				
 				<div class="checkbox">
@@ -87,7 +95,8 @@
 			<!-- 결과 확인 -->
 			<div class="go">
 				<br>
-				<input class="btngo" id="btn" type="submit" value="결과 확인하기!">
+				<input class="btngo" id="btn" type="submit" value="결과 확인하기!" onclick="showAlert();">
+							
 			</div>
 		</form>
 	</section>
