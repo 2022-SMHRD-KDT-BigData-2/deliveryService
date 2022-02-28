@@ -8,11 +8,11 @@
 <link rel="stylesheet" href="assets/css/Quiz.css" />
 
 <script language="javascript">
-	function showAlert(){
-		alert("?님\n헬퍼로 등록하여 주셔서 진심으로 감사합니다.\n\n우리 심부릉은 ?님이 안전하게 심부름을 수행할 수 있도록\n최선을 다해 도와드리겠습니다.\n감사합니다.");
-	}
+	 function showAlert(){
+		 alert("?님\n헬퍼로 등록하여 주셔서 진심으로 감사합니다.\n\n우리 심부릉은 ?님이 안전하게 심부름을 수행할 수 있도록\n최선을 다해 도와드리겠습니다.\n감사합니다.");
+	 }
 	
-</script>
+ </script>
 
 </head>
 <body>
@@ -91,15 +91,16 @@
 				<input type="radio" name="choice5" value="X"> X
 				</div>
 			</fieldset>
-
+				
 			<!-- 결과 확인 -->
-			<div class="go">
+			 <div class="go">
 				<br>
-				<input class="btngo" id="btn" type="submit" value="결과 확인하기!" onclick="showAlert();">
-							
+			  <!--  <input class="btngo" id="btn" type="submit" value="결과 확인하기!" onclick="showAlert();">-->
+			  <a href="pop.html"><input class="btngo" type="button" value="결과확인하기!"></a>
 			</div>
-		</form>
-	</section>
+		</section>
+	</form>
+	
 </body>
 
 </body>
