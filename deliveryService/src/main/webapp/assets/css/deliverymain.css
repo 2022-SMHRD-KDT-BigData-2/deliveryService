@@ -2405,10 +2405,10 @@ input, select, textarea {
 				text-align: center;
 			}
 
-				ul.pagination li > .page.active {
+				/*ul.pagination li > .page.active {
 					background-color: #ffffff;
 					color: #242943;
-				}
+				}*/
 
 					ul.pagination li > .page.active:hover {
 						background-color: #9bf1ff;
