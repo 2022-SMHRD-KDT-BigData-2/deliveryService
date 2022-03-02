@@ -1,18 +1,15 @@
-<!DOCTYPE HTML>
-<!--
-	Forty by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
+    pageEncoding="EUC-KR"%>
+<!DOCTYPE html>
 <html>
-	<head>
-		<title>물물교환 게시판 - 심부릉</title>
+<head>
+<title>물물교환 게시판 - 심부릉</title>
 		<meta charset="EUC-KR">
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/deliverymain.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="is-preload">
+</head>
+<body class="is-preload">
 
 		<!-- Wrapper -->
 			<div id="wrapper">
@@ -50,14 +47,13 @@
 							<section id="one">
 								<div class="inner">
 									<header class="major">
-										<h1>물물교환 게시판</h1>
+										<h1>심부름 게시판</h1>
 										<h2>This is where you trade goods</h2>
 									</header>
-									<span class="image main"><img src="images/R.jpg" alt="" /></span>
+									<!-- <span class="image main"><img src="images/R.jpg" alt="" /></span> -->
 									<!-- Table -->
-													<h3>게시판</h3>
+													<h3>벌레 잡아주기</h3>
 													<ul class="actions">
-														<li><a href="ExchangePopup.html" id="show" class="button next">물물교환 하기!</a></li>
 													</ul>
 													<div class="table-wrapper">
 														<table>
@@ -115,6 +111,8 @@
 														<li><a href="#" class="page">10</a></li>
 														<li><a href="#" class="button small">Next</a></li>
 													</ul>
+													
+													<li><a href="deliveryBoard.html" id="show" class="button next">Back!</a></li>
 									
 								</div>
 							</section>

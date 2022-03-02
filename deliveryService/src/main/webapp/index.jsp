@@ -26,7 +26,7 @@
 
 				<!-- Header -->
 					<header id="header" class="alt">
-						<a href="index.html" class="logo"><strong>심부릉</strong></a>
+						<a href="index.jsp" class="logo"><strong>심부릉</strong></a>
 						<nav>
 							<a href="#menu">Menu</a>
 						</nav>
@@ -39,17 +39,16 @@
 						<% 
 						if(vo == null){
 						%>
-							<li><a href="index.html">Home</a></li>
 							<li><a href="Join.jsp" class="button fit">회원가입</a></li>
-							<li><a href="login.html" class="button fit">로그인</a></li>
-						</ul>
+							<li><a href="login.jsp" class="button fit">로그인</a></li>
 						</ul>
 						<%} else { %>
-							<li><a href="deliveryBoard.html">심부름 게시판</a></li>
-							<li><a href="Exchange.html">물물교환 게시판</a></li>
-							<li><a href="myPage.html">마이페이지</a></li>
-							<li><a href="callCenter.html">고객센터</a></li>
-							<li><a href="login.html" class="button fit">로그아웃</a></li>
+						</ul>
+							<li><a href="deliveryBoard.html" class="button fit">심부름 게시판</a></li>
+							<li><a href="Exchange.jsp" class="button fit">물물교환 게시판</a></li>
+							<li><a href="myPage.html" class="button fit">마이페이지</a></li>
+							<li><a href="callCenter.html" class="button fit">고객센터</a></li>
+							<li><a href="logoutService" class="button fit">로그아웃</a></li>
 						</ul>
 						
 						<%} %>

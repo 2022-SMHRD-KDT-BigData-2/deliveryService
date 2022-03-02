@@ -1,4 +1,3 @@
-<%@page import="deliveryService.model.MemberVO"%>
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
 <!DOCTYPE html>
@@ -11,16 +10,13 @@
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 </head>
 <body class="is-preload">
-<%
-		MemberVO vo = (MemberVO)session.getAttribute("vo");
-		out.print(vo);
-	%>
+
 		<!-- Wrapper -->
 			<div id="wrapper">
 
 				<!-- Header -->
 					<header id="header">
-						<a href="index.jsp" class="logo"><strong>심부릉</strong> <span></span></a>
+						<a href="index.html" class="logo"><strong>심부릉</strong> <span></span></a>
 						<nav>
 							<a href="#menu">Menu</a>
 						</nav>
@@ -29,19 +25,17 @@
 				<!-- Menu -->
 					<nav id="menu">
 						<ul class="links">
-						<ul class="actions stacked">
-							<li><a href="index.jsp" class="button fit">Home</a></li>
-							<li><a href="deliveryBoard.html" class="button fit">심부름 게시판</a></li>
-							<li><a href="myPage.html" class="button fit">마이페이지</a></li>
-							<li><a href="callCenter.html" class="button fit">고객센터</a></li>
-						
-						<%if(vo == null){ %>
-							<li><a href="#" class="button fit">회원가입</a></li>
-							<li><a href="Login.jsp" class="button fit">로그인</a></li>
-							<%}else{ %>
-							<li><a href="index.jsp" class="button fit">로그아웃</a></li>
-						<%} %>
+							<li><a href="index.html">Home</a></li>
+							<li><a href="deliveryBoard.html">심부름 게시판</a></li>
+							<li><a href="Exchange.html">물물교환 게시판</a></li>
+							<li><a href="myPage.html">마이페이지</a></li>
+							<li><a href="callCenter.html">고객센터</a></li>
 						</ul>
+						<ul class="actions stacked">
+
+							<li><a href="#" class="button fit">회원가입</a></li>
+							<li><a href="login.html" class="button fit">로그인</a></li>
+
 						</ul>
 					</nav>
 
@@ -53,14 +47,13 @@
 							<section id="one">
 								<div class="inner">
 									<header class="major">
-										<h1>물물교환 게시판</h1>
+										<h1>심부름 게시판</h1>
 										<h2>This is where you trade goods</h2>
 									</header>
-									<span class="image main"><img src="images/R.jpg" alt="" /></span>
+									<!-- <span class="image main"><img src="images/R.jpg" alt="" /></span> -->
 									<!-- Table -->
-													<h3>게시판</h3>
+													<h3>비대면</h3>
 													<ul class="actions">
-														<li><a href="ExchangePopup.html" id="show" class="button next">물물교환 하기!</a></li>
 													</ul>
 													<div class="table-wrapper">
 														<table>
@@ -118,6 +111,8 @@
 														<li><a href="#" class="page">10</a></li>
 														<li><a href="#" class="button small">Next</a></li>
 													</ul>
+													
+													<li><a href="deliveryBoard.html" id="show" class="button next">Back!</a></li>
 									
 								</div>
 							</section>

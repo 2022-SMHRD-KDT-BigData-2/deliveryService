@@ -16,7 +16,7 @@
 			
 <body>
 	<div class="logo">
-		<a href="" target="_blank" title="심부릉">
+		<a href="index.jsp" target="_blank" title="심부릉">
 		<img src="./images/Linesa.png" class="logo"></a>
 	</div>
 	<!--회원가입 부분-->
@@ -105,7 +105,7 @@
                <div class="go">
                 <!--  <div class="signup-btn-wrap">-->
                     <a href="index.jsp"><input class="btngo" id="btn" type ="button" value = "취소하기" ></a>
-                    <a href="index.jsp"><input class="btngo" id="btn" type ="button" value = "가입하기" ></a>
+                    <a href="joinService"><input class="btngo" id="btn" type ="button" value = "가입하기" ></a>
                 <!-- </div> -->
            	 </div>
             </div>
@@ -113,7 +113,7 @@
         
         </form>
         
-        <!--  <script type="text/javascript">
+        <script type="text/javascript">
         	
         	
             function check_pw(){
@@ -154,7 +154,7 @@
                 }
             }
             
-            </script>-->
+            </script>
 			
 			
 </body>

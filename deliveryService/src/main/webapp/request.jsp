@@ -4,20 +4,15 @@
 <html>
 <head>
 <meta charset="EUC-KR">
-<title>심부릉:요청페이지</title>
+<link rel="stylesheet" href="assets/css/popup.css" />
+<title>Insert title here</title>
 </head>
-<body>
-	<body>
-    <form class="tab1" action = "errand_action.jsp" method = "post" name = "errand_form">
-    <header>
-        <div data-role="page" id="page1">
-            <div data-role="header">
-              <h1 align="center">심부름 요청서</h1>
-            </div>
-    </header>
-
-        <fieldset class = "fie1" align="center">
-                <br>
+<body class="dimmed">
+    <form action="#" method="post">
+    <div class="popup">
+        <div class="title" align="center">심부름 요청서</div>
+        <div class="content">
+            <fieldset class = "fie1" align="center">
                 <label class = "legend"><b>심부름 항목 선택</b> </label>
                 <select name="errand" style="text-align: left; width: 250px; height: 30px;">
                     <option value="none">카테고리 선택</option>
@@ -34,17 +29,16 @@
                     <option value="110">기타</option>
                 </select>
                 <br>
-                <br>
             
                 <div data-role="content">
-                    <label class = "legend"><b>심부름 제목</b> </label> <input type="text" name="title" placeholder="제목을 입력해주세요!"
+                    <p><label class = "legend"><b>심부름 제목</b> </label> <input type="text" name="title" placeholder="제목을 입력해주세요!"
                         style="text-align: left; width: 250px; height: 30px;"></p>
-                    <label class = "legend"><b>등록 일자</b> </label> <input type="date" style="text-align: left; width: 250px; height: 30px;"></p>
-                    <label class = "legend"><b>마감 일자</b> </label> <input type="date" style="text-align: left; width: 250px; height: 30px;"></p>
+                    <!-- <p><label class = "legend"><b>시작 날짜</b> </label> <input type="date" style="text-align: left; width: 250px; height: 30px;"></p> -->
+                    <p><label class = "legend"><b>마감 일자</b> </label> <input type="date" style="text-align: left; width: 250px; height: 30px;"></p>
                       
                     <hr>
                     <label class = "legend"><b>선호 헬퍼 성별 : </b> </label>
-                    남자 <input type="radio" name="gender" value="men"> 여자 <input type="radio" name="gender" value="women"> 없음 <input type="radio" name="gender" value="none">
+                       남자 <input type="radio" name="gender" value="men"> 여자 <input type="radio" name="gender" value="women"> 없음 <input type="radio" name="gender" value="none">
                     <br>
                     <br>
                 </div>
@@ -74,32 +68,35 @@
                 </div>
             
             <div data-role="content">
-                <label class = "legend"><b>심부름 장소</b> </label> <input type="text" name="place" id="txt1" placeholder="심부름 도착 장소를 입력해주세요." style="text-align: left; width: 250px; height: 30px;"></p>     
-                <label class = "legend"><b>심부름비</b> </label> <input type="text" name="money" placeholder="ex) 5000" style="text-align: left; width: 250px; height: 30px;"></p>
+                <p><label class = "legend"><b>심부름 장소</b> </label> <input type="text" name="place" id="txt1" placeholder="심부름 도착 장소를 입력해주세요." style="text-align: left; width: 250px; height: 30px;"></p>     
+                <p><label class = "legend"><b>심부름비</b> </label> <input type="text" name="money" placeholder="ex) 5000" style="text-align: left; width: 250px; height: 30px;"></p>
             </div>
 
             <hr>
             <div data-role="fieldcontain">
               <label class = "legend"><b>심부름 요청 내용</b> </label>
-              <input type="file" value="사진첨부" align="right">
-              
+              <input type="image" value="사진첨부">
               <br>
               <input type="text" name="content" placeholder="요청 내용을 상세하게 입력해 주세요."
               style="text-align: left; width: 400px; height: 200px;">
             </div>
-            <br>
-           </div>
-        </fieldset>
+            
+           </fieldset>
            <br>
            <div data-role="footer" data-position="fixed" align="center">
-                <input type="submit" value="홈으로">
-                <input type="submit" value="취소">
-                <input type="submit" value="올리기">
+                <a href="index.jsp" class="button next">홈으로</a>
+                <a href="deliveryBoard.html" class="button next">취소</a>
+                <a href="deliveryBoard.html" class="button next">올리기</a>
            </div>
             
-         </div>     
-         
-</body>
-	
+         </div>
+         </div>
+         </form>   
+            
+        <!--  <div class="cmd">
+            <input type="submit" name="btnclose" class="btn btn-primary" style="height:50px; font-size:20px;" value="닫기">
+            <input type="submit" class="btn btn-primary" style="margin-left:400px;" value="가입 완료">
+        </div>-->
+   
 </body>
 </html>
