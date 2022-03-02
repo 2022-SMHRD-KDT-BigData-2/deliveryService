@@ -1,3 +1,4 @@
+<%@page import="deliveryService.model.MemberVO"%>
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
 <!DOCTYPE html>
@@ -11,7 +12,10 @@
 </style>
 </head>
 <body>
-
+	<%
+		MemberVO vo = (MemberVO)session.getAttribute("vo");
+		out.print(vo);
+	%>
 	<div class="logo">
 		<a href="index.jsp" target="_blank" title="심부릉">
 		<img src="./images/Linesa.png" class="logo"></a>
@@ -21,7 +25,7 @@
                 <!--아이디,비번,비번재확인-->
                 <div class="fontgan">
                 	<h2 style="display: inline;">아이디</h2>
-                	<h2 style="display: inline;"><!--//vo 구간 --> 아이디</h2>
+                	<h2 style="display: inline;"><%=vo.getId() %> 아이디</h2>
 				</div>
                 <h3>비밀번호 변경</h3>
                 <span class="signup-input">
