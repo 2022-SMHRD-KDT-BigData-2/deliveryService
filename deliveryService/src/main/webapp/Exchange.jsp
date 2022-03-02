@@ -1,3 +1,4 @@
+<%@page import="deliveryService.model.MemberVO"%>
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
 <!DOCTYPE html>
@@ -10,13 +11,16 @@
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 </head>
 <body class="is-preload">
-
+<%
+		MemberVO vo = (MemberVO)session.getAttribute("vo");
+		out.print(vo);
+	%>
 		<!-- Wrapper -->
 			<div id="wrapper">
 
 				<!-- Header -->
 					<header id="header">
-						<a href="index.html" class="logo"><strong>심부릉</strong> <span></span></a>
+						<a href="index.jsp" class="logo"><strong>심부릉</strong> <span></span></a>
 						<nav>
 							<a href="#menu">Menu</a>
 						</nav>
@@ -25,17 +29,22 @@
 				<!-- Menu -->
 					<nav id="menu">
 						<ul class="links">
-							<li><a href="index.html">Home</a></li>
-							<li><a href="deliveryBoard.html">심부름 게시판</a></li>
-							<li><a href="Exchange.html">물물교환 게시판</a></li>
-							<li><a href="myPage.html">마이페이지</a></li>
-							<li><a href="callCenter.html">고객센터</a></li>
+						<%if(vo == null){ %>
+							<li><a href="index.jsp" class="button fit">Home</a></li>
+							<%}else{ %>
+							<li><a href="deliveryBoard.html" class="button fit">심부름 게시판</a></li>
+							<li><a href="Exchange.jsp" class="button fit">물물교환 게시판</a></li>
+							<li><a href="myPage.html" class="button fit">마이페이지</a></li>
+							<li><a href="callCenter.html" class="button fit">고객센터</a></li>
+							<%} %>
 						</ul>
 						<ul class="actions stacked">
-
+						<%if(vo == null){ %>
 							<li><a href="#" class="button fit">회원가입</a></li>
-							<li><a href="login.html" class="button fit">로그인</a></li>
-
+							<li><a href="Login.jsp" class="button fit">로그인</a></li>
+							<%}else{ %>
+							<li><a href="index.jsp" class="button fit">로그아웃</a></li>
+						<%} %>
 						</ul>
 					</nav>
 

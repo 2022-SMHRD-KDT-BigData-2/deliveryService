@@ -13,7 +13,7 @@
 <body>
 
 	<div class="logo">
-		<a href="" target="_blank" title="심부릉">
+		<a href="index.jsp" target="_blank" title="심부릉">
 		<img src="./images/Linesa.png" class="logo"></a>
 	</div>
 	<!--회원정보 부분-->
