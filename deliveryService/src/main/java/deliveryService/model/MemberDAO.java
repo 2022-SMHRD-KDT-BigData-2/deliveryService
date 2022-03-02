@@ -37,7 +37,7 @@ public class MemberDAO {
 	}
 
 	public MemberVO login(MemberVO vo) {
-		SqlSession session = sqlSessionFactory.openSession();
+		SqlSession session = sqlSessionFactory.openSession(true);
 
 		MemberVO uvo = session.selectOne("loginService", vo);
 
@@ -46,5 +46,15 @@ public class MemberDAO {
 		return uvo;
 
 	}
+	
+	public int helpercheck(MemberVO vo) {
+		
+		SqlSession session = sqlSessionFactory.openSession(true);
+		int cnt = session.update("HelperCheck", vo);
 
+		session.close();
+
+		return cnt;
+
+	}
 }

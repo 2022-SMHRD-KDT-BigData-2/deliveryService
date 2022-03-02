@@ -19,7 +19,12 @@ public class MemberVO {
 		this.email = email;
 		this.helper_check = helper_check;
 	}
-
+	
+    public MemberVO(String helper_check) {
+    	
+    	this.helper_check = helper_check;
+    }
+    
 	public MemberVO(String id, String pw) {
 		
 		this.id = id;
