@@ -50,8 +50,8 @@
                 <h3>학과선택</h3>
                 <span style="display: flex;">
                     <span class="signup-input-birth">
-                        <select id="signup-birth-mm" class="selectbox" name="major" onchange="">
-                            <option>학과선택</option>
+                        <select id="signup-birth-mm" class="selectbox" name="major">
+                            <option value="0">학과선택</option>
                             <option value="10">간호대</option>
                             <option value="20">경영대</option>
                             <option value="30">공과대</option>
