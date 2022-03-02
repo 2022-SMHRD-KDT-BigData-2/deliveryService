@@ -33,7 +33,7 @@
                 <div data-role="content">
                     <p><label class = "legend"><b>심부름 제목</b> </label> <input type="text" name="title" placeholder="제목을 입력해주세요!"
                         style="text-align: left; width: 250px; height: 30px;"></p>
-                    <p><label class = "legend"><b>등록 일자</b> </label> <input type="date" style="text-align: left; width: 250px; height: 30px;"></p>
+                    <!-- <p><label class = "legend"><b>시작 날짜</b> </label> <input type="date" style="text-align: left; width: 250px; height: 30px;"></p> -->
                     <p><label class = "legend"><b>마감 일자</b> </label> <input type="date" style="text-align: left; width: 250px; height: 30px;"></p>
                       
                     <hr>
@@ -84,9 +84,9 @@
            </fieldset>
            <br>
            <div data-role="footer" data-position="fixed" align="center">
-                <a href="index.html" class="button next">홈으로</a>
-                <a href="landing.html" class="button next">취소</a>
-                <a href="landing.html" class="button next">올리기</a>
+                <a href="index.jsp" class="button next">홈으로</a>
+                <a href="deliveryBoard.html" class="button next">취소</a>
+                <a href="deliveryBoard.html" class="button next">올리기</a>
            </div>
             
          </div>
