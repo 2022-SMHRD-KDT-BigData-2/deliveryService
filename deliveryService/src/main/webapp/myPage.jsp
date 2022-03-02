@@ -1,3 +1,4 @@
+<%@page import="deliveryService.model.MemberVO"%>
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
 <!DOCTYPE html>
@@ -11,13 +12,17 @@
 </head>
 <body>
 <body class="is-preload">
+<%
+		MemberVO vo = (MemberVO)session.getAttribute("vo");
+		out.print(vo);
+	%>
 
 		<!-- Wrapper -->
 			<div id="wrapper">
 
 				<!-- Header -->
 					<header id="header">
-						<a href="index.html" class="logo"><strong>심부릉</strong> </a>
+						<a href="index.jsp" class="logo"><strong>심부릉</strong> </a>
 						<nav>
 							<a href="#menu">Menu</a>
 						</nav>
@@ -26,15 +31,18 @@
 				<!-- Menu -->
 					<nav id="menu">
 						<ul class="links">
-							<li><a href="index.html">Home</a></li>
-							<li><a href="deliveryBoard.html">심부름 게시판</a></li>
-							<li><a href="Exchange.html">물물교환 게시판</a></li>
-							<li><a href="myPage.html">마이페이지</a></li>
-							<li><a href="callCenter.html">고객센터</a></li>
-						</ul>
 						<ul class="actions stacked">
-							<li><a href="#" class="button fit">회원가입</a></li>
-							<li><a href="login.html" class="button fit">로그인</a></li>
+						<%if(vo == null){ %>
+							<li><a href="Join.jsp" class="button fit">회원가입</a></li>
+							<li><a href="Login.jsp" class="button fit">로그인</a></li>
+						<%}else{ %>
+							<li><a href="index.jsp" class="button fit">Home</a></li>
+							<li><a href="deliveryBoard.html" class="button fit">심부름 게시판</a></li>
+							<li><a href="Exchange.jsp" class="button fit">물물교환 게시판</a></li>
+							<li><a href="callCenter.jsp" class="button fit">고객센터</a></li>
+							<li><a href="logoutService" class="button fit">로그아웃</a></li>
+						<%} %>
+						</ul>			
 						</ul>
 					</nav>
 
@@ -84,25 +92,51 @@
 										</div>
 
 									<hr class="major" />
+<!-- One -->
+							<section id="one">
+								<div class="inner">
+									<header class="major">
+										
+									</header>
 
-									<!-- Elements -->
-										<h2 id="elements">이용내역</h2>
-										<div class="row gtr-200">
+									<!-- Content -->
+										<h2 id="content">나의 평가</h2>
+										<p>
 											
+										</p>
+										<div class="row">
+											<div class="col-6 col-12-small">
+												<h3>Sem turpis amet semper</h3>
+												<p>Nunc lacinia ante nunc ac lobortis. Interdum ad
+												ipiscing gravida odio porttitor sem non mi integer non faucibus 
+												ornare mi ut ante amet placerat aliquet. Volutpat commodo eu sed 
+												ante lacinia. Sapien a lorem in integer ornare praesent commodo ad
+												ipiscing arcu in massa commodo lorem accumsan at odio massa ac ac.
+												 Semper adipiscing varius montes viverra nibh in adipiscing blandi
+												 t tempus accumsan.</p>
+											</div>
+											<div class="col-6 col-12-small">
+												<h3>Magna odio tempus commodo</h3>
+												<p>In arcu accumsan arcu adipiscing accumsan orci ac. Felis id enim aliquet. Accumsan ac integer lobortis commodo ornare aliquet accumsan erat tempus amet porttitor. Ante commodo blandit adipiscing integer semper orci eget. Faucibus commodo adipiscing mi eu nullam accumsan morbi arcu ornare odio mi adipiscing nascetur lacus ac interdum morbi accumsan vis mi accumsan ac praesent.</p>
+											</div>
+											<!-- Break -->
+											<div class="col-4 col-12-medium">
+												<h3>Interdum sapien gravida</h3>
+												<p>Nunc lacinia ante nunc ac lobortis. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus ornare mi ut ante amet placerat aliquet. Volutpat eu sed ante lacinia sapien lorem accumsan varius montes viverra nibh in adipiscing blandit tempus accumsan.</p>
+											</div>
+											<div class="col-4 col-12-medium">
+												<h3>Faucibus consequat lorem</h3>
+												<p>Nunc lacinia ante nunc ac lobortis. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus ornare mi ut ante amet placerat aliquet. Volutpat eu sed ante lacinia sapien lorem accumsan varius montes viverra nibh in adipiscing blandit tempus accumsan.</p>
+											</div>
+											<div class="col-4 col-12-medium">
+												<h3>Accumsan montes viverra</h3>
+												<p>Nunc lacinia ante nunc ac lobortis. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus ornare mi ut ante amet placerat aliquet. Volutpat eu sed ante lacinia sapien lorem accumsan varius montes viverra nibh in adipiscing blandit tempus accumsan.</p>
+											</div>
+										</div>
 
-												<!-- Text stuff -->
-													<h3>Text</h3>
-													<p>This is <b>bold</b> and this is <strong>strong</strong>. This is <i>italic</i> and this is <em>emphasized</em>.
-													This is <sup>superscript</sup> text and this is <sub>subscript</sub> text.
-													This is <u>underlined</u> and this is code: <code>for (;;) { ... }</code>.
-													Finally, this is a <a href="#">link</a>.</p>
-													<hr />
-													<h2>Heading Level 2</h2>
-													<h3>Heading Level 3</h3>
-													<h4>Heading Level 4</h4>
-													<hr />
-													<p>Nunc lacinia ante nunc ac lobortis. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus ornare mi ut ante amet placerat aliquet. Volutpat eu sed ante lacinia sapien lorem accumsan varius montes viverra nibh in adipiscing blandit tempus accumsan.</p>
+									<hr class="major" />
 
+									
 									<!-- Elements -->
 										<h2 id="elements">나의 평가</h2>
 

@@ -29,22 +29,19 @@
 				<!-- Menu -->
 					<nav id="menu">
 						<ul class="links">
-						<%if(vo == null){ %>
+						<ul class="actions stacked">
 							<li><a href="index.jsp" class="button fit">Home</a></li>
-							<%}else{ %>
 							<li><a href="deliveryBoard.html" class="button fit">심부름 게시판</a></li>
-							<li><a href="Exchange.jsp" class="button fit">물물교환 게시판</a></li>
 							<li><a href="myPage.html" class="button fit">마이페이지</a></li>
 							<li><a href="callCenter.html" class="button fit">고객센터</a></li>
-							<%} %>
-						</ul>
-						<ul class="actions stacked">
+						
 						<%if(vo == null){ %>
 							<li><a href="#" class="button fit">회원가입</a></li>
 							<li><a href="Login.jsp" class="button fit">로그인</a></li>
 							<%}else{ %>
 							<li><a href="index.jsp" class="button fit">로그아웃</a></li>
 						<%} %>
+						</ul>
 						</ul>
 					</nav>
 

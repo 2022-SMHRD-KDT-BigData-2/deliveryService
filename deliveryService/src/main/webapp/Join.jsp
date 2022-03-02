@@ -105,7 +105,7 @@
                <div class="go">
                 <!--  <div class="signup-btn-wrap">-->
                     <a href="index.jsp"><input class="btngo" id="btn" type ="button" value = "취소하기" ></a>
-                    <a href="index.jsp"><input class="btngo" id="btn" type ="button" value = "가입하기" ></a>
+                    <a href="joinService"><input class="btngo" id="btn" type ="button" value = "가입하기" ></a>
                 <!-- </div> -->
            	 </div>
             </div>
