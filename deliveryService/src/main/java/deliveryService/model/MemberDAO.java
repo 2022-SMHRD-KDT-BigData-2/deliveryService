@@ -37,7 +37,7 @@ public class MemberDAO {
 	}
 
 	public MemberVO login(MemberVO vo) {
-		SqlSession session = sqlSessionFactory.openSession(true);
+		SqlSession session = sqlSessionFactory.openSession();
 
 		MemberVO uvo = session.selectOne("loginService", vo);
 
@@ -47,7 +47,7 @@ public class MemberDAO {
 
 	}
 	
-	public int helpercheck(MemberVO vo) {
+public int helpercheck(MemberVO vo) {
 		
 		SqlSession session = sqlSessionFactory.openSession(true);
 		int cnt = session.update("HelperCheck", vo);
@@ -55,6 +55,26 @@ public class MemberDAO {
 		session.close();
 
 		return cnt;
+}
 
+	public MemberVO IdCheck(String id) {
+		SqlSession session = sqlSessionFactory.openSession();
+
+		MemberVO vo = (MemberVO) session.selectOne("IdCheck", id);
+
+		session.close();
+
+		return vo;
 	}
+
+	public String emailDupleCheck(String email) {
+		SqlSession session = sqlSessionFactory.openSession();
+
+		String result = session.selectOne("emailDupleCheck", email);
+
+		session.close();
+
+		return result;
+	}
+
 }

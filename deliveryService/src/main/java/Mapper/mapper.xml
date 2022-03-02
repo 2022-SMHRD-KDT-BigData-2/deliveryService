@@ -16,8 +16,7 @@
 	<select id="loginService"
 		parameterType="deliveryService.model.MemberVO"
 		resultType="deliveryService.model.MemberVO">
-		select * from DELIVERY_MEMBER where id = #{id} and pw =
-		#{pw}
+		select * from DELIVERY_MEMBER where id = #{id} and pw =	#{pw}
 	</select>
 
 	<insert id="ExchangeService"
@@ -26,12 +25,8 @@
 		values(exchange_num_seq.nextval,#{exid},#{title},#{content},sysdate,#{deadline},#{ex_finish},#{exfilename})
 	</insert>
 
-	<select id="s" parameterType="deliveryService.model.MemberVO">
-		select * from delivery_member
-	</select>
-
 	<!-- 심부름 게시글 작성 -->
-	<insert id="writeService"
+	<insert id="requestService"
 		parameterType="deliveryService.model.DeliveryBoardVO">
 		insert into delivery_board values(board_num_seq.nextval,
 		#{title},
@@ -44,8 +39,8 @@
 		sysdate,
 		#{deadline},
 		#{bid},
-		#{helper_check},
-		#{helper_id})
+		null,
+		null)
 	</insert>
 
 	<!-- 심부름 댓글 작성 -->
@@ -71,20 +66,24 @@
 	
 	<!-- 심부름 게시글 전체 보기 -->
 	<select id="selectDeliveryB"
-	parameterType="deliveryService.model.DeliveryBoardVO">
+	resultType="deliveryService.model.DeliveryBoardVO">
 		select * from delivery_board
-	</select>
-	
-	<!-- 심부름 게시글 하나 보기 -->
-	<select id="viewDelivery" 
-	parameterType="deliveryService.model.DeliveryBoardVO">
-		select * from delivery_board where num=#{num}
 	</select>
 	
 	<!-- 심부름 게시글 카테고리별 보기 -->
 	<select id="selectDeliveryCate" 
-	parameterType="deliveryService.model.DeliveryBoardVO">
+	resultType="deliveryService.model.DeliveryBoardVO">
 		select * from delivery_board where separation =#{separation}
+	</select>
+	
+	<!-- 아이디 중복체크 -->>
+	<select id="IdCheck" resultType="deliveryService.model.MemberVO">
+		select * from delivery_member where id=#{id}
+	</select>
+	
+	<!-- 이메일 중복체크 -->
+	<select id="emailDupleCheck" resultType="deliveryService.model.MemberVO">
+		select email from delivery_member where id = #{id}
 	</select>
 </mapper>
 

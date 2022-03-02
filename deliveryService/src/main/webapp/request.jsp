@@ -1,3 +1,4 @@
+<%@page import="deliveryService.model.MemberVO"%>
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
 <!DOCTYPE html>
@@ -7,10 +8,15 @@
 <link rel="stylesheet" href="assets/css/popup.css" />
 <title>Insert title here</title>
 </head>
+
+ <%
+      MemberVO vo = (MemberVO)session.getAttribute("vo");
+      out.print(vo);
+   %>
 <body class="dimmed">
-    <form action="#" method="post">
+    <form action="requestService" method="post">
     <div class="popup">
-        <div class="title" align="center">심부름 요청서</div>
+        <div class="title" align="center"> 심부름 요청서</div>
         <div class="content">
             <fieldset class = "fie1" align="center">
                 <label class = "legend"><b>심부름 항목 선택</b> </label>
@@ -34,7 +40,7 @@
                     <p><label class = "legend"><b>심부름 제목</b> </label> <input type="text" name="title" placeholder="제목을 입력해주세요!"
                         style="text-align: left; width: 250px; height: 30px;"></p>
                     <!-- <p><label class = "legend"><b>시작 날짜</b> </label> <input type="date" style="text-align: left; width: 250px; height: 30px;"></p> -->
-                    <p><label class = "legend"><b>마감 일자</b> </label> <input type="date" style="text-align: left; width: 250px; height: 30px;"></p>
+                    <p><label class = "legend"><b>마감 일자</b> </label> <input type="date" name="deadline" style="text-align: left; width: 250px; height: 30px;"></p>
                       
                     <hr>
                     <label class = "legend"><b>선호 헬퍼 성별 : </b> </label>
@@ -75,7 +81,7 @@
             <hr>
             <div data-role="fieldcontain">
               <label class = "legend"><b>심부름 요청 내용</b> </label>
-              <input type="image" value="사진첨부">
+              <input type="image" name="file" value="사진첨부">
               <br>
               <input type="text" name="content" placeholder="요청 내용을 상세하게 입력해 주세요."
               style="text-align: left; width: 400px; height: 200px;">
@@ -86,7 +92,7 @@
            <div data-role="footer" data-position="fixed" align="center">
                 <a href="index.jsp" class="button next">홈으로</a>
                 <a href="deliveryBoard.html" class="button next">취소</a>
-                <a href="deliveryBoard.html" class="button next">올리기</a>
+                <button type="submit" class="button next">올리기</button>
            </div>
             
          </div>

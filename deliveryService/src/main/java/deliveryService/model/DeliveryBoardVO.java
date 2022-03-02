@@ -36,6 +36,19 @@ public class DeliveryBoardVO {
 		this.fileName = fileName;
 	}
 
+	public DeliveryBoardVO(String title, String helperGender, String exception, String place, int money,
+			int separation, String content, String deadLine, String fileName) {
+		this.title = title;
+		this.helperGender = helperGender;
+		this.exception = exception;
+		this.place = place;
+		this.money = money;
+		this.separation = separation;
+		this.content = content;
+		this.deadLine = deadLine;
+		this.fileName = fileName;
+	}
+
 	public int getNum() {
 		return num;
 	}

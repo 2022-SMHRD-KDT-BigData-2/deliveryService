@@ -4,9 +4,9 @@
     pageEncoding="EUC-KR"%>
 <!DOCTYPE HTML>
 <!--
-	Forty by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+   Forty by HTML5 UP
+   html5up.net | @ajlkn
+   Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
 <html>
 	<head>
@@ -25,17 +25,40 @@
 		out.print(uvo);
 	%>
 
-		<!-- Wrapper -->
-			<div id="wrapper">
+      <!-- Wrapper -->
+         <div id="wrapper">
 
-				<!-- Header -->
-					<header id="header" class="alt">
-						<a href="index.jsp" class="logo"><strong>심부릉</strong></a>
-						<nav>
-							<a href="#menu">Menu</a>
-						</nav>
-					</header>
+            <!-- Header -->
+               <header id="header" class="alt">
+                  <a href="index.jsp" class="logo"><strong>심부릉</strong></a>
+                  <nav>
+                     <a href="#menu">Menu</a>
+                  </nav>
+               </header>
 
+<<<<<<< HEAD
+            <!-- Menu -->
+               <nav id="menu">
+                  <ul class="links">
+                     <ul class="actions stacked">
+                  <% 
+                  if(vo == null){
+                  %>
+                     <li><a href="Join.jsp" class="button fit">회원가입</a></li>
+                     <li><a href="login.jsp" class="button fit">로그인</a></li>
+                  </ul>
+                  <%} else { %>
+                  </ul>
+                     <li><a href="deliveryBoard.html" class="button fit">심부름 게시판</a></li>
+                     <li><a href="Exchange.jsp" class="button fit">물물교환 게시판</a></li>
+                     <li><a href="myPage.html" class="button fit">마이페이지</a></li>
+                     <li><a href="callCenter.html" class="button fit">고객센터</a></li>
+                     <li><a href="logoutService" class="button fit">로그아웃</a></li>
+                  </ul>
+                  
+                  <%} %>
+               </nav>
+=======
 				<!-- Menu -->
 					<nav id="menu">
 						<ul class="links">
@@ -57,31 +80,33 @@
 						
 						<%} %>
 					</nav>
+>>>>>>> branch 'master' of https://github.com/2022-SMHRD-KDT-BigData-2/deliveryService.git
 
-				<!-- Banner -->
-				
-					<section id="banner" class="major">
-						<div class="inner">
-							<header class="major">
-								<h1>전대생 어서오고</h1>
-							</header>
-							<div class="content">
-								<p>Chonnam National University Students, Welcome!</p>
-								<ul class="actions">
-								<%if(vo == null) {%>
-									<li><a href="Login.jsp" class="button next scrolly">로그인</a></li>
-									<li><a href="Join.jsp" class="button next scrolly">회원가입</a></li>
-								<%} else { %>
-								<li><a href="#one" class="button next scrolly">한번 눌러봐</a></li>
-								<%} %>
-								</ul>
-							</div>
-						</div>
-					</section>
-				<% if(vo != null) { %>
-				<!-- Main -->
-					<div id="main">
+            <!-- Banner -->
+            
+               <section id="banner" class="major">
+                  <div class="inner">
+                     <header class="major">
+                        <h1>전대생 어서오고</h1>
+                     </header>
+                     <div class="content">
+                        <p>Chonnam National University Students, Welcome!</p>
+                        <ul class="actions">
+                        <%if(vo == null) {%>
+                           <li><a href="Login.jsp" class="button next scrolly">로그인</a></li>
+                           <li><a href="Join.jsp" class="button next scrolly">회원가입</a></li>
+                        <%} else { %>
+                        <li><a href="#one" class="button next scrolly">한번 눌러봐</a></li>
+                        <%} %>
+                        </ul>
+                     </div>
+                  </div>
+               </section>
+            <% if(vo != null) { %>
+            <!-- Main -->
+               <div id="main">
 
+<<<<<<< HEAD
 						<!-- One -->
 							<section id="one" class="tiles">
 								<article>
@@ -139,16 +164,16 @@
 						</div>
 					</footer>
 
-			</div>
+         </div>
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+      <!-- Scripts -->
+         <script src="assets/js/jquery.min.js"></script>
+         <script src="assets/js/jquery.scrolly.min.js"></script>
+         <script src="assets/js/jquery.scrollex.min.js"></script>
+         <script src="assets/js/browser.min.js"></script>
+         <script src="assets/js/breakpoints.min.js"></script>
+         <script src="assets/js/util.js"></script>
+         <script src="assets/js/main.js"></script>
 
-	</body>
+   </body>
 </html>

@@ -1,3 +1,4 @@
+<%@page import="deliveryService.model.MemberVO"%>
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
 <!DOCTYPE html>
@@ -8,6 +9,12 @@
 <title>심부릉 : 로그인 페이지</title>
 </head>
 <body>
+<%
+		MemberVO vo = (MemberVO)session.getAttribute("vo");
+		out.print(vo);
+		
+		
+	%>
 		<header>
 			<div class="logo-wrap">
 				<img src="">
@@ -24,9 +31,8 @@
 			</div>
 		
 			<div class="login-button-wrap">
-				<button id ="" type="submit" value="" style="cursor: pointer;">Back</button>
-				<button  id ="" type="submit" value="" style="cursor: pointer;">Sign in</button>
-
+				<a href="Main.jsp"><button id ="" type="button" value="" style="cursor: pointer;">Back</button></a>
+				<button id ="" type="submit" style="cursor: pointer;">Sign in</button>
 			</div>
 			 </form>
 		</section>
