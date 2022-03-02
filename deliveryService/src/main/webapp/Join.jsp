@@ -113,7 +113,7 @@
         
         </form>
         
-        <!--  <script type="text/javascript">
+        <script type="text/javascript">
         	
         	
             function check_pw(){
@@ -154,7 +154,7 @@
                 }
             }
             
-            </script>-->
+            </script>
 			
 			
 </body>
