@@ -1,3 +1,4 @@
+<%@page import="deliveryService.model.DeliveryBoardVO"%>
 <%@page import="deliveryService.model.MemberVO"%>
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
@@ -19,6 +20,9 @@
 	<%
 		MemberVO vo = (MemberVO)session.getAttribute("vo");
 		out.print(vo);
+		
+		DeliveryBoardVO uvo = (DeliveryBoardVO)session.getAttribute("vo");
+		out.print(uvo);
 	%>
 
 		<!-- Wrapper -->
@@ -40,7 +44,7 @@
 						if(vo == null){
 						%>
 							<li><a href="Join.jsp" class="button fit">회원가입</a></li>
-							<li><a href="login.jsp" class="button fit">로그인</a></li>
+							<li><a href="Login.jsp" class="button fit">로그인</a></li>
 						</ul>
 						<%} else { %>
 						</ul>
@@ -85,7 +89,7 @@
 										<img src="images/pic01.jpg" alt="" />
 									</span>
 									<header class="major">
-										<h3><a href="deliveryBoard.html" class="link">심부름 게시판</a></h3>
+										<h3><a href="deliveryBoard.jsp" class="link">심부름 게시판</a></h3>
 										<p>The page to request errands</p>
 									</header>
 								</article>

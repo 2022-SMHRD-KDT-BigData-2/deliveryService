@@ -1,19 +1,27 @@
-<!DOCTYPE HTML>
-<!--
-	Forty by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
+<%@page import="deliveryService.model.DeliveryBoardVO"%>
+<%@page import="deliveryService.model.MemberVO"%>
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
+    pageEncoding="EUC-KR"%>
+<!DOCTYPE html>
 <html>
-	<head>
-		<title>ì‹¬ë¶€ë¦„ ê²Œì‹œíŒ - ì‹¬ë¶€ë¦‰</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/deliverymain.css" />
 		<link rel="stylesheet" href="assets/css/categorylist.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="is-preload">
+</head>
+
+<body class="is-preload">
+	<%
+		MemberVO vo = (MemberVO)session.getAttribute("vo");
+		out.print(vo);
+	
+		DeliveryBoardVO uvo = (DeliveryBoardVO)session.getAttribute("vo");
+		out.print(uvo);
+	%>
+	
 
 		<!-- Wrapper -->
 			<div id="wrapper">
@@ -21,7 +29,7 @@
 				<!-- Header -->
 				<!-- Note: The "styleN" class below should match that of the banner element. -->
 					<header id="header" class="alt style2">
-						<a href="index.html" class="logo"><strong>ì‹¬ë¶€ë¦‰</strong> </a>
+						<a href="index.html" class="logo"><strong>½ÉºÎ¸ª</strong> </a>
 						<nav>
 							<a href="#menu">Menu</a>
 						</nav>
@@ -31,14 +39,14 @@
 					<nav id="menu">
 						<ul class="links">
 							<li><a href="index.html">Home</a></li>
-							<li><a href="deliveryBoard.html">ì‹¬ë¶€ë¦„ ê²Œì‹œíŒ</a></li>
-							<li><a href="Exchange.html">ë¬¼ë¬¼êµí™˜ ê²Œì‹œíŒ</a></li>
-							<li><a href="myPage.html">ë§ˆì´í˜ì´ì§€</a></li>
-							<li><a href="callCenter.html">ê³ ê°ì„¼í„°</a></li>
+							<li><a href="deliveryBoard.html">½ÉºÎ¸§ °Ô½ÃÆÇ</a></li>
+							<li><a href="Exchange.html">¹°¹°±³È¯ °Ô½ÃÆÇ</a></li>
+							<li><a href="myPage.html">¸¶ÀÌÆäÀÌÁö</a></li>
+							<li><a href="callCenter.html">°í°´¼¾ÅÍ</a></li>
 						</ul>
 						<ul class="actions stacked">
-							<li><a href="join.jsp" class="button fit">íšŒì›ê°€ì…</a></li>
-							<li><a href="login.html" class="button fit">ë¡œê·¸ì¸</a></li>
+							<li><a href="join.jsp" class="button fit">È¸¿ø°¡ÀÔ</a></li>
+							<li><a href="login.html" class="button fit">·Î±×ÀÎ</a></li>
 						</ul>
 					</nav>
 
@@ -50,7 +58,7 @@
 								<img src="images/pic07.jpg" alt="" />
 							</span>
 							<header class="major">
-								<h1>ì‹¬ë¶€ë¦„ ê²Œì‹œíŒ</h1>
+								<h1>½ÉºÎ¸§ °Ô½ÃÆÇ</h1>
 							</header>
 							<div class="content">
 								<p>It's a page where you can request errands.</p>
@@ -65,20 +73,20 @@
 							<section id="one">
 								<div class="inner">
 									<header class="major">
-										<h2>ì‹¬ë¶€ë¦„ ì¹´í…Œê³ ë¦¬</h2>
+										<h2>½ÉºÎ¸§ Ä«Å×°í¸®</h2>
 									</header>
 									<div class="list">
-									<a href="all.jsp">ì „ì²´</a>&nbsp;&nbsp;&nbsp;&nbsp;
-									<a href="1.jsp">ë°°ë‹¬</a>&nbsp;&nbsp;&nbsp;&nbsp;
-									<a href="2.jsp">ë™í–‰</a>&nbsp;&nbsp;&nbsp;&nbsp;
-									<a href="3.jsp">ì¥í•™ê¸ˆ</a>&nbsp;&nbsp;&nbsp;&nbsp;
-									<a href="4.jsp">ì—­í• ëŒ€í–‰</a>&nbsp;&nbsp;&nbsp;&nbsp;
-									<a href="5.jsp">ìš©ë³‘êµ¬í•˜ê¸°</a>&nbsp;&nbsp;&nbsp;&nbsp;
-									<a href="6.jsp">ë¹„ëŒ€ë©´</a>&nbsp;&nbsp;&nbsp;&nbsp;
-									<a href="7.jsp">ë²Œë ˆ ì¡ì•„ì£¼ê¸°</a>&nbsp;&nbsp;&nbsp;&nbsp;
-									<a href="8.jsp">ìƒí™œì˜ ë‹¬ì¸</a>&nbsp;&nbsp;&nbsp;&nbsp;
-									<a href="9.jsp">ë°˜ë ¤ê²¬</a>&nbsp;&nbsp;&nbsp;&nbsp;
-									<a href="10.jsp">ê¸°íƒ€</a>
+									<a href="all.jsp">ÀüÃ¼</a>&nbsp;&nbsp;&nbsp;&nbsp;
+									<a href="1.jsp">¹è´Ş</a>&nbsp;&nbsp;&nbsp;&nbsp;
+									<a href="2.jsp">µ¿Çà</a>&nbsp;&nbsp;&nbsp;&nbsp;
+									<a href="3.jsp">ÀåÇĞ±İ</a>&nbsp;&nbsp;&nbsp;&nbsp;
+									<a href="4.jsp">¿ªÇÒ´ëÇà</a>&nbsp;&nbsp;&nbsp;&nbsp;
+									<a href="5.jsp">¿ëº´±¸ÇÏ±â</a>&nbsp;&nbsp;&nbsp;&nbsp;
+									<a href="6.jsp">ºñ´ë¸é</a>&nbsp;&nbsp;&nbsp;&nbsp;
+									<a href="7.jsp">¹ú·¹ Àâ¾ÆÁÖ±â</a>&nbsp;&nbsp;&nbsp;&nbsp;
+									<a href="8.jsp">»ıÈ°ÀÇ ´ŞÀÎ</a>&nbsp;&nbsp;&nbsp;&nbsp;
+									<a href="9.jsp">¹İ·Á°ß</a>&nbsp;&nbsp;&nbsp;&nbsp;
+									<a href="10.jsp">±âÅ¸</a>
 									</div>
 								</div>
 							</section>
@@ -87,23 +95,23 @@
 							<section id="three">
 								<div class="inner">
 									<header class="major">
-										<h2>ê²Œì‹œíŒ</h2>
+										<h2>°Ô½ÃÆÇ</h2>
 													
 									</header>
 									<div class="table-wrapper">
 														<table>
 															<thead>
 																<tr>
-																	<th>ë²ˆí˜¸</th>
-																	<th>ì œëª©</th>
-																	<th>ì‘ì„±ì</th>
-																	<th>ì‘ì„±ì¼</th>
+																	<th>¹øÈ£</th>
+																	<th>Á¦¸ñ</th>
+																	<th>ÀÛ¼ºÀÚ</th>
+																	<th>ÀÛ¼ºÀÏ</th>
 																</tr>
 															</thead>
 															<tbody>
 																<tr>
 																	<td>1</td>
-																	<td><a href="#"></a></td>
+																	<td><a href="#"><%=uvo.getTitle() %></a></td>
 																	<td><a href="#">29.99</a></td>
 																	<td><a href="#">2022-02-26</a></td>
 																</tr>
@@ -149,8 +157,8 @@
 													</div>
 									
 									<ul class="actions">
-										<li><a href="request.jsp" id="show" class="button next">ì‹¬ë¶€ë¦„ ìš”ì²­í•˜ê¸°!</a></li>
-										<!--  <input type="button" value="íŒì—…ì°½ í˜¸ì¶œ" onclick="showPopup();">
+										<li><a href="request.jsp" id="show" class="button next">½ÉºÎ¸§ ¿äÃ»ÇÏ±â!</a></li>
+										<!--  <input type="button" value="ÆË¾÷Ã¢ È£Ãâ" onclick="showPopup();">
 									<script>
 										function showPopup() {
 											window.open("08_2_popup.html", "a", "width=400, height=300, left=100, top=50");
