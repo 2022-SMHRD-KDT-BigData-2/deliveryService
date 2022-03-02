@@ -52,6 +52,18 @@
 		<description></description>
 		<servlet-class>deliveryService.controller.requestService</servlet-class>
 	</servlet>
+	<servlet>
+		<servlet-name>goBoardMain</servlet-name>
+		<display-name>goBoardMain</display-name>
+		<description></description>
+		<servlet-class>deliveryService.controller.goBoardMain</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>goViewBoard</servlet-name>
+		<display-name>goViewBoard</display-name>
+		<description></description>
+		<servlet-class>deliveryService.controller.goViewBoard</servlet-class>
+	</servlet>
 	
 	<servlet-mapping>
 		<servlet-name>joinService</servlet-name>
@@ -85,5 +97,13 @@
 	<servlet-mapping>
 		<servlet-name>requestService</servlet-name>
 		<url-pattern>/requestService</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>goBoardMain</servlet-name>
+		<url-pattern>/goBoardMain</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>goViewBoard</servlet-name>
+		<url-pattern>/goViewBoard</url-pattern>
 	</servlet-mapping>
 </web-app>

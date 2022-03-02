@@ -19,10 +19,9 @@
 	<body class="is-preload">
 	<%
 		MemberVO vo = (MemberVO)session.getAttribute("vo");
-		out.print(vo);
 		
-		DeliveryBoardVO uvo = (DeliveryBoardVO)session.getAttribute("vo");
-		out.print(uvo);
+		out.print(vo);
+	
 	%>
 
       <!-- Wrapper -->
@@ -36,7 +35,7 @@
                   </nav>
                </header>
 
-<<<<<<< HEAD
+
             <!-- Menu -->
                <nav id="menu">
                   <ul class="links">
@@ -45,11 +44,11 @@
                   if(vo == null){
                   %>
                      <li><a href="Join.jsp" class="button fit">회원가입</a></li>
-                     <li><a href="login.jsp" class="button fit">로그인</a></li>
+                     <li><a href="Login.jsp" class="button fit">로그인</a></li>
                   </ul>
                   <%} else { %>
                   </ul>
-                     <li><a href="deliveryBoard.html" class="button fit">심부름 게시판</a></li>
+                     <li><a href="goBoardMain" class="button fit">심부름 게시판</a></li>
                      <li><a href="Exchange.jsp" class="button fit">물물교환 게시판</a></li>
                      <li><a href="myPage.html" class="button fit">마이페이지</a></li>
                      <li><a href="callCenter.html" class="button fit">고객센터</a></li>
@@ -58,7 +57,7 @@
                   
                   <%} %>
                </nav>
-=======
+
 				<!-- Menu -->
 					<nav id="menu">
 						<ul class="links">
@@ -71,7 +70,7 @@
 						</ul>
 						<%} else { %>
 						</ul>
-							<li><a href="deliveryBoard.html" class="button fit">심부름 게시판</a></li>
+							<li><a href="goBoardMain" class="button fit">심부름 게시판</a></li>
 							<li><a href="Exchange.jsp" class="button fit">물물교환 게시판</a></li>
 							<li><a href="myPage.html" class="button fit">마이페이지</a></li>
 							<li><a href="callCenter.html" class="button fit">고객센터</a></li>
@@ -80,7 +79,6 @@
 						
 						<%} %>
 					</nav>
->>>>>>> branch 'master' of https://github.com/2022-SMHRD-KDT-BigData-2/deliveryService.git
 
             <!-- Banner -->
             

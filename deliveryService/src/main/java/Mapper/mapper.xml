@@ -82,6 +82,10 @@
 		select * from delivery_board where separation =#{separation}
 	</select>
 	
+	<select id="viewDelivery" resultType="deliveryService.model.DeliveryBoardVO">
+		select * from delivery_board where num = #{num}
+	</select>
+	
 	
 	<!-- 이메일 중복체크 -->
 	<select id="emailDupleCheck" resultType="deliveryService.model.MemberVO">

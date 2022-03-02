@@ -5,6 +5,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import com.oreilly.servlet.MultipartRequest;
 import com.oreilly.servlet.multipart.DefaultFileRenamePolicy;
@@ -38,11 +39,17 @@ public class requestService extends HttpServlet {
 		String content = multi.getParameter("content");
 		String deadLine = multi.getParameter("deadLine");
 		String fileName = multi.getFilesystemName("file");
-		//String bid = multi.
-		DeliveryBoardVO vo = new DeliveryBoardVO(title, helper_Gender, helper_exception, place, money, separation, content, deadLine, fileName);
+		//String bid = multi.getPara
+		DeliveryBoardVO uvo = new DeliveryBoardVO(title, helper_Gender, helper_exception, place, money, separation, content, deadLine, fileName);
 
 		DeliveryBoardDAO dao = new DeliveryBoardDAO();
-		int cnt = dao.writeBoard(vo);
+		int cnt = dao.writeBoard(uvo);
+		
+		if(uvo != null) {
+
+			HttpSession session = request.getSession();
+			session.setAttribute("uvo", uvo);
+		}
 
 		if (cnt > 0) {
 			System.out.println("게시글 작성 성공");

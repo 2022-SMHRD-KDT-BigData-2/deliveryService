@@ -40,7 +40,7 @@ public class DeliveryBoardDAO {
 		
 		SqlSession session = sqlSessionFactory.openSession();
 		
-		List<DeliveryBoardVO> list = (List)session.selectList("selectDeliveryB");
+		List<DeliveryBoardVO> list = session.selectList("selectDeliveryB");
 		
 		session.close();
 		
@@ -50,7 +50,7 @@ public class DeliveryBoardDAO {
 	public List<DeliveryBoardVO> selectDeliveryCate(){
 		SqlSession session = sqlSessionFactory.openSession();
 		
-		List<DeliveryBoardVO> list = (List)session.selectList("selectDeliveryCate");
+		List<DeliveryBoardVO> list = session.selectList("selectDeliveryCate");
 		
 		session.close();
 		
@@ -67,4 +67,6 @@ public class DeliveryBoardDAO {
 		
 		return vo;
 	}
+
+	
 }
