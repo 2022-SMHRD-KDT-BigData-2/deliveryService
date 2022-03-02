@@ -11,8 +11,9 @@
 </style>
 </head>
 <body>
+
 	<div class="logo">
-		<a href="" target="_blank" title="심부릉">
+		<a href="index.jsp" target="_blank" title="심부릉">
 		<img src="./images/Linesa.png" class="logo"></a>
 	</div>
 	<!--회원정보 부분-->
@@ -20,7 +21,7 @@
                 <!--아이디,비번,비번재확인-->
                 <div class="fontgan">
                 	<h2 style="display: inline;">아이디</h2>
-                	<h2 style="display: inline;"><!--<%//vo 구간 %>--> 아이디</h2>
+                	<h2 style="display: inline;"><!--//vo 구간 --> 아이디</h2>
 				</div>
                 <h3>비밀번호 변경</h3>
                 <span class="signup-input">

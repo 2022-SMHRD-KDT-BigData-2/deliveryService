@@ -35,34 +35,10 @@
   	<servlet-class>deliveryService.controller.CheckService</servlet-class>
   </servlet>
   <servlet>
-  	<servlet-name>idCheck</servlet-name>
-  	<display-name>idCheck</display-name>
+  	<servlet-name>HelperCheck</servlet-name>
+  	<display-name>HelperCheck</display-name>
   	<description></description>
-  	<servlet-class>deliveryService.controller.idCheck</servlet-class>
-  </servlet>
-  <servlet>
-  	<servlet-name>IdCheck</servlet-name>
-  	<display-name>IdCheck</display-name>
-  	<description></description>
-  	<servlet-class>deliveryService.controller.IdCheck</servlet-class>
-  </servlet>
-  <servlet>
-  	<servlet-name>MailController</servlet-name>
-  	<display-name>MailController</display-name>
-  	<description></description>
-  	<servlet-class>deliveryService.controller.MailController</servlet-class>
-  </servlet>
-  <servlet>
-  	<servlet-name>gameService</servlet-name>
-  	<display-name>gameService</display-name>
-  	<description></description>
-  	<servlet-class>deliveryService.controller.gameService</servlet-class>
-  </servlet>
-  <servlet>
-  	<servlet-name>jaxService</servlet-name>
-  	<display-name>jaxService</display-name>
-  	<description></description>
-  	<servlet-class>deliveryService.controller.jaxService</servlet-class>
+  	<servlet-class>deliveryService.controller.HelperCheck</servlet-class>
   </servlet>
   <servlet-mapping>
   	<servlet-name>joinService</servlet-name>
@@ -84,24 +60,8 @@
   	<servlet-name>CheckService</servlet-name>
   	<url-pattern>/CheckService</url-pattern>
   </servlet-mapping>
-  <servlet-mapping>
-  	<servlet-name>idCheck</servlet-name>
-  	<url-pattern>/idCheck</url-pattern>
-  </servlet-mapping>
-  <servlet-mapping>
-  	<servlet-name>IdCheck</servlet-name>
-  	<url-pattern>/IdCheck</url-pattern>
-  </servlet-mapping>
-  <servlet-mapping>
-  	<servlet-name>MailController</servlet-name>
-  	<url-pattern>/MailController</url-pattern>
-  </servlet-mapping>
-  <servlet-mapping>
-  	<servlet-name>gameService</servlet-name>
-  	<url-pattern>/gameService</url-pattern>
-  </servlet-mapping>
-  <servlet-mapping>
-  	<servlet-name>jaxService</servlet-name>
-  	<url-pattern>/jaxService</url-pattern>
+    <servlet-mapping>
+  	<servlet-name>HelperCheck</servlet-name>
+  	<url-pattern>/HelperCheck</url-pattern>
   </servlet-mapping>
 </web-app>

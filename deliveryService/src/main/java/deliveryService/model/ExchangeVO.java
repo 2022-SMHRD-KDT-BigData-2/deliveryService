@@ -7,76 +7,106 @@ public class ExchangeVO {
 	private String exid;
 	private String title;
 	private String content;
-	private Date day;
-	private Date deadline;
-	private String fileName;
+	private String day;
+	private String deadline;
+	private String exfinish;
+	private String exfileName;
 	
-	public ExchangeVO(int num, String exid, String title, String content, Date day, Date deadline, String fileName) {
-		super();
+	
+	public ExchangeVO(int num, String exid, String title, String content, String day, String deadline, String exfinish,
+			String exfileName) {
+		
 		this.num = num;
 		this.exid = exid;
 		this.title = title;
 		this.content = content;
 		this.day = day;
 		this.deadline = deadline;
-		this.fileName = fileName;
+		this.exfinish = exfinish;
+		this.exfileName = exfileName;
 	}
+
 
 	public int getNum() {
 		return num;
 	}
 
+
 	public void setNum(int num) {
 		this.num = num;
 	}
+
 
 	public String getExid() {
 		return exid;
 	}
 
+
 	public void setExid(String exid) {
 		this.exid = exid;
 	}
+
 
 	public String getTitle() {
 		return title;
 	}
 
+
 	public void setTitle(String title) {
 		this.title = title;
 	}
+
 
 	public String getContent() {
 		return content;
 	}
 
+
 	public void setContent(String content) {
 		this.content = content;
 	}
 
-	public Date getDay() {
+
+	public String getDay() {
 		return day;
 	}
 
-	public void setDay(Date day) {
+
+	public void setDay(String day) {
 		this.day = day;
 	}
 
-	public Date getDeadline() {
+
+	public String getDeadline() {
 		return deadline;
 	}
 
-	public void setDeadline(Date deadline) {
+
+	public void setDeadline(String deadline) {
 		this.deadline = deadline;
 	}
 
-	public String getFileName() {
-		return fileName;
+
+	public String getExfinish() {
+		return exfinish;
 	}
 
-	public void setFileName(String fileName) {
-		this.fileName = fileName;
+
+	public void setExfinish(String exfinish) {
+		this.exfinish = exfinish;
 	}
+
+
+	public String getExfileName() {
+		return exfileName;
+	}
+
+
+	public void setExfileName(String exfileName) {
+		this.exfileName = exfileName;
+	}
+
+
 	
 	
 		

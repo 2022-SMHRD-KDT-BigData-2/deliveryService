@@ -26,19 +26,18 @@ public class loginService extends HttpServlet {
 		MemberVO vo = new MemberVO(id, pw);
 
 		MemberDAO dao = new MemberDAO();
-
-		MemberVO uvo = dao.login(vo);
-
-		if (uvo != null) {
-
-			HttpSession session = request.getSession();
-			session.setAttribute("vo", uvo);
-
-		} else {
-
-		}
-		response.sendRedirect("index.jsp");
-
+		
+		  MemberVO uvo= dao.login(vo);
+		 
+		  if(uvo != null) {
+		 
+		  HttpSession session = request.getSession(); 
+		  session.setAttribute("vo", uvo);
+		  
+		  }else {
+		
+		  } response.sendRedirect("index.jsp");
+		
 	}
 
 }

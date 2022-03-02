@@ -5,8 +5,8 @@
 <html>
 <head>
 <meta charset="EUC-KR">
-<link rel="stylesheet" href="assets/css/Login.css" />
-<title>Insert title here</title>
+<link rel="stylesheet" href="assets/css/Loginn.css" />
+<title>심부릉 : 로그인 페이지</title>
 </head>
 <body>
 <%
@@ -16,12 +16,6 @@
 		
 	%>
 		<header>
-			<div class="sel-lang-wrap">
-				<select class="lang-select" id="lange">
-					<option>한국어</option>
-					<option>English</option>
-				</select>
-			</div>
 			<div class="logo-wrap">
 				<img src="">
 			</div>
@@ -42,7 +36,6 @@
 			</div>
 			 </form>
 		</section>
-			<p class="forget-msg">Forgot your Username or Password? | Sign up</p>
 		
 </body>
 </html>

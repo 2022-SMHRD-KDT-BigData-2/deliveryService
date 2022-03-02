@@ -9,6 +9,10 @@
 		values(#{id},#{pw},#{gender},#{major},#{nation},#{email},'N')
 	</insert>
 
+     <update id="HelperCheck" parameterType="deliveryService.model.MemberVO">
+		update DELIVERY_MEMBER set HELPER_CHECK = #{helper_check} where id = #{id}
+	</update>
+	
 	<select id="loginService"
 		parameterType="deliveryService.model.MemberVO"
 		resultType="deliveryService.model.MemberVO">
@@ -19,7 +23,7 @@
 	<insert id="ExchangeService"
 		parameterType="deliveryService.model.ExchangeVO">
 		insert into EXCAHNGE
-		values(exchange_num_seq.nextval,#{exid},#{title},#{content},sysdate,#{deadline},#{ex_finish})
+		values(exchange_num_seq.nextval,#{exid},#{title},#{content},sysdate,#{deadline},#{ex_finish},#{exfilename})
 	</insert>
 
 	<!-- 심부름 게시글 작성 -->

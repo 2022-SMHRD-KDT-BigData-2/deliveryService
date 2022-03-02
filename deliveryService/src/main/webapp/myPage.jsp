@@ -1,25 +1,23 @@
-<!DOCTYPE HTML>
-<!--
-	Forty by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
+    pageEncoding="EUC-KR"%>
+<!DOCTYPE html>
 <html>
-	<head>
-		<title>ë§ˆì´í˜ì´ì§€ - ì‹¬ë¶€ë¦‰</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/deliverymain.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="is-preload">
+<head>
+<meta charset="EUC-KR">
+<title>½ÉºÎ¸ª : ¸¶ÀÌÆäÀÌÁö</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="assets/css/deliverymain.css" />
+	<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+</head>
+<body>
+<body class="is-preload">
 
 		<!-- Wrapper -->
 			<div id="wrapper">
 
 				<!-- Header -->
 					<header id="header">
-						<a href="index.html" class="logo"><strong>ì‹¬ë¶€ë¦‰</strong> </a>
+						<a href="index.html" class="logo"><strong>½ÉºÎ¸ª</strong> </a>
 						<nav>
 							<a href="#menu">Menu</a>
 						</nav>
@@ -29,14 +27,14 @@
 					<nav id="menu">
 						<ul class="links">
 							<li><a href="index.html">Home</a></li>
-							<li><a href="deliveryBoard.html">ì‹¬ë¶€ë¦„ ê²Œì‹œíŒ</a></li>
-							<li><a href="Exchange.html">ë¬¼ë¬¼êµí™˜ ê²Œì‹œíŒ</a></li>
-							<li><a href="myPage.html">ë§ˆì´í˜ì´ì§€</a></li>
-							<li><a href="callCenter.html">ê³ ê°ì„¼í„°</a></li>
+							<li><a href="deliveryBoard.html">½ÉºÎ¸§ °Ô½ÃÆÇ</a></li>
+							<li><a href="Exchange.html">¹°¹°±³È¯ °Ô½ÃÆÇ</a></li>
+							<li><a href="myPage.html">¸¶ÀÌÆäÀÌÁö</a></li>
+							<li><a href="callCenter.html">°í°´¼¾ÅÍ</a></li>
 						</ul>
 						<ul class="actions stacked">
-							<li><a href="#" class="button fit">íšŒì›ê°€ì…</a></li>
-							<li><a href="login.html" class="button fit">ë¡œê·¸ì¸</a></li>
+							<li><a href="#" class="button fit">È¸¿ø°¡ÀÔ</a></li>
+							<li><a href="login.html" class="button fit">·Î±×ÀÎ</a></li>
 						</ul>
 					</nav>
 
@@ -47,11 +45,11 @@
 							<section id="one">
 								<div class="inner">
 									<header class="major">
-										<h1>ë§ˆì´í˜ì´ì§€</h1>
+										<h1>¸¶ÀÌÆäÀÌÁö</h1>
 									</header>
 
 									<!-- Content -->
-										<h2 id="content">íšŒì›ì •ë³´</h2>
+										<h2 id="content">È¸¿øÁ¤º¸</h2>
 										<p>
 											
 										</p>
@@ -88,9 +86,9 @@
 									<hr class="major" />
 
 									<!-- Elements -->
-										<h2 id="elements">ì´ìš©ë‚´ì—­</h2>
+										<h2 id="elements">ÀÌ¿ë³»¿ª</h2>
 										<div class="row gtr-200">
-											<div class="col-6 col-12-medium">
+											
 
 												<!-- Text stuff -->
 													<h3>Text</h3>
@@ -106,9 +104,7 @@
 													<p>Nunc lacinia ante nunc ac lobortis. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus ornare mi ut ante amet placerat aliquet. Volutpat eu sed ante lacinia sapien lorem accumsan varius montes viverra nibh in adipiscing blandit tempus accumsan.</p>
 
 									<!-- Elements -->
-										<h2 id="elements">ë‚˜ì˜ í‰ê°€</h2>
-										<div class="row gtr-200">
-											<div class="col-6 col-12-medium">
+										<h2 id="elements">³ªÀÇ Æò°¡</h2>
 
 												<!-- Text stuff -->
 													<h3>Text</h3>
@@ -253,7 +249,7 @@
 						</div>
 					</footer>
 
-			</div>
+			
 
 		<!-- Scripts -->
 			<script src="assets/js/jquery.min.js"></script>
@@ -264,5 +260,5 @@
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
 
-	</body>
+</body>
 </html>

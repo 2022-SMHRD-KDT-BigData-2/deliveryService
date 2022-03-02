@@ -1,25 +1,26 @@
-<!DOCTYPE HTML>
-<!--
-	Forty by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
+<%@page import="deliveryService.model.MemberVO"%>
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
+    pageEncoding="EUC-KR"%>
+<!DOCTYPE html>
 <html>
-	<head>
-		<title>ë¬¼ë¬¼êµí™˜ ê²Œì‹œíŒ - ì‹¬ë¶€ë¦‰</title>
-		<meta charset="utf-8" />
+<head>
+<title>¹°¹°±³È¯ °Ô½ÃÆÇ - ½ÉºÎ¸ª</title>
+		<meta charset="EUC-KR">
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/deliverymain.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="is-preload">
-
+</head>
+<body class="is-preload">
+<%
+		MemberVO vo = (MemberVO)session.getAttribute("vo");
+		out.print(vo);
+	%>
 		<!-- Wrapper -->
 			<div id="wrapper">
 
 				<!-- Header -->
 					<header id="header">
-						<a href="index.html" class="logo"><strong>ì‹¬ë¶€ë¦‰</strong> <span></span></a>
+						<a href="index.jsp" class="logo"><strong>½ÉºÎ¸ª</strong> <span></span></a>
 						<nav>
 							<a href="#menu">Menu</a>
 						</nav>
@@ -28,15 +29,22 @@
 				<!-- Menu -->
 					<nav id="menu">
 						<ul class="links">
-							<li><a href="index.html">Home</a></li>
-							<li><a href="deliveryBoard.html">ì‹¬ë¶€ë¦„ ê²Œì‹œíŒ</a></li>
-							<li><a href="Exchange.html">ë¬¼ë¬¼êµí™˜ ê²Œì‹œíŒ</a></li>
-							<li><a href="myPage.html">ë§ˆì´í˜ì´ì§€</a></li>
-							<li><a href="callCenter.html">ê³ ê°ì„¼í„°</a></li>
+						<%if(vo == null){ %>
+							<li><a href="index.jsp" class="button fit">Home</a></li>
+							<%}else{ %>
+							<li><a href="deliveryBoard.html" class="button fit">½ÉºÎ¸§ °Ô½ÃÆÇ</a></li>
+							<li><a href="Exchange.jsp" class="button fit">¹°¹°±³È¯ °Ô½ÃÆÇ</a></li>
+							<li><a href="myPage.html" class="button fit">¸¶ÀÌÆäÀÌÁö</a></li>
+							<li><a href="callCenter.html" class="button fit">°í°´¼¾ÅÍ</a></li>
+							<%} %>
 						</ul>
 						<ul class="actions stacked">
-							<li><a href="#" class="button fit">íšŒì›ê°€ì…</a></li>
-							<li><a href="login.html" class="button fit">ë¡œê·¸ì¸</a></li>
+						<%if(vo == null){ %>
+							<li><a href="#" class="button fit">È¸¿ø°¡ÀÔ</a></li>
+							<li><a href="Login.jsp" class="button fit">·Î±×ÀÎ</a></li>
+							<%}else{ %>
+							<li><a href="index.jsp" class="button fit">·Î±×¾Æ¿ô</a></li>
+						<%} %>
 						</ul>
 					</nav>
 
@@ -48,64 +56,63 @@
 							<section id="one">
 								<div class="inner">
 									<header class="major">
-										<h1>ë¬¼ë¬¼êµí™˜ ê²Œì‹œíŒ</h1>
-										<h2>It's a page where you exchange things.</h2>
+										<h1>¹°¹°±³È¯ °Ô½ÃÆÇ</h1>
+										<h2>This is where you trade goods</h2>
 									</header>
 									<span class="image main"><img src="images/R.jpg" alt="" /></span>
 									<!-- Table -->
-													<h3>ê²Œì‹œíŒ</h3>
+													<h3>°Ô½ÃÆÇ</h3>
 													<ul class="actions">
-														<li><a href="ExchangePopup.html" id="show" class="button next">ë¬¼ë¬¼êµí™˜ í•˜ê¸°!</a></li>
+														<li><a href="ExchangePopup.html" id="show" class="button next">¹°¹°±³È¯ ÇÏ±â!</a></li>
 													</ul>
 													<div class="table-wrapper">
 														<table>
 															<thead>
 																<tr>
-																	<th>ë²ˆí˜¸</th>
-																	<th>ì œëª©</th>
-																	<th>ì‘ì„±ì</th>
-																	<th>ì‘ì„±ì¼</th>
+																	<th>¹øÈ£</th>
+																	<th>Á¦¸ñ</th>
+																	<th>ÀÛ¼ºÀÚ</th>
+																	<th>ÀÛ¼ºÀÏ</th>
 																</tr>
 															</thead>
 															<tbody>
 																<tr>
 																	<td>1</td>
 																	<td><a href="#">Ante turpis integer aliquet porttitor.</a></td>
-																	<td>29.99</td>
-																	<td>2022-02-26</td>
+																	<td><a href="#">29.99</a></td>
+																	<td><a href="#">2022-02-26</a></td>
 																</tr>
 																<tr>
 																	<td>2</td>
 																	<td><a href="#">Vis ac commodo adipiscing arcu aliquet.</a></td>
-																	<td>19.99</td>
-																	<td>2022-02-26</td>
+																	<td><a href="#">19.99</a></td>
+																	<td><a href="#">2022-02-26</a></td>
 																</tr>
 																<tr>
 																	<td>3</td>
 																	<td><a href="#">Morbi faucibus arcu accumsan lorem.</a></td>
-																	<td>29.99</td>
-																	<td>2022-02-26</td>	
+																	<td><a href="#">29.99</a></td>
+																	<td><a href="#">2022-02-26</a></td>	
 																</tr>
 																<tr>
 																	<td>4</td>
 																	<td><a href="#">Vitae integer tempus condimentum.</a></td>
-																	<td>19.99</td>
-																	<td>2022-02-26</td>
+																	<td><a href="#">19.99</a></td>
+																	<td><a href="#">2022-02-26</a></td>
 																</tr>
 																<tr>
 																	<td>5</td>
 																	<td><a href="">Ante turpis integer aliquet porttitor.</a></td>
-																	<td>29.99</td>
-																	<td>2022-02-26</td>
+																	<td><a href="#">29.99</a></td>
+																	<td><a href="#">2022-02-26</a></td>
 																</tr>
 															</tbody>
 															
 														</table>
 													</div>
-													
 													<ul class="pagination">
 														<li><span class="button small disabled">Prev</span></li>
-														<li><a href="#" class="page active">1</a></li>
+														<li><a href="#" class="page">1</a></li>
 														<li><a href="#" class="page">2</a></li>
 														<li><a href="#" class="page">3</a></li>
 														<li><span>&hellip;</span></li>

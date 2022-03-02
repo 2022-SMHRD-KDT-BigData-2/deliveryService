@@ -34,8 +34,8 @@
 					<p>헬퍼 활동을 시작하기 위해서 가장 먼저 눌러야하는 것은 프로필의 '헬퍼전환'이다.</P>
 				</fieldset>
 				<div class="checkbox">
-				<br><input  type="radio" name="choice"value="O">O &nbsp;&nbsp;&nbsp;
-				<input  type="radio" name="choice" value="X">X
+				<br><input id = quiz1 type="radio" name="choice"value="O">O &nbsp;&nbsp;&nbsp;
+					<input id = quiz1 type="radio" name="choice" value="X">X
 				</div>
 			</fieldset>
 
@@ -46,8 +46,8 @@
 					<p>고객이 올린 심부름을 하기 위해서는 먼저 고객에게 이메일을 보낸다.</p>
 				</fieldset>
 				<div class="checkbox">
-				<br><input type="radio" name="choice2" value="O">O &nbsp;&nbsp;&nbsp;
-				<input type="radio" name="choice2" value="X">X
+				<br><input id = quiz2 type="radio" name="choice2" value="O">O &nbsp;&nbsp;&nbsp;
+					<input id = quiz2 type="radio" name="choice2" value="X">X
 				</div>
 			</fieldset>
 
@@ -59,8 +59,8 @@
 				</fieldset>
 				
 				<div class="checkbox">
-				<br><input type="radio" name="choice3" value="O">O &nbsp;&nbsp;&nbsp;
-				<input type="radio" name="choice3" value="X">X
+				<br><input id = quiz3 type="radio" name="choice3" value="O">O &nbsp;&nbsp;&nbsp;
+				<input id = quiz3 type="radio" name="choice3" value="X">X
 				</div>
 			</fieldset>
 
@@ -72,8 +72,8 @@
 				<p>날짜를 꼼꼼히 확인하는 것이다.</p>
 				</fieldset>
 				<div class="checkbox">
-				<br><input type="radio" name="choice4" value="O"> O &nbsp;&nbsp;&nbsp;
-				<input type="radio" name="choice4" value="X">X
+				<br><input id = quiz4 type="radio" name="choice4" value="O"> O &nbsp;&nbsp;&nbsp;
+				<input  id = quiz4 type="radio" name="choice4" value="X">X
 				</div>
 			</fieldset>
 
@@ -87,8 +87,8 @@
 
 				</fieldset>
 				<div class="checkbox">
-				<br><input type="radio" name="choice5" value="O"> O &nbsp;&nbsp;&nbsp;
-				<input type="radio" name="choice5" value="X"> X
+				<br><input id = quiz5 type="radio" name="choice5" value="O"> O &nbsp;&nbsp;&nbsp;
+				<input id = quiz5 type="radio" name="choice5" value="X"> X
 				</div>
 			</fieldset>
 				
@@ -96,11 +96,34 @@
 			 <div class="go">
 				<br>
 			  <!--  <input class="btngo" id="btn" type="submit" value="결과 확인하기!" onclick="showAlert();">-->
-			  <a href="pop.html"><input class="btngo" type="button" value="결과확인하기!"></a>
+			  <a href="pop.html"><input class="btngo" type="button" value="결과확인하기!" onclick="test_rs()"></a>
+			  <form action></form>
 			</div>
 		</section>
 	</form>
 	
+	 <script type="text/javascript">
+        	
+        	
+            function test_rs(){
+     
+                var rs1 = document.getElementById('quiz1').value;
+                var rs2 = document.getElementById('quiz2').value;
+                var rs3 = document.getElementById('quiz3').value;
+                var rs4 = document.getElementById('quiz4').value;
+                var rs5 = document.getElementById('quiz5').value;
+                
+                var SC = [rs1,rs2,rs3,rs4,rs5];
+                var sum = 0;
+                
+                for(var i=0;i<SC.length;i++){
+                    if(SC[i]=='O'){
+                        sum+=20;
+                    }
+                if(sum == 100){
+                	document.getElementById('signup-pww').value='Y'}
+                }
+			</script>
 </body>
 
 </body>
