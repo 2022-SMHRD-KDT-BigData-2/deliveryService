@@ -36,7 +36,7 @@
 						</td>
 					</tr>
 					<tr>
-						<td colspan="2"><a href="selectDeliveryB"><button>뒤로가기</button></a></td>
+						<td colspan="2"><a href="goBoardMain"><button>뒤로가기</button></a></td>
 					</tr>
 				</table>
 			</div>

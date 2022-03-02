@@ -113,7 +113,7 @@
 								<%for(DeliveryBoardVO vo: list){ %>
 								<tr>
 									<td><%= vo.getNum() %></td>
-									<td><a href="goBoardMain?num=<%=vo.getNum() %>"><%=vo.getTitle() %></a></td>
+									<td><a href="goViewBoard?num=<%=vo.getNum() %>"><%=vo.getTitle() %></a></td>
 									<td><%= vo.getBid() %></td>
 									<td><%= vo.getDay() %></td>
 								</tr>
