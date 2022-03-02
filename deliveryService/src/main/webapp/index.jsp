@@ -39,17 +39,17 @@
 						<% 
 						if(vo == null){
 						%>
-							<li><a href="index.jsp" class="button fit">Home</a></li>
 							<li><a href="Join.jsp" class="button fit">회원가입</a></li>
 							<li><a href="login.jsp" class="button fit">로그인</a></li>
 						</ul>
 						<%} else { %>
 						</ul>
+							<li><a href="index.jsp" class="button fit">Home</a></li>
 							<li><a href="deliveryBoard.html" class="button fit">심부름 게시판</a></li>
 							<li><a href="Exchange.html" class="button fit">물물교환 게시판</a></li>
 							<li><a href="myPage.html" class="button fit">마이페이지</a></li>
 							<li><a href="callCenter.html" class="button fit">고객센터</a></li>
-							<li><a href="login.html" class="button fit">로그아웃</a></li>
+							<li><a href="logoutService" class="button fit">로그아웃</a></li>
 						</ul>
 						
 						<%} %>
