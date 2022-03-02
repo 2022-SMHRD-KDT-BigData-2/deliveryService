@@ -14,6 +14,7 @@
 
 body{
 	background:var(--body-background-color);
+	text-align: center;
 }
 
 .main-container{
@@ -57,7 +58,7 @@ body{
 	align-items: center;
 }
 .login-input-section-wrap{
-	padding-top: 30%;
+	padding-top: 15%;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -88,9 +89,10 @@ body{
 	width: 165px;
 	height :48px;
 	font-size: 18px;
-	background: #61a5c2;
+	background: orange;
 	color: white;
-	border: #61a5c2;
+	border: orange;
+	text-align: center;
 }
 
 .login-stay-sign-in{

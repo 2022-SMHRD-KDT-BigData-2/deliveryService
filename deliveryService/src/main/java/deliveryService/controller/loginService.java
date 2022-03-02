@@ -34,7 +34,7 @@ public class loginService extends HttpServlet {
 		  }else {
 		  
 		  
-		  } response.sendRedirect("Main.jsp");
+		  } response.sendRedirect("index.jsp");
 		
 	}
 
