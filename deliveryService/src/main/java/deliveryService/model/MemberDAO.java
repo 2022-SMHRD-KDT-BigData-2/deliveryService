@@ -55,6 +55,7 @@ public int helpercheck(MemberVO vo) {
 		session.close();
 
 		return cnt;
+}
 
 	public MemberVO IdCheck(String id) {
 		SqlSession session = sqlSessionFactory.openSession();

@@ -40,7 +40,7 @@
 						if(vo == null){
 						%>
 							<li><a href="Join.jsp" class="button fit">회원가입</a></li>
-							<li><a href="login.jsp" class="button fit">로그인</a></li>
+							<li><a href="Login.jsp" class="button fit">로그인</a></li>
 						</ul>
 						<%} else { %>
 						</ul>
