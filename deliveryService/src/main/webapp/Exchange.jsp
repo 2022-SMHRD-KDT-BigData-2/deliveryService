@@ -1,18 +1,15 @@
-<!DOCTYPE HTML>
-<!--
-	Forty by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
+    pageEncoding="EUC-KR"%>
+<!DOCTYPE html>
 <html>
-	<head>
-		<title>물물교환 게시판 - 심부릉</title>
+<head>
+<title>물물교환 게시판 - 심부릉</title>
 		<meta charset="EUC-KR">
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/deliverymain.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="is-preload">
+</head>
+<body class="is-preload">
 
 		<!-- Wrapper -->
 			<div id="wrapper">
@@ -54,7 +51,6 @@
 										<h2>This is where you trade goods</h2>
 									</header>
 									<span class="image main"><img src="images/R.jpg" alt="" /></span>
-									
 									<!-- Table -->
 													<h3>게시판</h3>
 													<ul class="actions">

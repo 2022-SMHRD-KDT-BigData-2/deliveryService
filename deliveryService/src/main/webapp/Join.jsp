@@ -93,7 +93,7 @@
                  </span>
                 <span class="signup-input">
                	 	<input class="legende" id="signup-email" type = "text" name = "emailnumber" placeholder="Certification Number">
-                <button class="btngo" type="button" >확인</button>
+               <button class="btngo" type="button" >확인</button>
                 </span>
             </div>
 
@@ -104,8 +104,8 @@
                 <!--가입하기-->
                <div class="go">
                 <!--  <div class="signup-btn-wrap">-->
-                    <input class = "btngo" id="btn" type ="submit" value = "취소하기" >
-                    <input class="btngo" id="btn" type ="submit" value = "가입하기" >
+                    <a href="index.jsp"><input class="btngo" id="btn" type ="button" value = "취소하기" ></a>
+                    <a href="index.jsp"><input class="btngo" id="btn" type ="button" value = "가입하기" ></a>
                 <!-- </div> -->
            	 </div>
             </div>
@@ -113,7 +113,7 @@
         
         </form>
         
-        <script type="text/javascript">
+        <!--  <script type="text/javascript">
         	
         	
             function check_pw(){
@@ -121,8 +121,13 @@
                 var pw = document.getElementById('signup-pww').value;
                 var SC = ["!","@","#","$","%"];
                 var check_SC = 0;
+
+    	
+                if(pw.length < 6|| pw.length > 16){
+
     
                 if(pw.length < 6 pw.length > 16){
+
                 	document.getElementById('check1').innerHTML='비밀번호는 6글자 이상, 16글자 이하만 이용 가능합니다.'
     
                     document.getElementById('signup-pww').value='';
@@ -133,22 +138,24 @@
                     }
                 }
                 if(check_SC == 0){
-                	document.getElementById('check1').innerHTML='!,@,#,$,% 의 특수문자가 들어가 있지 않습니다.'
-                    document.getElementById('check1').style.color='red';
-                    document.getElementById('signup-pww').value='';
+                	document.getElementById('check1').innerHTML="!,@,#,$,% 의 특수문자가 들어가 있지 않습니다.";
+                    document.getElementById('check1').style.color="red";
+                    document.getElementById('signup-pww').value="";
                 }
-                if(document.getElementById('signup-pww').value !='' && document.getElementById('signup-pww2').value!=''){
+                if(document.getElementById('signup-pww').value !=" document.getElementById('signup-pww2').value!="){
                     if(document.getElementById('signup-pww').value==document.getElementById('signup-pww2').value){
                         document.getElementById('check').innerHTML='비밀번호가 일치합니다.'
-                        document.getElementById('check').style.color='blue';
+                        document.getElementById('check').style.color="blue";
                     }
                     else{
-                        document.getElementById('check').innerHTML='비밀번호가 일치하지 않습니다.';
-                        document.getElementById('check').style.color='red';
+                        document.getElementById('check').innerHTML="비밀번호가 일치하지 않습니다.";
+                        document.getElementById('check').style.color="red";
                     }
                 }
             }
-			</script>
+            
+            </script>-->
+			
 			
 </body>
 </html>

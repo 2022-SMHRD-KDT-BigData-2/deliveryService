@@ -33,9 +33,8 @@ public class loginService extends HttpServlet {
 		  session.setAttribute("vo", uvo);
 		  
 		  }else {
-		  
-		  
-		  } response.sendRedirect("index.html");
+		
+		  } response.sendRedirect("index.jsp");
 		
 	}
 
