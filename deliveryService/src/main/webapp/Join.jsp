@@ -1,151 +1,161 @@
-<%@page import="deliveryService.model.MemberVO"%>
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
-<!DOCTYPE HTML>
-<!--
-	Forty by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
+<!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="EUC-KR">
-		<title>심부릉:메인</title>
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/deliverymain.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="is-preload">
-	<%
-		MemberVO vo = (MemberVO)session.getAttribute("vo");
-		out.print(vo);
-	%>
+<head>
+	<meta charset="EUC-KR">
+	<meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
+	<meta name="viewport" content="width=device-width", initial-scale="1">
+<link rel="stylesheet" href="assets/css/Join.css" />
+<title>심부릉:회원가입</title>
+<style>
+	img { display: block; margin: 0px auto; }
+</style>
+</head>
+	
+			
+<body>
+	<div class="logo">
+		<a href="index.jsp" target="_blank" title="심부릉">
+		<img src="./images/Linesa.png" class="logo"></a>
+	</div>
+	<!--회원가입 부분-->
+	<form action="joinService" method = "post">
+        <section class="signup-wrap">
+				<!--  <h2>회원가입</h2> -->
+                <!--아이디,비번,비번재확인-->
+                <h3>아이디</h3>
+                <span class="signup-input">
+                    <input id="signup-id" type = "text" name = "id" placeholder="ID">
+                     <span class="signup-at"></span>
+                <button class="btngo" type="button">확인</button>
+                </span>
 
-		<!-- Wrapper -->
-			<div id="wrapper">
+                <h3>비밀번호</h3>
+                <span class="signup-input">
+                	<input  id="signup-pww" type = "password" name = "pw" placeholder="Password" onchange="check_pw()">
+           
+                	<span class="pw-lock"></span><!-- 자물쇠 이미지 -->
+                </span>
+                <span id="check1"></span>
 
-				<!-- Header -->
-					<header id="header" class="alt">
-						<a href="index.jsp" class="logo"><strong>심부릉</strong></a>
-						<nav>
-							<a href="#menu">Menu</a>
-						</nav>
-					</header>
-
-				<!-- Menu -->
-					<nav id="menu">
-						<ul class="links">
-							<ul class="actions stacked">
-						<% 
-						if(vo == null){
-						%>
-							<li><a href="index.jsp" class="button fit">Home</a></li>
-							<li><a href="Join.jsp" class="button fit">회원가입</a></li>
-							<li><a href="login.jsp" class="button fit">로그인</a></li>
-						</ul>
-						<%} else { %>
-						</ul>
-							<li><a href="deliveryBoard.html" class="button fit">심부름 게시판</a></li>
-							<li><a href="Exchange.html" class="button fit">물물교환 게시판</a></li>
-							<li><a href="myPage.html" class="button fit">마이페이지</a></li>
-							<li><a href="callCenter.html" class="button fit">고객센터</a></li>
-							<li><a href="login.html" class="button fit">로그아웃</a></li>
-						</ul>
-						
-						<%} %>
-					</nav>
-
-				<!-- Banner -->
+                <h3>비밀번호 재확인</h3>
+                <span class="signup-input">
+					<input  id="signup-pww2" type = "password" name = "pw1" placeholder="Password" onchange="check_pw()">				
+                    <span class="pww-lock"></span>
+                </span>
+				<span id="check"></span>
 				
-					<section id="banner" class="major">
-						<div class="inner">
-							<header class="major">
-								<h1>전대생 어서오고</h1>
-							</header>
-							<div class="content">
-								<p>Chonnam National University Students, Welcome!</p>
-								<ul class="actions">
-								<%if(vo == null) {%>
-									<li><a href="Login.jsp" class="button next scrolly">로그인</a></li>
-									<li><a href="Join.jsp" class="button next scrolly">회원가입</a></li>
-								<%} else { %>
-								<li><a href="#one" class="button next scrolly">한번 눌러봐</a></li>
-								<%} %>
-								</ul>
-							</div>
-						</div>
-					</section>
-				<% if(vo != null) { %>
-				<!-- Main -->
-					<div id="main">
+            <div style="margin-top: 35px;">
+                <h3>학과선택</h3>
+                <span style="display: flex;">
+                    <span class="signup-input-birth">
+                        <select id="signup-birth-mm" class="selectbox" name="major" onchange="">
+                            <option>학과선택</option>
+                            <option value="10">간호대</option>
+                            <option value="20">경영대</option>
+                            <option value="30">공과대</option>
+                            <option value="40">농업생명과학대</option>
+                            <option value="50">법과대</option>
+                            <option value="60">사범대</option>
+                            <option value="70">사회과학대</option>
+                            <option value="80">생활과학대</option>
+                            <option value="90">수의과대</option>
+                            <option value="100">약학대</option>
+                            <option value="110">예술대</option>
+                            <option value="120">의과대</option>
+                            <option value="130">인문대</option>
+                            <option value="140">자연과학대</option>
+                            <option value="150">AI융합대</option>
+                        </select>
+                    </span>
+				</span>
+				<h3>국적</h3>
+				<span class="signup-input">
+					<label> 내국인 </label><input type="radio" name="nation" value="L">
+					<label> 외국인 </label><input type="radio" name="nation" value="F">
+                </span>
+                <h3>성별</h3>
+                <span class="signup-input">
+					<label> 남 </label><input type="radio" name="gender" value="M">
+					<label> 여 </label><input type="radio" name="gender" value="W">
 
-						<!-- One -->
-							<section id="one" class="tiles">
-								<article>
-									<span class="image">
-										<img src="images/pic01.jpg" alt="" />
-									</span>
-									<header class="major">
-										<h3><a href="deliveryBoard.html" class="link">심부름 게시판</a></h3>
-										<p>The page to request errands</p>
-									</header>
-								</article>
-								<article>
-									<span class="image">
-										<img src="images/pic02.jpg" alt="" />
-									</span>
-									<header class="major">
-										<h3><a href="Exchange.html" class="link">물물교환 게시판</a></h3>
-										<p>Exchange page</p>
-									</header>
-								</article>
-								<article>
-									<span class="image">
-										<img src="images/pic03.jpg" alt="" />
-									</span>
-									<header class="major">
-										<h3><a href="myPage.html" class="link">마이페이지</a></h3>
-										<p>My Page</p>
-									</header>
-								</article>
-								<article>
-									<span class="image">
-										<img src="images/pic04.jpg" alt="" />
-									</span>
-									<header class="major">
-										<h3><a href="callCenter.html" class="link">고객센터</a></h3>
-										<p>Customer information center</p>
-									</header>
-								</article>
-							
-					</div>
-				<%} %>
-				<!-- Footer -->
-					<footer id="footer">
-						<div class="inner">
-							<ul class="icons">
-								<li><a href="#" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
-								<li><a href="#" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
-								<li><a href="#" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
-								<li><a href="#" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
-								<li><a href="#" class="icon brands alt fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
-							</ul>
-							<ul class="copyright">
-								<li>&copy; Untitled</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li>
-							</ul>
-						</div>
-					</footer>
+                </span>
+                <span class="choice">
+                	<h3>학교이메일</h3>
+                </span>
+                <span class="signup-input">
+                    <input class="legende" id="signup-email" type = "text" name = "email" placeholder="Eamil">
+                    <button class="btngo" type="button" >인증</button>
+                 </span>
+                 <span class="choice">
+                 	<h3>인증번호</h3>
+                 </span>
+                <span class="signup-input">
+               	 	<input class="legende" id="signup-email" type = "text" name = "emailnumber" placeholder="Certification Number">
+               <button class="btngo" type="button" >확인</button>
+                </span>
+            </div>
 
-			</div>
+            <div style="margin-top: 35px;">
+            </div>
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+            <div>
+                <!--가입하기-->
+               <div class="go">
+                <!--  <div class="signup-btn-wrap">-->
+                    <a href="index.jsp"><input class="btngo" id="btn" type ="button" value = "취소하기" ></a>
+                    <a href="joinService"><input class="btngo" id="btn" type ="button" value = "가입하기" ></a>
+                <!-- </div> -->
+           	 </div>
+            </div>
+        </section>
+        
+        </form>
+        
+        <!--  <script type="text/javascript">
+        	
+        	
+            function check_pw(){
+     
+                var pw = document.getElementById('signup-pww').value;
+                var SC = ["!","@","#","$","%"];
+                var check_SC = 0;
 
-	</body>
+    	
+                if(pw.length < 6|| pw.length > 16){
+
+    
+                if(pw.length < 6 pw.length > 16){
+
+                	document.getElementById('check1').innerHTML='비밀번호는 6글자 이상, 16글자 이하만 이용 가능합니다.'
+    
+                    document.getElementById('signup-pww').value='';
+                }
+                for(var i=0;i<SC.length;i++){
+                    if(pw.indexOf(SC[i]) != -1){
+                        check_SC = 1;
+                    }
+                }
+                if(check_SC == 0){
+                	document.getElementById('check1').innerHTML="!,@,#,$,% 의 특수문자가 들어가 있지 않습니다.";
+                    document.getElementById('check1').style.color="red";
+                    document.getElementById('signup-pww').value="";
+                }
+                if(document.getElementById('signup-pww').value !=" document.getElementById('signup-pww2').value!="){
+                    if(document.getElementById('signup-pww').value==document.getElementById('signup-pww2').value){
+                        document.getElementById('check').innerHTML='비밀번호가 일치합니다.'
+                        document.getElementById('check').style.color="blue";
+                    }
+                    else{
+                        document.getElementById('check').innerHTML="비밀번호가 일치하지 않습니다.";
+                        document.getElementById('check').style.color="red";
+                    }
+                }
+            }
+            
+            </script>-->
+			
+			
+</body>
 </html>
