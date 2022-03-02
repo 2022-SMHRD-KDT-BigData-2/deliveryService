@@ -52,7 +52,7 @@
 									</header>
 									<!-- <span class="image main"><img src="images/R.jpg" alt="" /></span> -->
 									<!-- Table -->
-													<h3>배달</h3>
+													<h3>반려견</h3>
 													<ul class="actions">
 													</ul>
 													<div class="table-wrapper">

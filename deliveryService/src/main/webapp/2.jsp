@@ -47,7 +47,7 @@
 							<section id="one">
 								<div class="inner">
 									<header class="major">
-										<h1>심부름 게시판</h1>
+										<h1>동행</h1>
 										<h2>This is where you trade goods</h2>
 									</header>
 									<!-- <span class="image main"><img src="images/R.jpg" alt="" /></span> -->
