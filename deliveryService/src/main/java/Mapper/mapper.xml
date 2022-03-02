@@ -50,12 +50,14 @@
 		values(comment_num_seq.nextval,#{cnum},#{dcid},#{content},#{money},sysdate)
 	</insert>
 
+
 	<!-- 물물교환 댓글 작성 -->
 	<insert id="writeExComment"
 		parameterType="deliveryService.model.ExchangeCommentVO">
 		insert into exchange_comment
 		values(ex_comment_num_seq.nextval,#{exnum},#{excid},#{content},sysdate)
 	</insert>
+	
 	
 	<!-- 문의글 작성 -->
 	<insert id="writeInquiry"
@@ -64,11 +66,15 @@
 		values(inquiry_num_seq.nextval,#{send_id},#{receive_id},#{content},sysdate)
 	</insert>
 	
+	
+	
 	<!-- 심부름 게시글 전체 보기 -->
 	<select id="selectDeliveryB"
 	resultType="deliveryService.model.DeliveryBoardVO">
 		select * from delivery_board
 	</select>
+	
+	
 	
 	<!-- 심부름 게시글 카테고리별 보기 -->
 	<select id="selectDeliveryCate" 
@@ -76,15 +82,19 @@
 		select * from delivery_board where separation =#{separation}
 	</select>
 	
-	<!-- 아이디 중복체크 -->>
-	<select id="IdCheck" resultType="deliveryService.model.MemberVO">
-		select * from delivery_member where id=#{id}
-	</select>
 	
 	<!-- 이메일 중복체크 -->
 	<select id="emailDupleCheck" resultType="deliveryService.model.MemberVO">
 		select email from delivery_member where id = #{id}
 	</select>
+	
+	<!-- 아이디 중복체크 -->
+	<select id="IdCheck" resultType="deliveryService.model.MemberVO">
+		select * from delivery_member where id=#{id}
+	</select>
+	
+	
+	
 </mapper>
 
 

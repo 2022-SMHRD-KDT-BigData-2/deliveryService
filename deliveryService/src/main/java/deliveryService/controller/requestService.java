@@ -38,7 +38,7 @@ public class requestService extends HttpServlet {
 		String content = multi.getParameter("content");
 		String deadLine = multi.getParameter("deadLine");
 		String fileName = multi.getFilesystemName("file");
-		String bid = multi.
+		//String bid = multi.
 		DeliveryBoardVO vo = new DeliveryBoardVO(title, helper_Gender, helper_exception, place, money, separation, content, deadLine, fileName);
 
 		DeliveryBoardDAO dao = new DeliveryBoardDAO();
