@@ -16,8 +16,7 @@
 	<select id="loginService"
 		parameterType="deliveryService.model.MemberVO"
 		resultType="deliveryService.model.MemberVO">
-		select * from DELIVERY_MEMBER where id = #{id} and pw =
-		#{pw}
+		select * from DELIVERY_MEMBER where id = #{id} and pw =	#{pw}
 	</select>
 
 	<insert id="ExchangeService"
@@ -69,12 +68,6 @@
 	<select id="selectDeliveryB"
 	resultType="deliveryService.model.DeliveryBoardVO">
 		select * from delivery_board
-	</select>
-	
-	<!-- 심부름 게시글 하나 보기 -->
-	<select id="viewDelivery" 
-	resultType="deliveryService.model.DeliveryBoardVO">
-		select * from delivery_board where num=#{num}
 	</select>
 	
 	<!-- 심부름 게시글 카테고리별 보기 -->
