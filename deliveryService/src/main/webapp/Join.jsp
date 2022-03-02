@@ -50,7 +50,7 @@
                 <h3>학과선택</h3>
                 <span style="display: flex;">
                     <span class="signup-input-birth">
-                        <select id="signup-birth-mm" class="selectbox" name="major" onchange="">
+                        <select name="major" id="signup-birth-mm" class="selectbox">
                             <option>학과선택</option>
                             <option value="10">간호대</option>
                             <option value="20">경영대</option>
@@ -105,7 +105,7 @@
                <div class="go">
                 <!--  <div class="signup-btn-wrap">-->
                     <a href="index.jsp"><input class="btngo" id="btn" type ="button" value = "취소하기" ></a>
-                    <a href="joinService"><input class="btngo" id="btn" type ="button" value = "가입하기" ></a>
+                    <input class="btngo" id="btn" type ="submit" value = "가입하기" >
                 <!-- </div> -->
            	 </div>
             </div>
