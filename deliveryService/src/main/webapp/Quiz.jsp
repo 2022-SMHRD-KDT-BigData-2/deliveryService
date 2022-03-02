@@ -96,7 +96,7 @@
 			 <div class="go">
 				<br>
 			  <!--  <input class="btngo" id="btn" type="submit" value="결과 확인하기!" onclick="showAlert();">-->
-			  <a href="pop.html"><input class="btngo" type="button" value="결과확인하기!" onclick="test_rs()"></a>
+			  <a href="Quizpop.html"><input class="btngo" type="button" value="결과확인하기!" onclick="test_rs()"></a>
 			  <form action></form>
 			</div>
 		</section>
