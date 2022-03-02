@@ -1,3 +1,4 @@
+<%@page import="deliveryService.model.MemberVO"%>
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
 <!DOCTYPE html>
@@ -9,6 +10,12 @@
 
 </head>
 <body>
+<%
+		MemberVO vo = (MemberVO)session.getAttribute("vo");
+		out.print(vo);
+		
+		
+	%>
     <section id="home" class="home">
         <div class="overlay">
         	<!-- <img  class="overlay" alt="" src="./images/back.jpg"> -->
