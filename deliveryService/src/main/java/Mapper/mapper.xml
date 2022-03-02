@@ -26,7 +26,7 @@
 	</insert>
 
 	<!-- 심부름 게시글 작성 -->
-	<insert id="writeService"
+	<insert id="requestService"
 		parameterType="deliveryService.model.DeliveryBoardVO">
 		insert into delivery_board values(board_num_seq.nextval,
 		#{title},
@@ -39,8 +39,8 @@
 		sysdate,
 		#{deadline},
 		#{bid},
-		#{helper_check},
-		#{helper_id})
+		null,
+		null)
 	</insert>
 
 	<!-- 심부름 댓글 작성 -->
