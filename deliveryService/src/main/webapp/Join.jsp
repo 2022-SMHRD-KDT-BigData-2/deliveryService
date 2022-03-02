@@ -84,13 +84,13 @@ img {
 					<h3>학교이메일</h3>
 				</span> <span class="signup-input"> <input class="legende"
 					id="signup-email" type="text" name="email" placeholder="Eamil">
-					<button class="btngo" type="button">인증</button>
+					<button class="btngo" type="button" onclick="emailAuthentication()">인증</button>
 				</span> <span class="choice">
 					<h3>인증번호</h3>
 				</span> <span class="signup-input"> <input class="legende"
 					id="signup-email" type="text" name="emailnumber"
 					placeholder="Certification Number">
-					<button class="btngo" type="button">확인</button>
+					<button class="btngo" type="button" onclick="authCodeCheck()">확인</button> 
 				</span>
 			</div>
 
@@ -180,6 +180,19 @@ img {
 				
 			}
             
+            
+            </script>
+            <script type="text/javascript">
+	            function emailAuthentication(){
+	            	let email = document.ocument.getElementById('signup-email').value;
+	            	if (!emailValCheck()){
+	                	return false;
+	                }
+	            	var url = "confirmEmail.jsp?email=" + document.ocument.getElementById('signup-email').value;
+	            	open(url, "confirm",
+	            			"toolbar=no, location=no,menubar=no,scrollbars=no,resizable=no,width=300,height=200");
+	            }
+
             
             </script>
 

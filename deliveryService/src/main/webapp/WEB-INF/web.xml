@@ -52,6 +52,7 @@
 		<description></description>
 		<servlet-class>deliveryService.controller.requestService</servlet-class>
 	</servlet>
+	
 	<servlet-mapping>
 		<servlet-name>joinService</servlet-name>
 		<url-pattern>/joinService</url-pattern>
