@@ -30,7 +30,6 @@
 			</div>
 			 </form>
 		</section>
-			<p class="forget-msg">Forgot your User name or Password? | Sign up</p>
 		
 </body>
 </html>
