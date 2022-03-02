@@ -121,8 +121,13 @@
                 var pw = document.getElementById('signup-pww').value;
                 var SC = ["!","@","#","$","%"];
                 var check_SC = 0;
+<<<<<<< HEAD
     	<%
                 if(pw.length < 6|| pw.length > 16){
+=======
+    
+                if(pw.length < 6 pw.length > 16){
+>>>>>>> branch 'master' of https://github.com/2022-SMHRD-KDT-BigData-2/deliveryService
                 	document.getElementById('check1').innerHTML='비밀번호는 6글자 이상, 16글자 이하만 이용 가능합니다.'
     
                     document.getElementById('signup-pww').value='';
