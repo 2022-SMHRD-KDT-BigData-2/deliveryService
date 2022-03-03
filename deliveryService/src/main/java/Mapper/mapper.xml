@@ -40,6 +40,7 @@
 		#{deadline},
 		#{bid},
 		null,
+		null,
 		null)
 	</insert>
 
@@ -49,6 +50,13 @@
 		insert into delivery_comment
 		values(comment_num_seq.nextval,#{cnum},#{dcid},#{content},#{money},sysdate)
 	</insert>
+	
+	<!-- 심부름 댓글 불러오기 -->
+	<select id="Scomment"
+		parameterType="deliveryService.model.DeliveryCommentVO"
+		resultType="deliveryService.model.DeliveryCommentVO">
+		select * from DELIVERY_COMMENT 
+	</select>
 
 
 	<!-- 물물교환 댓글 작성 -->

@@ -29,7 +29,7 @@ public class DeliveryBoardDAO {
 	public int writeBoard(DeliveryBoardVO vo) {
 		SqlSession session = sqlSessionFactory.openSession(true);
 		
-		int cnt= session.insert("writeBoard",vo); // mapper에서 insert id= writeBoard
+		int cnt= session.insert("requestService",vo); // mapper에서 insert id= writeBoard
 		
 		session.close();
 		

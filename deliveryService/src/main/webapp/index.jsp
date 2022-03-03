@@ -82,29 +82,10 @@
 
             <!-- Banner -->
             
-               <section id="banner" class="major">
-                  <div class="inner">
-                     <header class="major">
-                        <h1>전대생 어서오고</h1>
-                     </header>
-                     <div class="content">
-                        <p>Chonnam National University Students, Welcome!</p>
-                        <ul class="actions">
-                        <%if(vo == null) {%>
-                           <li><a href="Login.jsp" class="button next scrolly">로그인</a></li>
-                           <li><a href="Join.jsp" class="button next scrolly">회원가입</a></li>
-                        <%} else { %>
-                        <li><a href="#one" class="button next scrolly">한번 눌러봐</a></li>
-                        <%} %>
-                        </ul>
-                     </div>
-                  </div>
-               </section>
-            <% if(vo != null) { %>
+   
             <!-- Main -->
                <div id="main">
 
-<<<<<<< HEAD
 						<!-- One -->
 							<section id="one" class="tiles">
 								<article>
@@ -112,7 +93,7 @@
 										<img src="images/pic01.jpg" alt="" />
 									</span>
 									<header class="major">
-										<h3><a href="deliveryBoard.jsp" class="link">심부름 게시판</a></h3>
+										<h3><a href="goBoardMain" class="link">심부름 게시판</a></h3>
 										<p>The page to request errands</p>
 									</header>
 								</article>
@@ -121,7 +102,7 @@
 										<img src="images/pic02.jpg" alt="" />
 									</span>
 									<header class="major">
-										<h3><a href="Exchange.html" class="link">물물교환 게시판</a></h3>
+										<h3><a href="Exchange.jsp" class="link">물물교환 게시판</a></h3>
 										<p>Exchange page</p>
 									</header>
 								</article>
@@ -130,8 +111,13 @@
 										<img src="images/pic03.jpg" alt="" />
 									</span>
 									<header class="major">
+									<%if(vo!=null){ %>
+										<h3><a href="myPage.html" class="link"><%=vo.getId() %>님 환영합니다!</a></h3>
+										<p>마이페이지</p>
+										<%}else{ %>
 										<h3><a href="myPage.html" class="link">마이페이지</a></h3>
 										<p>My Page</p>
+										<%} %>
 									</header>
 								</article>
 								<article>
@@ -145,19 +131,19 @@
 								</article>
 							
 					</div>
-				<%} %>
+	
 				<!-- Footer -->
 					<footer id="footer">
 						<div class="inner">
 							<ul class="icons">
-								<li><a href="#" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
-								<li><a href="#" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
-								<li><a href="#" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
-								<li><a href="#" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
-								<li><a href="#" class="icon brands alt fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+								<li><a href="https://www.jnu.ac.kr/jnumain.aspx" class="icon brands alt fa-twitter"><span class="label">전남대학교</span></a></li>
+								<li><a href="https://www.jnu.ac.kr/WebApp/web/HOM/TOP/Schedule300.aspx?type=1" class="icon brands alt fa-linkedin-in"><span class="label">학사일정</span></a></li>
+								<li><a href="https://sel.jnu.ac.kr/login.php" class="icon brands alt fa-instagram"><span class="label">이클래스</span></a></li>
+								<li><a href="https://www.work.go.kr/jobyoung/main.do" class="icon brands alt fa-github"><span class="label">청년워크넷</span></a></li>
+								<li><a href="https://www.kosaf.go.kr/ko/main.do" class="icon brands alt fa-facebook-f"><span class="label">한국장학재단</span></a></li>
 							</ul>
 							<ul class="copyright">
-								<li>&copy; Untitled</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li>
+								<li>&copy; 우리회식하조</li>
 							</ul>
 						</div>
 					</footer>

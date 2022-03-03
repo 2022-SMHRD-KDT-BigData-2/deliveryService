@@ -3,49 +3,50 @@ package deliveryService.model;
 public class DeliveryBoardVO {
 	private int num;
 	private String title;
-	private String helperGender;
-	private String exception;
+	private String helper_gender;
+	private String helper_exception;
 	private String place;
 	private int money;
 	private int separation;
 	private String content;
 	private String day;
-	private String deadLine;
+	private String deadline;
 	private String bid;
 	private String helperCheck;
 	private String helperId;
 	private String fileName;
-
-	public DeliveryBoardVO(int num, String title, String helperGender, String exception, String place, int money,
-			int separation, String content, String day, String deadLine, String bid, String helperCheck,
-			String helperId,String fileName) {
+	
+	public DeliveryBoardVO(int num, String title, String helper_gender, String helper_exception, String place,
+			int money, int separation, String content, String day, String deadline, String bid, String helperCheck,
+			String helperId, String fileName) {
 		super();
 		this.num = num;
 		this.title = title;
-		this.helperGender = helperGender;
-		this.exception = exception;
+		this.helper_gender = helper_gender;
+		this.helper_exception = helper_exception;
 		this.place = place;
 		this.money = money;
 		this.separation = separation;
 		this.content = content;
 		this.day = day;
-		this.deadLine = deadLine;
+		this.deadline = deadline;
 		this.bid = bid;
 		this.helperCheck = helperCheck;
 		this.helperId = helperId;
 		this.fileName = fileName;
 	}
 
-	public DeliveryBoardVO(String title, String helperGender, String exception, String place, int money,
-			int separation, String content, String deadLine, String fileName) {
+	public DeliveryBoardVO(String title, String helper_gender, String helper_exception, String place, int money,
+			int separation, String content, String deadline, String bid, String fileName) {
 		this.title = title;
-		this.helperGender = helperGender;
-		this.exception = exception;
+		this.helper_gender = helper_gender;
+		this.helper_exception = helper_exception;
 		this.place = place;
 		this.money = money;
 		this.separation = separation;
 		this.content = content;
-		this.deadLine = deadLine;
+		this.deadline = deadline;
+		this.bid = bid;
 		this.fileName = fileName;
 	}
 
@@ -65,20 +66,20 @@ public class DeliveryBoardVO {
 		this.title = title;
 	}
 
-	public String getHelperGender() {
-		return helperGender;
+	public String getHelper_gender() {
+		return helper_gender;
 	}
 
-	public void setHelperGender(String helperGender) {
-		this.helperGender = helperGender;
+	public void setHelper_gender(String helper_gender) {
+		this.helper_gender = helper_gender;
 	}
 
-	public String getException() {
-		return exception;
+	public String getHelper_exception() {
+		return helper_exception;
 	}
 
-	public void setException(String exception) {
-		this.exception = exception;
+	public void setHelper_exception(String helper_exception) {
+		this.helper_exception = helper_exception;
 	}
 
 	public String getPlace() {
@@ -122,11 +123,11 @@ public class DeliveryBoardVO {
 	}
 
 	public String getDeadLine() {
-		return deadLine;
+		return deadline;
 	}
 
-	public void setDeadLine(String deadLine) {
-		this.deadLine = deadLine;
+	public void setDeadLine(String deadline) {
+		this.deadline = deadline;
 	}
 
 	public String getBid() {
@@ -161,5 +162,4 @@ public class DeliveryBoardVO {
 		this.fileName = fileName;
 	}
 
-	
 }

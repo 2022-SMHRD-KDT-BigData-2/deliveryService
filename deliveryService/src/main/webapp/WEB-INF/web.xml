@@ -64,7 +64,26 @@
 		<description></description>
 		<servlet-class>deliveryService.controller.goViewBoard</servlet-class>
 	</servlet>
-	
+	<servlet>
+		<servlet-name>deliveryComment</servlet-name>
+		<display-name>deliveryComment</display-name>
+		<description></description>
+		<servlet-class>deliveryService.controller.deliveryComment</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>Scomment</servlet-name>
+		<display-name>Scomment</display-name>
+		<description></description>
+		<servlet-class>deliveryService.controller.Scomment</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>goIndex</servlet-name>
+		<display-name>goIndex</display-name>
+		<description></description>
+		<servlet-class>deliveryService.controller.goIndex</servlet-class>
+	</servlet>
+
 	<servlet-mapping>
 		<servlet-name>joinService</servlet-name>
 		<url-pattern>/joinService</url-pattern>
@@ -105,5 +124,17 @@
 	<servlet-mapping>
 		<servlet-name>goViewBoard</servlet-name>
 		<url-pattern>/goViewBoard</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>deliveryComment</servlet-name>
+		<url-pattern>/deliveryComment</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>Scomment</servlet-name>
+		<url-pattern>/Scomment</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>goIndex</servlet-name>
+		<url-pattern>/goIndex</url-pattern>
 	</servlet-mapping>
 </web-app>
