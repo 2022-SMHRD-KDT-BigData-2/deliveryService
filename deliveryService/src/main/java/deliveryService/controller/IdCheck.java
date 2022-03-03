@@ -22,7 +22,7 @@ public class IdCheck extends HttpServlet {
 			request.setCharacterEncoding("UTF-8");
 			
 			// 1. 파라미터 수집
-			String id = request.getParameter("id");
+			String id = request.getParameter("signup-id");
 			
 			// 2.DAO 시용
 			MemberDAO dao = new MemberDAO();

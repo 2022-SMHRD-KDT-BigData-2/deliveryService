@@ -64,6 +64,7 @@
 		<description></description>
 		<servlet-class>deliveryService.controller.goViewBoard</servlet-class>
 	</servlet>
+
 	<servlet>
 		<servlet-name>deliveryComment</servlet-name>
 		<display-name>deliveryComment</display-name>
@@ -77,6 +78,7 @@
 		<servlet-class>deliveryService.controller.Scomment</servlet-class>
 	</servlet>
 
+
 	<servlet>
 		<servlet-name>goIndex</servlet-name>
 		<display-name>goIndex</display-name>
@@ -88,11 +90,12 @@
 		<servlet-name>joinService</servlet-name>
 		<url-pattern>/joinService</url-pattern>
 	</servlet-mapping>
+
 	<servlet-mapping>
 		<servlet-name>IdCheck</servlet-name>
 		<url-pattern>/IdCheck</url-pattern>
 	</servlet-mapping>
-	
+
 	<servlet-mapping>
 		<servlet-name>dfadf</servlet-name>
 		<url-pattern>/dfadf</url-pattern>
