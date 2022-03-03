@@ -119,7 +119,7 @@ img {
                 var check_SC = 0;
 
     
-                if(pw.length < 6 pw.length > 16){
+                if(pw.length < 6 || pw.length > 16){
 
                 	document.getElementById('check1').innerHTML='비밀번호는 6글자 이상, 16글자 이하만 이용 가능합니다.'
     

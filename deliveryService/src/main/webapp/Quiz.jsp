@@ -22,8 +22,7 @@
 		<img src="./images/Logooo.png" class="logo"></a>
 	</div>
 	<section>
-		<form action="index.html" method="post"
-			name="login_form">
+		<form action="index.html" method="post" name="login_form">
 			<h1 class="topmenu">헬퍼 인증 퀴즈</h1>
 			
 			<!-- 퀴즈 1 -->
@@ -96,12 +95,15 @@
 			 <div class="go">
 				<br>
 			  <!--  <input class="btngo" id="btn" type="submit" value="결과 확인하기!" onclick="showAlert();">-->
-			  <a href="Quizpop.html"><input class="btngo" type="button" value="결과확인하기!" onclick="test_rs()"></a>
-			  <form action></form>
+			
 			</div>
+			</form>
 		</section>
-	</form>
 	
+	   		<form action="HelperCheck" method="post">
+			  <a href="Quizpop.html"><input  name = "helper_check" id = quiz class="btngo" type="submit" value="결과확인하기!" onclick="test_rs()"></a>
+
+			  </form>
 	 <script type="text/javascript">
         	
         	
@@ -121,8 +123,8 @@
                         sum+=20;
                     }
                 if(sum == 100){
-                	document.getElementById('signup-pww').value='Y'}
-                }
+                	document.getElementById('quiz').value='Y'}
+                };}
 			</script>
 </body>
 
