@@ -12,11 +12,10 @@
 <title>Insert title here</title>
 </head>
 <%
-	/* 		MemberVO uvo = (MemberVO)request.getAttribute("uvo"); */
+	MemberVO uvo = (MemberVO)session.getAttribute("vo");
 DeliveryBoardVO bvo = (DeliveryBoardVO) request.getAttribute("bvo");
 
 List<DeliveryCommentVO> list = (List<DeliveryCommentVO>) request.getAttribute("list");
-System.out.print(list.get(0).getContent());
 %>
 
 <body class="dimmed">
@@ -26,7 +25,7 @@ System.out.print(list.get(0).getContent());
 			<div class="content">
 				<div data-role="content">
 					<p>
-						<label class="legend"><b>심부름 제목 :</b>&nbsp;&nbsp;&nbsp;<%=bvo.getTitle()%>
+						<label class="legend"><b>심부름 제목 :</b>&nbsp;&nbsp;&nbsp; <span><%=bvo.getTitle()%></span> 
 						</label>
 					</p>
 					<!-- <p><label class = "legend"><b>시작 날짜</b> </label> <input type="date" style="text-align: left; width: 250px; height: 30px;"></p> -->
@@ -81,19 +80,31 @@ System.out.print(list.get(0).getContent());
 				</tr>
 			</thead>
 			<tbody>
-				<%-- <%for(DeliveryCommentVO vo: list){ %>
-								<tr>
-									<%if(vo.getDcid().equals(uvo.getId())){ %>
-									<td><%= vo.getCnum() %></td>
-									<td><%= vo.getDcid() %></td>
-									<td><%= vo.getContent() %></td>
-									<td><%= vo.getMoney() %></td>
-									<td><%= vo.getDay() %></td>
-								</tr><%}else{%>
-									<td><input tyep="text" placeholder="댓글을 입력하세요."></td>
-									<td>금액 제시 : <input tyep="text" placeholder="원하는 금액을 입력하세요."></td>
-								<%}%>
-								<%} %> --%>
+				<%
+					for (DeliveryCommentVO vo : list) {
+				%>
+				<tr>
+					<%
+						if (vo.getDcid().equals(uvo.getId())) {
+					%>
+					<td><%=vo.getCnum()%></td>
+					<td><%=vo.getDcid()%></td>
+					<td><%=vo.getContent()%></td>
+					<td><%=vo.getMoney()%></td>
+					<td><%=vo.getDay()%></td>
+				</tr>
+				<%
+					} else {
+				%>
+				<td><input tyep="text" placeholder="댓글을 입력하세요."></td>
+				<td>금액 제시 : <input tyep="text" placeholder="원하는 금액을 입력하세요."></td>
+				<%
+					}
+				%>
+				<%
+					}
+				%> 
+				
 
 			</tbody>
 

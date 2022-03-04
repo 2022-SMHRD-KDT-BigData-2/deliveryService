@@ -7,7 +7,7 @@
 <meta charset="EUC-KR">
 <title>심부릉 : 마이페이지</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-	<link rel="stylesheet" href="assets/css/deliverymain.css" />
+	<link rel="stylesheet" href="assets/css/deliverymain3.css" />
 	<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 </head>
 <body>

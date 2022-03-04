@@ -24,7 +24,7 @@ public class goViewBoard extends HttpServlet {
 
 		// 2. DAO 메서드 사용
 		DeliveryBoardDAO dao = new DeliveryBoardDAO();
-		DeliveryBoardVO bvo = dao.viewDelivery(7);
+		DeliveryBoardVO bvo = dao.viewDelivery(num);
 
 		System.out.println(bvo.getContent());
 

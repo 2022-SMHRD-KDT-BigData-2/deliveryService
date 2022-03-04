@@ -36,7 +36,9 @@ footer, header, hgroup, menu, nav, section {
 body {
 	line-height: 1;
 }
-
+p{
+	color: white;
+}
 ol, ul {
 	list-style: none;
 }
@@ -102,9 +104,8 @@ input, select, textarea {
 		box-sizing: inherit;
 	}
 
-	body {
-	/* 뒷배경인지 모르겠다*/
-		background: #242943;
+	body, section{
+		background: #fbf7f2;
 	}
 
 		body.is-preload *, body.is-preload *:before, body.is-preload *:after {
@@ -122,12 +123,13 @@ input, select, textarea {
 
 	body, input, select, textarea {
 		/*color: #ffffff;*/
-		color: #fff; /*영어적는곳 */
+		color: gray; /*영어적는곳 */
 		font-family: "Source Sans Pro", Helvetica, sans-serif;
 		font-size: 17pt;
 		font-weight: 300;
 		letter-spacing: 0.025em;
 		line-height: 1.65;
+		
 	}
 
 		@media screen and (max-width: 1680px) {
@@ -160,7 +162,7 @@ input, select, textarea {
 		-ms-transition: color 0.2s ease-in-out, border-bottom-color 0.2s ease-in-out;
 		transition: color 0.2s ease-in-out, border-bottom-color 0.2s ease-in-out;
 		
-		color: inherit;
+		color: inherit; /*여기 건들면 깨집니다 */
 		text-decoration: none;
 	}
 
@@ -186,9 +188,23 @@ input, select, textarea {
 		margin: 0 0 2em 0;
 	}
 
-	h1, h2, h3, h4, h5, h6 {
+	h1, h3, h4, h5, h6 {
 		/*color: #ffffff;*/
-		color: #fff; /*전대생 어서오고 글씨*/
+		color: #ffffff; /*전대생 어서오고 글씨*/
+		font-weight: 600;
+		line-height: 1.65;
+		margin: 0 0 1em 0;
+	}
+	
+	.exchange {
+		color: gray;
+		font-weight: 600;
+		line-height: 1.65;
+		margin: 0 0 1em 0;
+	}
+	
+	h2 {
+		color: gray;
 		font-weight: 600;
 		line-height: 1.65;
 		margin: 0 0 1em 0;
@@ -1800,6 +1816,15 @@ input, select, textarea {
 				margin: 0.325em 0 0.5em 0;
 				width: 100%;
 			}
+			header.majorr > :first-child:after {
+				content: '';
+				/*background-color: #fff;*/
+				background-color: gray;/*선색깔*/
+				display: block;
+				height: 2px;
+				margin: 0.325em 0 0.5em 0;
+				width: 100%;
+			}
 
 		header.major > p {
 			font-size: 0.7em;
@@ -2214,10 +2239,12 @@ input, select, textarea {
 			display: block;
 			margin: 2.5em 0;
 			width: 100%;
+			text-align: center;
 		}
 
 			.image.main img {
-				width: 100%;
+			/* 물물교환 이미지 로고 사이즈 */
+				width: 50%;
 			}
 
 			@media screen and (max-width: 736px) {
@@ -2361,6 +2388,31 @@ input, select, textarea {
 		ul.icons li {
 			display: inline-block;
 			padding: 0 1em 0 0;
+			padding-top: 30px;
+		}
+		
+		/* 하단 아이콘 */
+		.img {
+			width: 45px;
+			height: 55px;
+			padding-bottom : 10px;
+		}
+		
+		/* 찌부 워크넷 */
+		.img2 {
+			width: 80px;
+			height: 70px;
+		}
+		
+		/* 전남대 */
+		.img3 {
+			
+			width: 60px;
+			height: 55px;
+		}
+		.centercenter{
+			padding-top: 1%;
+			text-align: center;
 		}
 
 			ul.icons li:last-child {
@@ -2526,8 +2578,9 @@ input, select, textarea {
 		background-color: transparent;
 		border: 0;
 		border-radius: 0;
-		box-shadow: inset 0 0 0 2px #fff; /* 2528, 2529 버튼 박스 , 글자 색 */
-		color: #fff;
+		box-shadow: inset 0 0 0 2px gray; /* 2528, 2529 버튼 박스 , 글자 색 */
+		/*color: #fff;*/
+		color: gray;
 		/*box-shadow: inset 0 0 0 2px black;
 		color: black;*/
 		cursor: pointer;
@@ -2983,6 +3036,7 @@ input, select, textarea {
 					top: 0;
 					width: 100%;
 				}
+				
 
 			.spotlights > section > .content {
 				display: -moz-flex;
@@ -3132,7 +3186,7 @@ input, select, textarea {
 		display: flex;
 		/*background-color: #2a2f4a;*/
 		/*탑 메뉴바*/
-		background-color: #2a2f4a;
+		background-color: #fbf7f2;
 		box-shadow: 0 0 0.25em 0 rgba(0, 0, 0, 0.15);
 		cursor: default;
 		font-weight: 600;
@@ -3518,7 +3572,7 @@ input, select, textarea {
 		}
 
 		#banner.style2:after {
-			background-color: #8d82c4;
+			background-color: #73bad2;
 		}
 
 		#banner.style3:after {
@@ -3821,7 +3875,7 @@ input, select, textarea {
 		-ms-justify-content: center;
 		justify-content: center;
 		pointer-events: none;
-		background: rgba(36, 41, 67, 0.9);
+		background: #fbf7f2;
 		box-shadow: none;
 		height: 100%;
 		left: 0;
@@ -4077,6 +4131,10 @@ input, select, textarea {
             100% {left:0%;}
         }
         
-       
-    
+       .centergogo{
+       padding-left: 30%;
+       }
+		.colo{
+		color: gray;
+		}
 }		

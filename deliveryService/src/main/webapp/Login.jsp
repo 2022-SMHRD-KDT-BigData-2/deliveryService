@@ -11,9 +11,7 @@
 <body>
 <%
 		MemberVO vo = (MemberVO)session.getAttribute("vo");
-		out.print(vo);
-		
-		
+	
 	%>
 		<header>
 			<div class="logo-wrap">
@@ -31,8 +29,8 @@
 			</div>
 		
 			<div class="login-button-wrap">
-				<a href="Main.jsp"><button id ="" type="button" value="" style="cursor: pointer;">Back</button></a>
-				<button id ="" type="submit" style="cursor: pointer;">Sign in</button>
+				<button id ="" type="submit" style="cursor: pointer;">로그인</button>
+				<a href="Main.jsp"><button id ="" type="button" value="" style="cursor: pointer;">취소</button></a>
 			</div>
 			 </form>
 		</section>

@@ -10,7 +10,7 @@
 <title>Insert title here</title>
 <meta name="viewport"
 	content="width=device-width, initial-scale=1, user-scalable=no" />
-<link rel="stylesheet" href="assets/css/deliverymain.css" />
+<link rel="stylesheet" href="assets/css/deliverymain2.css" />
 <link rel="stylesheet" href="assets/css/categorylist.css" />
 <noscript>
 	<link rel="stylesheet" href="assets/css/noscript.css" />
@@ -41,7 +41,7 @@
 			<ul class="links">
 				<li><a href="index.jsp">Home</a></li>
 				<li><a href="goBoardMain">심부름 게시판</a></li>
-				<li><a href="Exchange.html">물물교환 게시판</a></li>
+				<li><a href="Exchange.jsp">물물교환 게시판</a></li>
 				<li><a href="myPage.jsp">마이페이지</a></li>
 				<li><a href="callCenter.html">고객센터</a></li>
 			</ul>
@@ -73,7 +73,7 @@
 			
 			<section id="one">
 				<div class="inner">
-					<header class="major">
+					<header class="majorr">
 						<h2>심부름 카테고리</h2>
 					</header>
 					<div class="list">
@@ -95,7 +95,7 @@
 			<!-- Three-->
 			<section id="three">
 				<div class="inner">
-					<header class="major">
+					<header class="majorr">
 						<h2>게시판</h2>
 
 					</header>
@@ -103,10 +103,10 @@
 						<table>
 							<thead>
 								<tr>
-									<th>번호</th>
-									<th>제목</th>
-									<th>작성자</th>
-									<th>작성일</th>
+									<th style="color: gray;">번호</th>
+									<th style="color: gray;">제목</th>
+									<th style="color: gray;">작성자</th>
+									<th style="color: gray;">작성일</th>
 								</tr>
 							</thead>
 							<tbody>
@@ -123,7 +123,7 @@
 						</table>
 
 						<ul class="pagination">
-							<li><span class="button small disabled">Prev</span></li>
+							<li><span class="button small">Prev</span></li>
 							<li><a href="#" class="page">1</a></li>
 							<li><a href="#" class="page">2</a></li>
 							<li><a href="#" class="page">3</a></li>

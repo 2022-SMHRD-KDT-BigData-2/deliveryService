@@ -11,7 +11,7 @@
 
  <%
 	MemberVO vo = (MemberVO) session.getAttribute("vo");
-out.print(vo);
+
 %> 
 <body class="dimmed">
 	<form action="requestService" method="post"
