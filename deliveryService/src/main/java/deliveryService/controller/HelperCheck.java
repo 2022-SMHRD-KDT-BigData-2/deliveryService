@@ -21,21 +21,16 @@ public class HelperCheck extends HttpServlet {
 		String id = uvo.getId();
 		// 세션에 저장된 아이디 값 호출 (로그인 된 id)
 		
-		String helper_check = request.getParameter("helper_check");
+		String helper_check = request.getParameter("userName");
 
-		MemberVO vo = new MemberVO(id, helper_check);
+		MemberVO vo = new MemberVO(id, "1", helper_check);
 		
 		MemberDAO dao = new MemberDAO();
 		
 		int cnt = dao.helpercheck(vo); 
 
 		  
-		if(cnt > 0) { // 성공 response.sendRedirect("join_success.jsp"); }else {
-		 response.sendRedirect("Login.jsp"); }
-		else {
-			
-		}
-		
+		session.setAttribute("requsetService", vo);
 		
 	}
 

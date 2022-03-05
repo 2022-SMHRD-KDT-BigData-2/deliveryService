@@ -13,15 +13,15 @@
 </head>
 <%
 	MemberVO uvo = (MemberVO)session.getAttribute("vo");
-DeliveryBoardVO bvo = (DeliveryBoardVO) request.getAttribute("bvo");
+	DeliveryBoardVO bvo = (DeliveryBoardVO) request.getAttribute("bvo");
 
-List<DeliveryCommentVO> list = (List<DeliveryCommentVO>) request.getAttribute("list");
+	List<DeliveryCommentVO> list = (List<DeliveryCommentVO>) request.getAttribute("list");
 %>
 
 <body class="dimmed">
-	<form action="requestService" method="post">
+	<form action="DCommentService" method="post" enctype="multipart/form-data">
 		<div class="popup">
-			<div class="title" align="center">심부름 내역</div>
+			<div class="title" align="center"><%=uvo.getId() %>님의 심부름 내역</div>
 			<div class="content">
 				<div data-role="content">
 					<p>
@@ -39,9 +39,10 @@ List<DeliveryCommentVO> list = (List<DeliveryCommentVO>) request.getAttribute("l
 					<br>
 				</div>
 				<div id="map" style="width: 100%; height: 350px;"></div>
+				<div onclick="search(`<%=bvo.getPlace() %>`)" >지도검색</div>
 				<div data-role="content">
 					<p>
-						<label class="legend"><b>심부름 장소 : </b>&nbsp;&nbsp;&nbsp;<%=bvo.getPlace()%>
+						<label class="legend"><b>심부름 장소 : </b>&nbsp;&nbsp;&nbsp;<span id="txt1" value=<%=bvo.getPlace() %>><%=bvo.getPlace()%></span>
 						</label>
 					</p>
 					<p>
@@ -54,16 +55,21 @@ List<DeliveryCommentVO> list = (List<DeliveryCommentVO>) request.getAttribute("l
 				<div data-role="fieldcontain">
 					<label class="legend"><b>심부름 내용 : </b>&nbsp;&nbsp;&nbsp;<%=bvo.getContent()%>
 					</label> <br> <br> <label class="legend"><b>사진 첨부 : </b>&nbsp;&nbsp;&nbsp;<%=bvo.getContent()%>
-					</label> <img alt="" src="img/<%=bvo.getFileName()%>"> <br> <br>
+					</label> <img alt="" src="images/<%=bvo.getFileName()%>"> <br> <br>
 				</div>
-
+				<%if(uvo.getHelper_check().equals("N")){ %>
 				<br>
 				<div data-role="footer" data-position="fixed" align="center">
-					<a href="index.jsp" class="button next">홈으로</a> <a
-						href="goBoardMain" class="button next">뒤로가기</a>
-					<button type="submit" class="button next">심부름 신청하기</button>
+					<a href="index.jsp" class="button next">홈으로</a> 
+					<a href="goBoardMain" class="button next">뒤로가기</a>
 				</div>
-
+				<% } else{%>
+					<br>
+				<div data-role="footer" data-position="fixed" align="center" style="text-align: center;">
+					<a  href="index.jsp" class="button next">홈으로</a> 
+					<a href="goBoardMain" class="button next">뒤로가기</a>
+					<button type="submit" class="button next">신청하기</button>
+				</div><%} %>
 			</div>
 		</div>
 	</form>
@@ -96,8 +102,8 @@ List<DeliveryCommentVO> list = (List<DeliveryCommentVO>) request.getAttribute("l
 				<%
 					} else {
 				%>
-				<td><input tyep="text" placeholder="댓글을 입력하세요."></td>
-				<td>금액 제시 : <input tyep="text" placeholder="원하는 금액을 입력하세요."></td>
+				<!--  <td><input tyep="text" placeholder="댓글을 입력하세요."></td>
+				<td>금액 제시 : <input tyep="text" placeholder="원하는 금액을 입력하세요."></td>-->
 				<%
 					}
 				%>
@@ -110,9 +116,8 @@ List<DeliveryCommentVO> list = (List<DeliveryCommentVO>) request.getAttribute("l
 
 		</table>
 	</div>
-	<script type="text/javascript"
-		src="//dapi.kakao.com/v2/maps/sdk.js?appkey=82c32ffcc6e0f6ca8625b3a6db6be3e2&libraries=services"></script>
-	<script>
+	<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=82c32ffcc6e0f6ca8625b3a6db6be3e2&libraries=services"></script>
+<!-- 	<script>
 		// 마커를 클릭하면 장소명을 표출할 인포윈도우 입니다
 		var infowindow = new kakao.maps.InfoWindow({
 			zIndex : 1
@@ -170,12 +175,13 @@ List<DeliveryCommentVO> list = (List<DeliveryCommentVO>) request.getAttribute("l
 				infowindow.open(map, marker);
 			});
 		}
-	</script>
+	</script> -->
 	<script>
-		function search() {
+		
+		function search(place) {
 			console.log(1);
 			var text = document.getElementById('txt1').value;
-			console.log(text);
+			console.log(place);
 
 			// 마커를 클릭하면 장소명을 표출할 인포윈도우 입니다
 			var infowindow = new kakao.maps.InfoWindow({
@@ -195,10 +201,9 @@ List<DeliveryCommentVO> list = (List<DeliveryCommentVO>) request.getAttribute("l
 			// 장소 검색 객체를 생성합니다
 			var ps = new kakao.maps.services.Places();
 
-			var place = document.getElementById('txt1').value;
 
 			// 키워드로 장소를 검색합니다
-			ps.keywordSearch(text, placesSearchCB);
+			ps.keywordSearch(place, placesSearchCB);
 
 			// 키워드 검색 완료 시 호출되는 콜백함수 입니다
 			function placesSearchCB(data, status, pagination) {
@@ -243,6 +248,8 @@ List<DeliveryCommentVO> list = (List<DeliveryCommentVO>) request.getAttribute("l
 								});
 			}
 		}
+		
+		search('<%=bvo.getPlace()%>');
 	</script>
 
 	<!-- Scripts -->

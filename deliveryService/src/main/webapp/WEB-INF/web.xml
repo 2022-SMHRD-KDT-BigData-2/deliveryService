@@ -85,6 +85,12 @@
 		<description></description>
 		<servlet-class>deliveryService.controller.goIndex</servlet-class>
 	</servlet>
+	<servlet>
+		<servlet-name>DCommentService</servlet-name>
+		<display-name>DCommentService</display-name>
+		<description></description>
+		<servlet-class>deliveryService.controller.DCommentService</servlet-class>
+	</servlet>
 
 	<servlet-mapping>
 		<servlet-name>joinService</servlet-name>
@@ -139,5 +145,9 @@
 	<servlet-mapping>
 		<servlet-name>goIndex</servlet-name>
 		<url-pattern>/goIndex</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>DCommentService</servlet-name>
+		<url-pattern>/DCommentService</url-pattern>
 	</servlet-mapping>
 </web-app>

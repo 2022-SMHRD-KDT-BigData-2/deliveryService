@@ -9,14 +9,17 @@
 <title>물물교환 게시판 - 심부릉</title>
 		<meta charset="EUC-KR">
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/deliverymain2.css" />
+		<link rel="stylesheet" href="assets/css/deliverymain5.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 </head>
-<body class="is-preload">
+<body class="is-preload" id="nanno">
 	<%
 		MemberVO vo = (MemberVO)session.getAttribute("vo");
 		
 	%>
+	<script>
+   document.getElementById('nanno').style.font = '20px 넥슨Lv1고딕 OTF Light';
+   </script>
 		<!-- Wrapper -->
 			<div id="wrapper">
 
@@ -35,7 +38,7 @@
 							<li><a href="index.jsp" class="button fit">Home</a></li>
 							<li><a href="deliveryBoard.jsp" class="button fit">심부름 게시판</a></li>
 							<li><a href="myPage.jsp" class="button fit">마이페이지</a></li>
-							<li><a href="callCenter.html" class="button fit">고객센터</a></li>
+							<li><a href="CallCenter.jsp" class="button fit">고객센터</a></li>
 						
 						<%if(vo == null){ %>
 							<li><a href="#" class="button fit">회원가입</a></li>
@@ -50,16 +53,27 @@
 
 				<!-- Main -->
 					<div id="main" class="alt">
+					<!-- Banner -->
+		<!-- Note: The "styleN" class below should match that of the header element. -->
+		<section id="banner" class="style2">
+			<div class="inner">
+				<span class="image"> <img src="images/pic07.jpg" alt="" />
+				</span>
+				<header class="major">
+					<h1>물물교환 게시판</h1>
+				</header>
+				<div class="content">
+					<p>It's a barter board.</p>
+				</div>
+			</div>
+		</section>
 
 						<!-- One -->
 							<section id="one">
 								<div class="inner">
-									<header class="major">
-										<h1 class="exchange">물물교환 게시판</h1>
-										<h2>This is where you trade goods</h2>
-									</header>
+									
 									<div class="centergogo">
-									<span class="image main"><img src="./images/RRR.JPG" alt="" /></span>
+									
 									</div>
 									<!-- Table -->
 													<h3 class="colo">게시판</h3>
@@ -129,24 +143,6 @@
 							</section>
 
 					</div>
-
-				
-
-				<!-- Footer -->
-					<footer id="footer">
-						<div class="inner">
-							<ul class="icons">
-								<li><a href="#" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
-								<li><a href="#" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
-								<li><a href="#" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
-								<li><a href="#" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
-								<li><a href="#" class="icon brands alt fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
-							</ul>
-							<ul class="copyright">
-								<li>&copy; Untitled</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li>
-							</ul>
-						</div>
-					</footer>
 
 			</div>
 

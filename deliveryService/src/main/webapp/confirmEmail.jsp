@@ -24,7 +24,7 @@
 	}
 	
 </script>
-<body>
+<body id="nanno">
 
 	<c:set var="emailDupleCheckResult" value="${emailDupleCheckResult }" />
 	<c:choose>

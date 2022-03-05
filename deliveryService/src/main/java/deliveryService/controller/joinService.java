@@ -33,7 +33,7 @@ public class joinService extends HttpServlet {
 
 		  
 		if(cnt > 0) { // ¼º°ø response.sendRedirect("join_success.jsp"); }else {
-		 response.sendRedirect("Main.jsp"); }
+		 response.sendRedirect("index.jsp"); }
 		else {
 			
 		}

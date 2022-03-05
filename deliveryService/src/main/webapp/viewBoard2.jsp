@@ -6,11 +6,14 @@
 <head>
 
 </head>
-<body>
+<body id="nanno">
 	<%
 		DeliveryBoardVO bvo = (DeliveryBoardVO)request.getAttribute("bvo");		
 			
 	%>			
+	<script>
+   document.getElementById('nanno').style.font = '20px ³Ø½¼Lv1°íµñ OTF Light';
+   </script>
 			<div id = "board">
 				<h2>½ÉºÎ¸§ ³»¿ª</h2>
 				<fieldset>

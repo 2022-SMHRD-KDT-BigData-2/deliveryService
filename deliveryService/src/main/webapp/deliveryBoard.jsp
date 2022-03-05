@@ -7,7 +7,7 @@
 <html>
 <head>
 <meta charset="EUC-KR">
-<title>Insert title here</title>
+<title>심부릉 : 심부름게시판</title>
 <meta name="viewport"
 	content="width=device-width, initial-scale=1, user-scalable=no" />
 <link rel="stylesheet" href="assets/css/deliverymain2.css" />
@@ -17,13 +17,15 @@
 </noscript>
 </head>
 
-<body class="is-preload">
+<body class="is-preload" id="nanno">
 	<%
 	List<DeliveryBoardVO> list = (List<DeliveryBoardVO>) request.getAttribute("list");
 	
 	%>
 
-
+<script>
+   document.getElementById('nanno').style.font = '20px 넥슨Lv1고딕 OTF Light';
+   </script>
 	<!-- Wrapper -->
 	<div id="wrapper">
 
@@ -32,7 +34,7 @@
 		<header id="header" class="alt style2">
 			<a href="index.jsp" class="logo"><strong>심부릉</strong> </a>
 			<nav>
-				<a href="#menu">Menu</a>
+				<a href="#menu" style="color: #fff;">Menu</a>
 			</nav>
 		</header>
 
@@ -151,27 +153,7 @@
 			
 		</div>
 
-		<!-- Footer -->
-		<footer id="footer">
-			<div class="inner">
-				<ul class="icons">
-					<li><a href="#" class="icon brands alt fa-twitter"><span
-							class="label">Twitter</span></a></li>
-					<li><a href="#" class="icon brands alt fa-facebook-f"><span
-							class="label">Facebook</span></a></li>
-					<li><a href="#" class="icon brands alt fa-instagram"><span
-							class="label">Instagram</span></a></li>
-					<li><a href="#" class="icon brands alt fa-github"><span
-							class="label">GitHub</span></a></li>
-					<li><a href="#" class="icon brands alt fa-linkedin-in"><span
-							class="label">LinkedIn</span></a></li>
-				</ul>
-				<ul class="copyright">
-					<li>&copy; Untitled</li>
-					<li>Design: <a href="https://html5up.net">HTML5 UP</a></li>
-				</ul>
-			</div>
-		</footer>
+
 
 	</div>
 

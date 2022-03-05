@@ -8,6 +8,7 @@ public class MemberVO {
 	private String nation;
 	private String email;
 	private String helper_check;
+	private String p;
 	
 	public MemberVO(String id, String pw, String gender, int major, String nation, String email, String helper_check) {
 	
@@ -20,11 +21,13 @@ public class MemberVO {
 		this.helper_check = helper_check;
 	}
 	
-    public MemberVO(String helper_check) {
-    	
-    	this.helper_check = helper_check;
-    }
-    
+	public MemberVO(String id, String p, String helper_check) {
+		this.id = id;
+	    this.p = p;
+	    this.helper_check = helper_check;
+	    
+	}
+	
 	public MemberVO(String id, String pw) {
 		
 		this.id = id;

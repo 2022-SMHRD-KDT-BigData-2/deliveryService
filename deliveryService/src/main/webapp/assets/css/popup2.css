@@ -37,16 +37,20 @@
    
    .popup > .title{
        border-radius: 15px 15px 0 0;
-       min-height: 130px;
+       min-height: 70px;
        color: #fff;
        background-color: orange;
-       padding: 10px 15px;
-       padding-top : 10px;
+       padding: 10px 30px;
+       padding-top : 50%;
        box-sizing: border-box;
-       font-weight: bold;
-       font-size : 40px;
        max-height: 130px;
-       padding-bottom: 20%
+ 
+   }
+   .titlename{
+   font-weight: bold;
+       margin :0, -30%;
+       font-size : 40px;
+       box-sizing: border-box;
    }
    
    .popup > .content {

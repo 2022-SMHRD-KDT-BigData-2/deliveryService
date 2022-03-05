@@ -17,10 +17,13 @@ img {
 </head>
 
 
-<body>
+<body id="nanno">
 	<div class="logo">
 		<a href="index.jsp" target="_blank" title="½ÉºÎ¸ª"> <img
 			src="./images/Linesa.png" class="logo"></a>
+			<script>
+   				document.getElementById('nanno').style.font = '20px ³Ø½¼Lv1°íµñ OTF Light';
+   			</script>
 	</div>
 	<!--È¸¿ø°¡ÀÔ ºÎºÐ-->
 	<form action="joinService" method="post">

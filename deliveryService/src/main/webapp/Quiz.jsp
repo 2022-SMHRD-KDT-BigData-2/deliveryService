@@ -6,6 +6,7 @@
 <meta charset="EUC-KR">
 <title>심부릉:헬퍼 인증 퀴즈</title>
 <link rel="stylesheet" href="assets/css/Quiz.css" />
+<script src="js/jquery-3.6.0.js"></script>
 
 <script language="javascript">
 	 function showAlert(){
@@ -15,8 +16,11 @@
  </script>
 
 </head>
+<body id="nanno">
 <body>
-<body>
+	<script>
+   		document.getElementById('nanno').style.font = '20px 넥슨Lv1고딕 OTF Light';
+   	</script>
 		<div class="logo">
 		<a href="" title="심부릉">
 		<img src="./images/Logooo.png" class="logo"></a>
@@ -99,32 +103,70 @@
 			</div>
 			</form>
 		</section>
-	
-	   		<form action="HelperCheck" method="post">
-			  <a href="Quizpop.html"><input  name = "helper_check" id = quiz class="btngo" type="submit" value="결과확인하기!" onclick="test_rs()"></a>
-
-			  </form>
+	<div align="center" ><button class="btngo" type = "button" onclick="test_rs()">전송</button></div>
+	   		  
 	 <script type="text/javascript">
         	
-        	
-            function test_rs(){
-     
-                var rs1 = document.getElementById('quiz1').value;
-                var rs2 = document.getElementById('quiz2').value;
-                var rs3 = document.getElementById('quiz3').value;
-                var rs4 = document.getElementById('quiz4').value;
-                var rs5 = document.getElementById('quiz5').value;
-                
-                var SC = [rs1,rs2,rs3,rs4,rs5];
-                var sum = 0;
-                
-                for(var i=0;i<SC.length;i++){
-                    if(SC[i]=='O'){
-                        sum+=20;
-                    }
-                if(sum == 100){
-                	document.getElementById('quiz').value='Y'}
-                };}
+	  function test_rs(){
+      	
+   	   var rs1 = $('input[name=choice]:checked').val();
+   	   var rs2 = $('input[name=choice2]:checked').val();
+   	   var rs3 = $('input[name=choice3]:checked').val();
+   	   var rs4 = $('input[name=choice4]:checked').val();
+   	   var rs5 = $('input[name=choice5]:checked').val();
+   	   
+   	   var sc2 = [rs1,rs2,rs3,rs4,rs5];
+          var sc = ['O','X','X','O','O'];
+          var sum = 0;
+          console.log(sc[0]);
+          console.log(sc[1]);
+          console.log(sc[2]);
+          console.log(sc[3]);
+          console.log(sc[4]);
+          
+          for(var i=0;i<sc.length;i++){
+              if(sc[i]==sc2[i]){
+       
+                  sum+=2;
+              }
+          }
+          
+          if(sum == 10){	
+       	   
+       	   $.ajax({
+           		url:'HelperCheck', // 요청  url
+           		type : 'post', // get 방식 or post 방식
+           		data: { 
+           			'userName' : 'Y'
+           		
+           		}, 
+           	
+           		success : function(res){// 성공 콜백함수
+           			
+           			console.log(res);
+           			
+           			alert("헬퍼로 등록하여 주셔서 진심으로 감사합니다.\n\n안전하게 심부름을 수행할 수 있도록\n최선을 다해 도와드리겠습니다.\n감사합니다.");
+           			location.href = "index.jsp";
+           			
+           		},
+           		error : function(){
+           			
+           			alert("error");
+           			}//에러콜백 함수
+           	});
+       	     	
+          
+          }else{
+          	/* loaction.href='Quiz.jsp'; */
+       	   alert("다시 풀어보세요");       	
+       	   location.href='Quiz.jsp';
+          }  
+          
+          
+          
+        console.log(1);
+        
+   }
 			</script>
 </body>
 

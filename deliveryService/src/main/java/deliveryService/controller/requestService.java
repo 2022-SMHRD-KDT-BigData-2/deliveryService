@@ -19,6 +19,7 @@ public class requestService extends HttpServlet {
 
 	protected void service(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
+		request.setCharacterEncoding("euc-kr");
 		HttpSession session = request.getSession();
 		String encoding = "euc-kr";
 		String savePath = request.getServletContext().getRealPath("images");
@@ -36,10 +37,12 @@ public class requestService extends HttpServlet {
 		int separation = Integer.parseInt(multi.getParameter("errand"));
 		String content = multi.getParameter("content");
 		String deadline = multi.getParameter("deadline");
-		String bid = session.getId();
+		String bid = multi.getParameter("bid");
 		String fileName = multi.getFilesystemName("file");
 		DeliveryBoardVO uvo = new DeliveryBoardVO(title, helper_gender, helper_exception, place, money, separation,
 				content, deadline, bid, fileName);
+		System.out.println(place);
+		System.out.println(uvo.getPlace());
 		DeliveryBoardDAO dao = new DeliveryBoardDAO();
 		int cnt = dao.writeBoard(uvo);
 

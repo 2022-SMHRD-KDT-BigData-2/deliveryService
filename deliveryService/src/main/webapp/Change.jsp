@@ -11,7 +11,7 @@
 	img { display: block; margin: 0px auto; }
 </style>
 </head>
-<body>
+<body id="nanno">
 	<%
 		MemberVO vo = (MemberVO)session.getAttribute("vo");
 		out.print(vo);
@@ -20,6 +20,9 @@
 		<a href="index.jsp" target="_blank" title="심부릉">
 		<img src="./images/Linesa.png" class="logo"></a>
 	</div>
+	<script>
+  		 document.getElementById('nanno').style.font = '20px 넥슨Lv1고딕 OTF Light';
+   	</script>
 	<!--회원정보 부분-->
         <section class="signup-wrap">
                 <!--아이디,비번,비번재확인-->

@@ -1,3 +1,4 @@
+<%@page import="deliveryService.model.DeliveryBoardVO"%>
 <%@page import="deliveryService.model.MemberVO"%>
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
 	pageEncoding="EUC-KR"%>
@@ -5,94 +6,53 @@
 <html>
 <head>
 <meta charset="EUC-KR">
-<link rel="stylesheet" href="assets/css/popup2.css" />
+<link rel="stylesheet" href="assets/css/popup.css" />
 <title>Insert title here</title>
 </head>
 
 <%
 	MemberVO vo = (MemberVO) session.getAttribute("vo");
+	DeliveryBoardVO dvo = (DeliveryBoardVO)session.getAttribute("dvo");
 %>
 <body class="dimmed">
 
-	<form action="requestService" method="post"
-		enctype="multipart/form-data">
+	<form action="DCommentService" method="post">
 		<div class="popup">
 			<div class="title" align="center">
+				<span> <%=vo.getId()%></span> 님의 심부름 요청서
 			</div>
 			<div class="content">
-				<span class="titlename"> <%=vo.getId()%> 님의 심부름 요청서</span>
-				
 				<fieldset class="fie1" align="center">
-				<br>
-					<label class="legend"><b>심부름 항목 선택</b> </label> 
-					<select name="errand" style="text-align: left; width: 250px; height: 30px;">
-						<option value="0">카테고리 선택</option>
-						<option value="10">배달</option>
-						<option value="20">동행</option>
-						<option value="30">장학금</option>
-						<option value="40">역할대행</option>
-						<option value="50">용병구하기</option>
-						<option value="60">비대면</option>
-						<option value="70">벌레 잡아주기</option>
-						<option value="80">생활의 달인</option>
-						<option value="90">반려견</option>
-						<option value="100">물품대여</option>
-						<option value="110">기타</option>
-					</select> <br>
+					<label class="legend"><b>심부름 항목</b> </label> 
 
 					<div data-role="content">
 						<p>
-							<label class="legend"><b>심부름 제목</b> </label> <input type="text"
-								name="title" placeholder="제목을 입력해주세요!"
-								style="text-align: left; width: 250px; height: 30px;">
+							<label class="legend"><b>심부름 제목</b> 
+								
+							</label>
 						</p>
-						<!-- <p><label class = "legend"><b>시작 날짜</b> </label> <input type="date" style="text-align: left; width: 250px; height: 30px;"></p> -->
+						
 						<p>
-							<label class="legend"><b>마감 일자</b> </label> <input type="date"
-								name="deadline"
-								style="text-align: left; width: 250px; height: 30px;">
+							<label class="legend"><b>마감 일자</b>
+								<%= dvo.getDeadLine() %>							
+							 </label> 
 						</p>
 
 						<hr>
-						<label class="legend"><b>선호 헬퍼 성별 : </b> </label> 남자 <input
-							type="radio" name="gender" value="M"> 여자 <input
-							type="radio" name="gender" value="W"> 없음 <input
-							type="radio" name="gender" value="G"> <br> <br>
+						
 					</div>
 
 					<div data-role="content">
-						<label class="legend"><b>헬퍼 제외 학과 선택</b> </label> <select
-							name="major"
-							style="text-align: left; width: 250px; height: 30px;">
-							<option value="0">학과 선택</option>
-							<option value="10">간호대</option>
-							<option value="20">경영대</option>
-							<option value="30">공과대</option>
-							<option value="40">농업생명과학대</option>
-							<option value="50">법과대</option>
-							<option value="60">사범대</option>
-							<option value="70">사회과학대</option>
-							<option value="80">생활과학대</option>
-							<option value="90">수의과대</option>
-							<option value="100">약학대</option>
-							<option value="110">예술대</option>
-							<option value="120">의과대</option>
-							<option value="130">인문대</option>
-							<option value="140">자연과학대</option>
-							<option value="150">AI융합대</option>
-						</select> <br> <br>
+						
 					</div>
 
 					<div data-role="content">
 
 						<p>
-							<label class="legend"><b>심부름 장소</b> </label> <input type="text"
-								name="place" id="txt1" placeholder="심부름 도착 장소를 입력해주세요."
-								style="text-align: left; width: 250px; height: 30px;">
-						</p><div onclick="search()">지도 검색</div>
-
-
-
+							<label class="legend"><b>심부름 장소</b> </label> 
+						</p>
+						
+						<div onclick="search()">지도 검색</div>
 
 						<div id="map" style="width: 100%; height: 350px;"></div>
 
@@ -107,10 +67,8 @@
 
 					<hr>
 					<div data-role="fieldcontain">
-						<label class="legend"><b>심부름 요청 내용</b> </label> 
-						<input type="file" name="file"> <br> 
-						<input type="text" name="content" placeholder="요청 내용을 상세하게 입력해 주세요."
-							style="text-align: left; width: 400px; height: 200px;">
+						<label class="legend"><b>심부름 요청 내용</b> </label>  
+						
 					</div>
 
 				</fieldset>
@@ -121,19 +79,19 @@
 					<button type="submit" class="button next">올리기</button>
 
 				</div>
-				<input type="hidden" name="bid" value=<%=vo.getId()%>>
+				
 			</div>
 		</div>
 	</form>
 
 
 
-	<!--  <div class="cmd">
+	<div class="cmd">
 		<input type="submit" name="btnclose" class="btn btn-primary"
 			style="height: 50px; font-size: 20px;" value="닫기"> <input
 			type="submit" class="btn btn-primary" style="margin-left: 400px;"
 			value="가입 완료">
-	</div>-->
+	</div>
 
 	<!-- 지도 보여주기 -->
 	<script type="text/javascript"
