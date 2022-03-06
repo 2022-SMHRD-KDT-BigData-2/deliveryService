@@ -9,19 +9,21 @@
 <head>
 <meta charset="EUC-KR">
 <link rel="stylesheet" href="assets/css/popup.css" />
+<script src="js/jquery-3.6.0.js"></script>
 <title>Insert title here</title>
 </head>
 <%
 	MemberVO uvo = (MemberVO)session.getAttribute("vo");
 	DeliveryBoardVO bvo = (DeliveryBoardVO) request.getAttribute("bvo");
-
 	List<DeliveryCommentVO> list = (List<DeliveryCommentVO>) request.getAttribute("list");
 %>
 
 <body class="dimmed">
-	<form action="DCommentService" method="post" enctype="multipart/form-data">
+	
 		<div class="popup">
-			<div class="title" align="center"><%=uvo.getId() %>님의 심부름 내역</div>
+			<div class="title" align="center">
+			<h4><%=uvo.getId() %>님의 심부름 내역</h4>
+			</div>
 			<div class="content">
 				<div data-role="content">
 					<p>
@@ -68,12 +70,11 @@
 				<div data-role="footer" data-position="fixed" align="center" style="text-align: center;">
 					<a  href="index.jsp" class="button next">홈으로</a> 
 					<a href="goBoardMain" class="button next">뒤로가기</a>
-					<button type="submit" class="button next">신청하기</button>
+					<button type="button" class="button next" onclick="call()">신청하기</button>
 				</div><%} %>
 			</div>
 		</div>
-	</form>
-
+	
 	<div class="table-wrapper">
 		<table>
 			<thead>
@@ -117,65 +118,36 @@
 		</table>
 	</div>
 	<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=82c32ffcc6e0f6ca8625b3a6db6be3e2&libraries=services"></script>
-<!-- 	<script>
-		// 마커를 클릭하면 장소명을 표출할 인포윈도우 입니다
-		var infowindow = new kakao.maps.InfoWindow({
-			zIndex : 1
-		});
-
-		var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
-		mapOption = {
-			center : new kakao.maps.LatLng(37.566826, 126.9786567), // 지도의 중심좌표
-			level : 3
-		// 지도의 확대 레벨
-		};
-
-		// 지도를 생성합니다    
-		var map = new kakao.maps.Map(mapContainer, mapOption);
-
-		// 장소 검색 객체를 생성합니다
-		var ps = new kakao.maps.services.Places();
-
-		// 키워드로 장소를 검색합니다
-		ps.keywordSearch('광주 전남대학교', placesSearchCB);
-
-		// 키워드 검색 완료 시 호출되는 콜백함수 입니다
-		function placesSearchCB(data, status, pagination) {
-			if (status === kakao.maps.services.Status.OK) {
-
-				// 검색된 장소 위치를 기준으로 지도 범위를 재설정하기위해
-				// LatLngBounds 객체에 좌표를 추가합니다
-				var bounds = new kakao.maps.LatLngBounds();
-
-				for (var i = 0; i < data.length; i++) {
-					displayMarker(data[i]);
-					bounds.extend(new kakao.maps.LatLng(data[i].y, data[i].x));
-				}
-
-				// 검색된 장소 위치를 기준으로 지도 범위를 재설정합니다
-				map.setBounds(bounds);
-			}
+	<script type="text/javascript">
+	  
+		function call(){
+			 $.ajax({
+	           		url:'DeliveryCall', // 요청  url
+	           		type : 'post', // get 방식 or post 방식
+	           		data: { 
+	           			'work' : 'Y',
+	           		    'num'  : '<%=bvo.getNum()%>'
+	           		}, 
+	           	
+	           		success : function(res){// 성공 콜백함수
+	           			
+	           			console.log(res);
+	           			
+	           			alert("신청되었습니다.");
+	           			location.href = "myPage";
+	           			
+	           		},
+	           		error : function(){
+	           			
+	           			alert("error");
+	           			}//에러콜백 함수
+	           	});
+	       	     	
+	
 		}
-
-		// 지도에 마커를 표시하는 함수입니다
-		function displayMarker(place) {
-
-			// 마커를 생성하고 지도에 표시합니다
-			var marker = new kakao.maps.Marker({
-				map : map,
-				position : new kakao.maps.LatLng(place.y, place.x)
-			});
-
-			// 마커에 클릭이벤트를 등록합니다
-			kakao.maps.event.addListener(marker, 'click', function() {
-				// 마커를 클릭하면 장소명이 인포윈도우에 표출됩니다
-				infowindow
-						.setContent('<div style="padding:5px;font-size:12px;">'
-								+ place.place_name + '</div>');
-				infowindow.open(map, marker);
-			});
-		}
-	</script> -->
+	
+	
+	</script>
 	<script>
 		
 		function search(place) {

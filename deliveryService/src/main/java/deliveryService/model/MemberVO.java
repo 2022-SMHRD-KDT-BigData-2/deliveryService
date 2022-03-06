@@ -90,5 +90,10 @@ public class MemberVO {
 		this.helper_check = helper_check;
 	}
 	
+	public MemberVO(String id) {
+	      this.id = id;
+
+	   }
+	
 }
 	

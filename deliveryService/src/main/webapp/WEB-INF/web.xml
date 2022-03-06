@@ -91,6 +91,55 @@
 		<description></description>
 		<servlet-class>deliveryService.controller.DCommentService</servlet-class>
 	</servlet>
+	<servlet>
+		<servlet-name>goViewExchange</servlet-name>
+		<display-name>goViewExchange</display-name>
+		<description></description>
+		<servlet-class>deliveryService.controller.goViewExchange</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>goExchangeBoard</servlet-name>
+		<display-name>goExchangeBoard</display-name>
+		<description></description>
+		<servlet-class>deliveryService.controller.goExchangeBoard</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>goeb</servlet-name>
+		<display-name>goeb</display-name>
+		<description></description>
+		<servlet-class>deliveryService.controller.goeb</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>InquiryService</servlet-name>
+		<display-name>InquiryService</display-name>
+		<description></description>
+		<servlet-class>deliveryService.controller.InquiryService</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>deleteService</servlet-name>
+		<display-name>deleteService</display-name>
+		<description></description>
+		<servlet-class>deliveryService.controller.deleteService</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>updateService</servlet-name>
+		<display-name>updateService</display-name>
+		<description></description>
+		<servlet-class>deliveryService.controller.updateService</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>DeliveryCall</servlet-name>
+		<display-name>DeliveryCall</display-name>
+		<description></description>
+		<servlet-class>deliveryService.controller.DeliveryCall</servlet-class>
+	</servlet>
+	
+	<servlet>
+		<servlet-name>myPage</servlet-name>
+		<display-name>myPage</display-name>
+		<description></description>
+		<servlet-class>deliveryService.controller.myPage</servlet-class>
+	</servlet>
 
 	<servlet-mapping>
 		<servlet-name>joinService</servlet-name>
@@ -149,5 +198,37 @@
 	<servlet-mapping>
 		<servlet-name>DCommentService</servlet-name>
 		<url-pattern>/DCommentService</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>goViewExchange</servlet-name>
+		<url-pattern>/goViewExchange</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>goExchangeBoard</servlet-name>
+		<url-pattern>/goExchangeBoard</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>goeb</servlet-name>
+		<url-pattern>/goeb</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>InquiryService</servlet-name>
+		<url-pattern>/InquiryService</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>deleteService</servlet-name>
+		<url-pattern>/deleteService</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>updateService</servlet-name>
+		<url-pattern>/updateService</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>DeliveryCall</servlet-name>
+		<url-pattern>/DeliveryCall</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>myPage</servlet-name>
+		<url-pattern>/myPage</url-pattern>
 	</servlet-mapping>
 </web-app>

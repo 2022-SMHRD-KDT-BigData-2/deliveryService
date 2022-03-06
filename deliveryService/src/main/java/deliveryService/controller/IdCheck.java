@@ -19,7 +19,7 @@ public class IdCheck extends HttpServlet {
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// 0. 인코딩
 		
-			request.setCharacterEncoding("UTF-8");
+			request.setCharacterEncoding("EUC-KR");
 			
 			// 1. 파라미터 수집
 			String id = request.getParameter("signup-id");
@@ -29,7 +29,7 @@ public class IdCheck extends HttpServlet {
 			MemberVO vo = dao.IdCheck(id);
 			
 			// 3. 응답
-			response.setCharacterEncoding("utf-8");
+			response.setCharacterEncoding("EUC-KR");
 			PrintWriter out = response.getWriter();
 			out.print(vo == null);
 			

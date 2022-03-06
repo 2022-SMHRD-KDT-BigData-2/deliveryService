@@ -6,6 +6,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import com.oreilly.servlet.MultipartRequest;
 import com.oreilly.servlet.multipart.DefaultFileRenamePolicy;
@@ -18,6 +19,8 @@ public class ExchangeService extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
+		HttpSession session =request.getSession();
 		String savePath = request.getServletContext().getRealPath("img");
 
 	
@@ -29,32 +32,27 @@ public class ExchangeService extends HttpServlet {
 		MultipartRequest multi = new MultipartRequest(request, savePath, maxSize, encoding,
 				new DefaultFileRenamePolicy());
 		
-//		private int num;
-//		private String exid;
-//		private String title;
-//		private String content;
-//		private Date day;
-//		private Date deadline;
-//		private String exfinish;
-//		private String exfileName;
 		int num = Integer.parseInt(request.getParameter("num"));
-		String exid = request.getParameter("exid");
+		String exid = session.getId();
 		String title = request.getParameter("title");
 		String content = request.getParameter("content");
 		String day = request.getParameter("day");
 		String deadline = request.getParameter("deadline");
-		String exfinish = request.getParameter("exfinish");
+		String ex_finish = request.getParameter("exfinish");
 		String exfileName = request.getParameter("exfileName");
 		
-		ExchangeVO vo = new ExchangeVO(num, exid, title, content, day, deadline, exfinish, exfileName);
+		ExchangeVO vo = new ExchangeVO(num, exid, title, content, day, deadline, ex_finish, exfileName);
 
 		ExchangeDAO dao = new ExchangeDAO();
 		int cnt = dao.resi(vo);
 
 		if (cnt > 0) {
 			System.out.println("게시글 작성 성공");
+			response.sendRedirect("goExchangeBoard");
 		} else {
 			System.out.println("게시글 작성 실패");
+			response.sendRedirect("ExchangePopup.html");
+			
 		}
 	}
 

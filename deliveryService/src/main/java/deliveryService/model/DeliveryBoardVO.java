@@ -15,10 +15,11 @@ public class DeliveryBoardVO {
 	private String helperCheck;
 	private String helperId;
 	private String fileName;
+	private String work;
 	
 	public DeliveryBoardVO(int num, String title, String helper_gender, String helper_exception, String place,
 			int money, int separation, String content, String day, String deadline, String bid, String helperCheck,
-			String helperId, String fileName) {
+			String helperId, String fileName, String work) {
 		super();
 		this.num = num;
 		this.title = title;
@@ -34,6 +35,7 @@ public class DeliveryBoardVO {
 		this.helperCheck = helperCheck;
 		this.helperId = helperId;
 		this.fileName = fileName;
+		this.work = work;
 	}
 
 	public DeliveryBoardVO(String title, String helper_gender, String helper_exception, String place, int money,
@@ -48,6 +50,24 @@ public class DeliveryBoardVO {
 		this.deadline = deadline;
 		this.bid = bid;
 		this.fileName = fileName;
+	}
+	
+	public DeliveryBoardVO(String helperCheck,String helperId, String work, int num) {
+		
+		this.helperCheck = helperCheck;
+		this.helperId = helperId;
+		this.work = work;
+		this.num = num;
+		
+	}
+	
+
+	public String getWork() {
+		return work;
+	}
+
+	public void setWork(String work) {
+		this.work = work;
 	}
 
 	public int getNum() {

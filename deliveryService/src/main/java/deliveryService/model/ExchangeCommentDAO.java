@@ -1,6 +1,7 @@
 package deliveryService.model;
 
 import java.io.InputStream;
+import java.util.List;
 
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
@@ -33,4 +34,16 @@ public class ExchangeCommentDAO {
 		
 		return cnt;
 	}
-}
+
+	public List<ExchangeCommentVO> ExComment() {
+			
+			SqlSession session = sqlSessionFactory.openSession();
+			
+			List<ExchangeCommentVO> list = session.selectList("ExComment");
+			
+			session.close();
+			
+			return list;
+		}
+	}
+

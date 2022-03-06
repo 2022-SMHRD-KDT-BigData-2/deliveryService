@@ -4,26 +4,38 @@
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="deliveryService.model.MemberDAO">
 
-	<insert id="joinService" parameterType="deliveryService.model.MemberVO">
+	<!-- 회원가입 -->
+	<insert id="joinService"
+		parameterType="deliveryService.model.MemberVO">
 		insert into DELIVERY_MEMBER
 		values(#{id},#{pw},#{gender},#{major},#{nation},#{email},'N')
 	</insert>
 
-     <update id="HelperCheck" parameterType="deliveryService.model.MemberVO">
-		update DELIVERY_MEMBER set HELPER_CHECK = #{helper_check} where id = #{id}
+	<!-- 헬퍼 인증 성공 -->
+	<update id="HelperCheck"
+		parameterType="deliveryService.model.MemberVO">
+		update DELIVERY_MEMBER set HELPER_CHECK =
+		#{helper_check} where id = #{id}
 	</update>
-	
+
+	<!-- 로그인 하기 -->
 	<select id="loginService"
 		parameterType="deliveryService.model.MemberVO"
 		resultType="deliveryService.model.MemberVO">
 		select * from DELIVERY_MEMBER where id = #{id} and pw =	#{pw}
 	</select>
 
-	<insert id="ExchangeService"
-		parameterType="deliveryService.model.ExchangeVO">
-		insert into EXCAHNGE
-		values(exchange_num_seq.nextval,#{exid},#{title},#{content},sysdate,#{deadline},#{ex_finish},#{exfilename})
-	</insert>
+	<!-- 이메일 중복체크 -->
+	<select id="emailDupleCheck"
+		resultType="deliveryService.model.MemberVO">
+		select email from delivery_member where id = #{id}
+	</select>
+
+	<!-- 아이디 중복체크 -->
+	<select id="IdCheck" resultType="deliveryService.model.MemberVO">
+		select * from delivery_member
+		where id = #{id}
+	</select>
 
 	<!-- 심부름 게시글 작성 -->
 	<insert id="requestService"
@@ -39,10 +51,23 @@
 		sysdate,
 		#{deadline},
 		#{bid},
+		'N',
 		null,
 		null,
-		null)
+		'N')
 	</insert>
+
+	<!-- 심부름 게시글 전체 보기 -->
+	<select id="selectDeliveryB"
+		resultType="deliveryService.model.DeliveryBoardVO">
+		select * from delivery_board
+	</select>
+
+	<!-- 심부름 게시글 하나 보기 -->
+	<select id="viewDelivery"
+		resultType="deliveryService.model.DeliveryBoardVO">
+		select * from delivery_board where num = #{num}
+	</select>
 
 	<!-- 심부름 댓글 작성 -->
 	<insert id="writeComment"
@@ -50,14 +75,40 @@
 		insert into delivery_comment
 		values(comment_num_seq.nextval,#{cnum},#{dcid},#{content},#{money},sysdate)
 	</insert>
-	
+
 	<!-- 심부름 댓글 불러오기 -->
 	<select id="Scomment"
 		parameterType="deliveryService.model.DeliveryCommentVO"
 		resultType="deliveryService.model.DeliveryCommentVO">
-		select * from DELIVERY_COMMENT 
+		select * from DELIVERY_COMMENT
 	</select>
 
+
+	<!-- 심부름 게시글 카테고리별 보기 -->
+	<select id="selectDeliveryCate"
+		resultType="deliveryService.model.DeliveryBoardVO">
+		select * from delivery_board where separation
+		=#{separation}
+	</select>
+
+	 <!-- 물물교환 게시글 작성 -->
+	<insert id="ExchangeService"
+		parameterType="deliveryService.model.ExchangeVO">
+		insert into EXCAHNGE
+		values(exchange_num_seq.nextval,#{exid},#{title},#{content},sysdate,#{deadline},#{ex_finish},#{exfilename})
+	</insert> 
+
+	<!-- 물물교환 게시글 전체 보기 -->
+	<select id="selectExchangeB"
+		resultType="deliveryService.model.ExchangeVO">
+		select * from exchange
+	</select>
+
+	<!-- 물물교환 게시글 하나 보기 -->
+	<select id="viewExchange"
+		resultType="deliveryService.model.ExchangeVO">
+		select * from exchange where num = #{num}
+	</select>
 
 	<!-- 물물교환 댓글 작성 -->
 	<insert id="writeExComment"
@@ -66,47 +117,39 @@
 		values(ex_comment_num_seq.nextval,#{exnum},#{excid},#{content},sysdate)
 	</insert>
 	
-	
+	<!-- 물물교환 댓글 불러오기 -->
+	<select id="ExComment"
+		parameterType="deliveryService.model.ExchangeCommentVO"
+		resultType="deliveryService.model.ExchangeCommentVO">
+		select * from exchange_COMMENT 
+	</select>
+
+
 	<!-- 문의글 작성 -->
-	<insert id="writeInquiry"
+	<insert id="InquiryService"
 		parameterType="deliveryService.model.InquiryVO">
 		insert into inquiry
 		values(inquiry_num_seq.nextval,#{send_id},#{receive_id},#{content},sysdate)
 	</insert>
 	
+	<!-- 탈퇴 -->
+   <delete id="deleteService" parameterType="deliveryService.model.MemberVO">
+        delete from delivery_member
+        where id=#{id}
+     </delete>
+     
+     <!-- 회원수정 -->
+      <update id="updateService" parameterType="deliveryService.model.MemberVO">
+        update delivery_member set pw=#{pw} 
+        where id=#{id}
+     </update>
+     
+	<!-- 심부름 신청하기 -->
+	<update id="DeliveryCall" parameterType="deliveryService.model.DeliveryBoardVO">
+		update delivery_board set HELPER_CHECK = #{helperCheck}, HELPER_ID = #{helperId}, WORK = #{work} where num = #{num}
+	</update>
 	
-	
-	<!-- 심부름 게시글 전체 보기 -->
-	<select id="selectDeliveryB"
-	resultType="deliveryService.model.DeliveryBoardVO">
-		select * from delivery_board
-	</select>
-	
-	
-	
-	<!-- 심부름 게시글 카테고리별 보기 -->
-	<select id="selectDeliveryCate" 
-	resultType="deliveryService.model.DeliveryBoardVO">
-		select * from delivery_board where separation =#{separation}
-	</select>
-	
-	<select id="viewDelivery" resultType="deliveryService.model.DeliveryBoardVO">
-		select * from delivery_board where num = #{num}
-	</select>
-	
-	
-	<!-- 이메일 중복체크 -->
-	<select id="emailDupleCheck" resultType="deliveryService.model.MemberVO">
-		select email from delivery_member where id = #{id}
-	</select>
-	
-	<!-- 아이디 중복체크 -->
-	<select id="IdCheck" resultType="deliveryService.model.MemberVO">
-		select * from delivery_member where id = #{id}
-	</select>
-	
-	
-	
+
 </mapper>
 
 

@@ -76,5 +76,37 @@ public int helpercheck(MemberVO vo) {
 
 		return result;
 	}
+	
+	// 회원 탈퇴 (회원정보 삭제)
+	   // == delete ==
+	   public int delete(MemberVO vo) {
+
+	      // 1. sqlSession 생성
+	      SqlSession session = sqlSessionFactory.openSession(true);
+
+	      // 2. mapper에 정의해둔 sql문 사용
+	      int cnt = session.delete("deleteService", vo);
+
+	      // 3. session 닫기
+	      session.close();
+
+	      return cnt;
+
+	   }
+	   
+	// == update ==
+	   public int update(MemberVO vo) {
+
+	      // 1. sqlSession 생성
+	      SqlSession session = sqlSessionFactory.openSession(true);
+
+	      // 2. mapper에 정의해둔 sql문 사용
+	      int cnt = session.update("updateService", vo);
+
+	      // 3. session 닫기
+	      session.close();
+
+	      return cnt;
+	   }
 
 }

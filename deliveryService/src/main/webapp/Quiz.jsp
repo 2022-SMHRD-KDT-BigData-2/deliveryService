@@ -137,7 +137,7 @@
            		url:'HelperCheck', // 요청  url
            		type : 'post', // get 방식 or post 방식
            		data: { 
-           			'userName' : 'Y'
+           			'work' : 'Y'
            		
            		}, 
            	

@@ -20,7 +20,7 @@
 <body class="is-preload" id="nanno">
 	<%
 	List<DeliveryBoardVO> list = (List<DeliveryBoardVO>) request.getAttribute("list");
-	
+	MemberVO uvo = (MemberVO)session.getAttribute("vo");
 	%>
 
 <script>
@@ -41,16 +41,21 @@
 		<!-- Menu -->
 		<nav id="menu">
 			<ul class="links">
-				<li><a href="index.jsp">Home</a></li>
-				<li><a href="goBoardMain">심부름 게시판</a></li>
-				<li><a href="Exchange.jsp">물물교환 게시판</a></li>
-				<li><a href="myPage.jsp">마이페이지</a></li>
-				<li><a href="callCenter.html">고객센터</a></li>
-			</ul>
-			<ul class="actions stacked">
-				<li><a href="Join.jsp" class="button fit">회원가입</a></li>
+				<li><a href="index.jsp" class="button fit">Home</a></li>
+
+				<li><a href="goExchangeBoard" class="button fit">물물교환 게시판</a></li>
+				<li><a href="myPage.jsp" class="button fit">마이페이지</a></li>
+				<li><a href="callCenter.jsp" class="button fit">고객센터</a></li>
+					<%if(uvo==null){%>
+					<li><a href="Join.jsp" class="button fit">회원가입</a></li>
 				<li><a href="Login.jsp" class="button fit">로그인</a></li>
+				<%}else{ %>
+				<li><a href="logoutService" class="button fit">로그아웃</a></li>
+				<%} %>
 			</ul>
+			<!--  <ul class="actions stacked">-->
+			
+			<!-- </ul> -->
 		</nav>
 
 		<!-- Banner -->
@@ -113,6 +118,7 @@
 							</thead>
 							<tbody>
 								<%for(DeliveryBoardVO vo: list){ %>
+								<% if(vo.getWork().equals("N")){%>
 								<tr>
 									<td><%= vo.getNum() %></td>
 									<td><a href="goViewBoard?num=<%=vo.getNum() %>"><%=vo.getTitle() %></a></td>
@@ -120,6 +126,7 @@
 									<td><%= vo.getDay() %></td>
 								</tr>
 								<%} %>
+								<%}%>
 							</tbody>
 
 						</table>

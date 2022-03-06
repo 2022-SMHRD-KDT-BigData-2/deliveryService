@@ -1,37 +1,36 @@
 package deliveryService.controller;
 
 import java.io.IOException;
+
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import deliveryService.model.MemberDAO;
+import deliveryService.model.DeliveryBoardDAO;
+import deliveryService.model.DeliveryBoardVO;
 import deliveryService.model.MemberVO;
 
-public class HelperCheck extends HttpServlet {
-	private static final long serialVersionUID = 1L;
 
+public class DeliveryCall extends HttpServlet {
+	private static final long serialVersionUID = 1L;
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		request.setCharacterEncoding("euc-kr");
 		HttpSession session = request.getSession();
-		
 		MemberVO uvo = (MemberVO)session.getAttribute("vo");
-		String id = uvo.getId();
-		// 세션에 저장된 아이디 값 호출 (로그인 된 id)
-		
-		String helper_check = request.getParameter("work");
 
-		MemberVO vo = new MemberVO(id, "1", helper_check);
-		
-		MemberDAO dao = new MemberDAO();
-		
-		int cnt = dao.helpercheck(vo); 
+		String work = request.getParameter("work");
+		String helperId = uvo.getId();
+		String helperCheck = uvo.getHelper_check();
+		int num = Integer.parseInt(request.getParameter("num"));
 
-		  
-		session.setAttribute("requsetService", vo);
+		DeliveryBoardVO vo = new DeliveryBoardVO(helperCheck,helperId,work,num);
+		DeliveryBoardDAO dao = new DeliveryBoardDAO();
 		
+		int cnt = dao.deliverycall(vo);
+		
+	    
 	}
 
 }

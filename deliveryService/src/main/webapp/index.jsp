@@ -1,3 +1,4 @@
+<%@page import="java.util.List"%>
 <%@page import="deliveryService.model.DeliveryBoardVO"%>
 <%@page import="deliveryService.model.MemberVO"%>
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
@@ -52,15 +53,15 @@
 				<%if(vo.getHelper_check().equals("N")){ %>
 				<li><a href="Quiz.jsp" class="button fit">헬퍼 전환하기</a></li>
 				<li><a href="goBoardMain" class="button fit">심부름 게시판</a></li>
-				<li><a href="Exchange.jsp" class="button fit">물물교환 게시판</a></li>
-				<li><a href="myPage.jsp" class="button fit">마이페이지</a></li>
+				<li><a href="goeb" class="button fit">물물교환 게시판</a></li>
+				<li><a href="myPage" class="button fit">마이페이지</a></li>
 				<li><a href="CallCenter.jsp" class="button fit">고객센터</a></li>
 				<li><a href="logoutService" class="button fit">로그아웃</a></li>
 				<%}else{ %>
 
 				<li><a href="goBoardMain" class="button fit">심부름 게시판</a></li>
-				<li><a href="Exchange.jsp" class="button fit">물물교환 게시판</a></li>
-				<li><a href="myPage.html" class="button fit">마이페이지</a></li>
+				<li><a href="goeb" class="button fit">물물교환 게시판</a></li>
+				<li><a href="myPage" class="button fit">마이페이지</a></li>
 				<li><a href="CallCenter.jsp" class="button fit">고객센터</a></li>
 				<li><a href="logoutService" class="button fit">로그아웃</a></li>
 			</ul>
@@ -83,8 +84,8 @@
 				<%} else { %>
 			</ul>
 			<li><a href="goBoardMain" class="button fit">심부름 게시판</a></li>
-			<li><a href="Exchange.jsp" class="button fit">물물교환 게시판</a></li>
-			<li><a href="myPage.jsp" class="button fit">마이페이지</a></li>
+			<li><a href="goeb" class="button fit">물물교환 게시판</a></li>
+			<li><a href="myPage" class="button fit">마이페이지</a></li>
 			<li><a href="CallCenter.jsp" class="button fit">고객센터</a></li>
 			<li><a href="logoutService" class="button fit">로그아웃</a></li>
 			</ul>
@@ -115,7 +116,7 @@
 					</span>
 					<header class="major">
 						<h3>
-							<a href="Exchange.jsp" class="link">물물교환 게시판</a>
+							<a href="goeb" class="link">물물교환 게시판</a>
 						</h3>
 						<p>Exchange page</p>
 					</header>
@@ -126,12 +127,12 @@
 					<header class="major">
 						<%if(vo!=null){ %>
 						<h3>
-							<a href="myPage.jsp" class="link"><%=vo.getId() %>님 환영합니다!</a>
+							<a href="myPage" class="link"><%=vo.getId() %>님 환영합니다!</a>
 						</h3>
 						<p>마이페이지</p>
 						<%}else{ %>
 						<h3>
-							<a href="myPage.jsp" class="link">마이페이지</a>
+							<a href="myPage" class="link">마이페이지</a>
 						</h3>
 						<p>My Page</p>
 						<%} %>

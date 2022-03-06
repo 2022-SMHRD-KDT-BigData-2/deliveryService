@@ -68,5 +68,14 @@ public class DeliveryBoardDAO {
 		return vo;
 	}
 
-	
+	 public int deliverycall(DeliveryBoardVO vo) {
+			
+			SqlSession session = sqlSessionFactory.openSession(true);
+			int cnt = session.update("DeliveryCall", vo);
+
+			session.close();
+
+			return cnt;
+	}
+
 }

@@ -1,3 +1,5 @@
+<%@page import="deliveryService.model.InquiryVO"%>
+<%@page import="deliveryService.controller.InquiryService"%>
 <%@page import="deliveryService.model.MemberVO"%>
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
@@ -23,7 +25,7 @@
 
 				<!-- Header -->
 					<header id="header">
-						<a href="index.html" class="logo"><strong>심부릉</strong></a>
+						<a href="index.jsp" class="logo"><strong>심부릉</strong></a>
 						<nav>
 							<a href="#menu">Menu</a>
 						</nav>
@@ -35,13 +37,13 @@
 							<%if(vo.getHelper_check().equals("N")){ %>
 				<li><a href="Quiz.jsp" class="button fit">헬퍼 전환하기</a></li>
 				<li><a href="goBoardMain" class="button fit">심부름 게시판</a></li>
-				<li><a href="Exchange.jsp" class="button fit">물물교환 게시판</a></li>
+				<li><a href="goeb" class="button fit">물물교환 게시판</a></li>
 				<li><a href="myPage.jsp" class="button fit">마이페이지</a></li>
 				<li><a href="CallCenter.jsp" class="button fit">고객센터</a></li>
 				<li><a href="logoutService" class="button fit">로그아웃</a></li>
 				<%}else{ %>
 				<li><a href="goBoardMain" class="button fit">심부름 게시판</a></li>
-				<li><a href="Exchange.jsp" class="button fit">물물교환 게시판</a></li>
+				<li><a href="goeb" class="button fit">물물교환 게시판</a></li>
 				<li><a href="myPage.jsp" class="button fit">마이페이지</a></li>
 				<li><a href="CallCenter.jsp" class="button fit">고객센터</a></li>
 				<li><a href="logoutService" class="button fit">로그아웃</a></li>
@@ -110,18 +112,15 @@
 
 									<!-- Content -->
 										<fieldset>
-										<h2 id="content">문의글</h2>
+										<h2 id="content" align="center">문의글</h2>
 
-								<form method="post" action="#">
+								<form method="post" action="InquiryService">
 									<div class="fields">
-										<div class="field half">
-											<label for="name">My ID</label>
-											<input type="text" name="name" id="name" />
-										</div>
-										<div class="field half">
+										
+										<div class="field half" align="center">
 											<label for="email">Receive ID</label>
-											<select>
-												<option value="none">운영진을 선택하세요.</option>
+											<select name="receive_id">
+												<option value="@.">운영진을 선택하세요.</option>
 												<option value="grace4342@gmail.com">박형빈</option>
 												<option value="wlstn6830@gmail.com">신진수</option>
 												<option value="taewon1554@gmail.com">윤태원</option>
@@ -131,13 +130,14 @@
 										</div>
 										<div class="field">
 											<label for="message">Message</label>
-											<textarea name="message" id="message" rows="6"></textarea>
+											<textarea name ="content" id="message" rows="6"></textarea>
 										</div>
 									</div>
 									<ul class="actions">
 										<li><input type="submit" value="보내기" class="primary"></li>
 										
 									</ul>
+											<input type="hidden" name="send_id" value=<%= vo.getId() %>>
 								</form>
 
 										

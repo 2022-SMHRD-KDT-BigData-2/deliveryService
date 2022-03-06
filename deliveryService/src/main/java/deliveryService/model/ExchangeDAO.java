@@ -1,6 +1,7 @@
 package deliveryService.model;
 
 import java.io.InputStream;
+import java.util.List;
 
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
@@ -33,5 +34,29 @@ public class ExchangeDAO{
 			return cnt;
 			
 		}
+		
+		public List<ExchangeVO> selectExchangeB(){
+			
+			SqlSession session = sqlSessionFactory.openSession();
+			
+			List<ExchangeVO> list = session.selectList("selectExchangeB");
+			
+			session.close();
+			
+			return list;
+		}
+		
+		public ExchangeVO viewExchange(int num) {
+			
+			SqlSession session = sqlSessionFactory.openSession();
+			
+			ExchangeVO vo = session.selectOne("viewExchange",num);
+			
+			session.close();
+			
+			return vo;
+		}
+
+		
 		
     }

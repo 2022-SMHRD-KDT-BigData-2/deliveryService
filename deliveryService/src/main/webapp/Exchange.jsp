@@ -14,10 +14,11 @@
 </head>
 <body class="is-preload" id="nanno">
 	<%
-		MemberVO vo = (MemberVO)session.getAttribute("vo");
+		MemberVO mvo = (MemberVO)session.getAttribute("vo");
 		List<ExchangeVO> list = (List<ExchangeVO>)request.getAttribute("list");
 		
 	%>
+	
 	<script>
    document.getElementById('nanno').style.font = '20px 넥슨Lv1고딕 OTF Light';
    </script>
@@ -41,11 +42,11 @@
 							<li><a href="myPage.jsp" class="button fit">마이페이지</a></li>
 							<li><a href="CallCenter.jsp" class="button fit">고객센터</a></li>
 						
-						<%if(vo == null){ %>
-							<li><a href="#" class="button fit">회원가입</a></li>
+						<%if(mvo == null){ %>
+							<li><a href="Join.jsp" class="button fit">회원가입</a></li>
 							<li><a href="Login.jsp" class="button fit">로그인</a></li>
 							<%}else{ %>
-							<li><a href="index.jsp" class="button fit">로그아웃</a></li>
+							<li><a href="logoutService" class="button fit">로그아웃</a></li>
 						<%} %>
 						</ul>
 						</ul>
@@ -92,14 +93,14 @@
 																</tr>
 															</thead>
 															<tbody>
-																
+																<%for(ExchangeVO vo : list){ %>
 																<tr>
-																	<td><%= %></td>
-																	<td><%= %></td>
-																	<td><a href="#">나야</a></td>
-																	<td><a href="#">2022-03-04</a></td>
+																	<td><%=vo.getNum() %></td>
+																	<td><a href="goViewExchange?num=<%=vo.getNum() %>"><%=vo.getTitle() %></a></td>
+																	<td><%= vo.getExid() %></td>
+																	<td><%=vo.getDay() %></td>
 																</tr>
-																
+																<%} %>
 																
 															</tbody>
 															

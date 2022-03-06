@@ -34,8 +34,8 @@
 			</div>
 		
 			<div class="login-button-wrap">
-				<button id ="" type="submit" style="cursor: pointer;">로그인</button>
-				<a href="index.jsp"><button id ="" type="button" value="" style="cursor: pointer;">취소</button></a>
+				<button type="submit" style="cursor: pointer;">로그인</button>
+				<a href="index.jsp"><button type="button" style="cursor: pointer;">취소</button></a>
 			</div>
 
 			 </form>

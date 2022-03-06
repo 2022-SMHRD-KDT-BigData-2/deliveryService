@@ -27,7 +27,7 @@ public class InquiryDAO {
 	public int writeInquiry(InquiryVO vo) {
 		SqlSession session = sqlSessionFactory.openSession(true);
 
-		int cnt = session.insert("writeInquiry", vo); // mapper에서 insert id= writeInquiry
+		int cnt = session.insert("InquiryService", vo); // mapper에서 insert id= writeInquiry
 
 		session.close();
 

@@ -6,7 +6,7 @@
 <link rel="stylesheet" href="assets/css/popup.css" />
 </head>
 <body class="dimmed">
-	 <form action="#" method="post">
+	 <form action="ExchangeService" method="post" enctype="multipart/form-data">
     <div class="popup">
         <div class="title" align="center">물물교환 작성</div>
         <div class="content">
@@ -15,8 +15,7 @@
                 <div data-role="content">
                     <p><label class = "legend"><b>제목</b> </label> <input type="text" name="title" placeholder="제목을 입력해주세요!"
                         style="text-align: left; width: 250px; height: 30px;"></p>
-                    <p><label class = "legend"><b>등록 일자</b> </label> <input type="date" style="text-align: left; width: 250px; height: 30px;"></p>
-                    <p><label class = "legend"><b>마감 일자</b> </label> <input type="date" style="text-align: left; width: 250px; height: 30px;"></p>
+                    <p><label class = "legend" ><b>마감 일자</b> </label> <input type="date" name="deadline" style="text-align: left; width: 250px; height: 30px;"></p>
                       
                     <hr>
                     
@@ -24,7 +23,7 @@
     
             <div data-role="fieldcontain">
               <label class = "legend"><b>내용</b> </label>
-              <input type="image" value="사진첨부">
+              <input type="file" name="exfileName">
               <br>
               <input type="text" name="content" placeholder="요청 내용을 상세하게 입력해 주세요."
               style="text-align: left; width: 400px; height: 200px;">
@@ -36,7 +35,7 @@
            <div data-role="footer" data-position="fixed" align="center">
                 <a href="index.jsp" class="button next">홈으로</a>
                 <a href="index.jsp" class="button next">취소</a>
-                <a href="Exchange.jsp" class="button next">올리기</a>
+                <button type="submit" class="button next">올리기</button>
            </div>
             
          </div>
