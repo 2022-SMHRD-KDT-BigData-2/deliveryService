@@ -115,6 +115,17 @@
                                  <td><%=vo.getHelper_check() %></td>
                                  </tr>
                               </table>
+                              
+                     <!-- 이용 내역 -->
+                     		  <h2 id="content"><%=vo.getId() %>님의 이용 내역</h2>   
+                              <table>
+                                 <tr>
+                                    <td>이용 내역</td>
+                                    
+                                 </tr>
+                              </table>
+
+
                      <!-- 평가 -->         
                               <h2 id="content"><%=vo.getId() %>님에 대한 평가</h2>   
                               <table>
@@ -122,9 +133,7 @@
                                     <td>기본 점수</td>
                                     
                                  </tr>
-                                                              </table>				
-
-
+                              </table>	
 
 			
 

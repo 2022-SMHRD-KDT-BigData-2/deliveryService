@@ -15,6 +15,7 @@
 <body class="is-preload" id="nanno">
 	<%
 		MemberVO vo = (MemberVO)session.getAttribute("vo");
+		List<ExchangeVO> list = (List<ExchangeVO>)request.getAttribute("list");
 		
 	%>
 	<script>
@@ -36,7 +37,7 @@
 						<ul class="links">
 						<ul class="actions stacked">
 							<li><a href="index.jsp" class="button fit">Home</a></li>
-							<li><a href="deliveryBoard.jsp" class="button fit">심부름 게시판</a></li>
+							<li><a href="goBoardMain" class="button fit">심부름 게시판</a></li>
 							<li><a href="myPage.jsp" class="button fit">마이페이지</a></li>
 							<li><a href="CallCenter.jsp" class="button fit">고객센터</a></li>
 						
@@ -93,36 +94,13 @@
 															<tbody>
 																
 																<tr>
-																	<td>1</td>
-																	<td><a href="#">dfafsfs</a></td>
+																	<td><%= %></td>
+																	<td><%= %></td>
 																	<td><a href="#">나야</a></td>
 																	<td><a href="#">2022-03-04</a></td>
 																</tr>
 																
-																<tr>
-																	<td>2</td>
-																	<td><a href="#">Vis ac commodo adipiscing arcu aliquet.</a></td>
-																	<td><a href="#">19.99</a></td>
-																	<td><a href="#">2022-02-26</a></td>
-																</tr>
-																<tr>
-																	<td>3</td>
-																	<td><a href="#">Morbi faucibus arcu accumsan lorem.</a></td>
-																	<td><a href="#">29.99</a></td>
-																	<td><a href="#">2022-02-26</a></td>	
-																</tr>
-																<tr>
-																	<td>4</td>
-																	<td><a href="#">Vitae integer tempus condimentum.</a></td>
-																	<td><a href="#">19.99</a></td>
-																	<td><a href="#">2022-02-26</a></td>
-																</tr>
-																<tr>
-																	<td>5</td>
-																	<td><a href="">Ante turpis integer aliquet porttitor.</a></td>
-																	<td><a href="#">29.99</a></td>
-																	<td><a href="#">2022-02-26</a></td>
-																</tr>
+																
 															</tbody>
 															
 														</table>
