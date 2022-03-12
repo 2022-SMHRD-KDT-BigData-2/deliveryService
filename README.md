@@ -1,5 +1,9 @@
 ## 프로젝트명
 - 대학생 맞춤형 심부름 서비스
+
+## 주제 선정
+- 비대면 서비스의 수요 증가에 따른 심부름 서비스 활성화
+
 ## 주요기능
 - 심부름 게시글 작성 및 신청
 - 물물교환 게시글 작성 및 신청
@@ -11,6 +15,7 @@
 - 서버환경 : tomcat 8.5 / Flask
 - 데이터베이스 : oracle 11g
 - 빌드도구 : maven
+
 ## 대표 이미지
 - 메인
 
@@ -36,7 +41,6 @@
 
 ![요청서2](https://user-images.githubusercontent.com/99272241/158027022-e1ee12b9-c2b2-4afc-b252-38f319710e04.png)
 
-
 - 심부름 내역
 
 ![심부름내역](https://user-images.githubusercontent.com/99272241/158026592-80ecdd12-dbe2-4780-8b22-46edf3b1aaac.png)
@@ -51,7 +55,6 @@
 
 - 마이페이지
 
-
 ![마이페이지](https://user-images.githubusercontent.com/99272241/158026607-8eb97da4-1bd9-42b4-a27e-bee412212f4a.png)
 
 - 고객센터
@@ -63,6 +66,7 @@
 ![비번변경](https://user-images.githubusercontent.com/99272241/158026636-d76e2941-0ea2-4a5b-a051-69e79d7046c0.png)
 
 ![탈퇴](https://user-images.githubusercontent.com/99272241/158026642-5dc3e9d3-0467-48f5-b9f2-87c66adc1da1.png)
+
 ## 서비스 URL
 https://project-student-3.ddns.net/deliveryService/index.jsp
 
