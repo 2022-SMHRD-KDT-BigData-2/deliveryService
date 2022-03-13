@@ -70,5 +70,5 @@
 ![탈퇴](https://user-images.githubusercontent.com/99272241/158026642-5dc3e9d3-0467-48f5-b9f2-87c66adc1da1.png)
 
 ## 서비스 URL
-https://project-student-3.ddns.net/deliveryService2/index.jsp
+https://project-student-3.ddns.net/deliveryService/index.jsp
 
