@@ -49,7 +49,7 @@
 
 - 물물교환 게시판
 
-![물물교환](https://user-images.githubusercontent.com/99272241/158026597-7a1b284a-ee40-4542-8766-a3ca5a09fa98.png)
+![물물교환](https://user-images.githubusercontent.com/99272241/158043436-fc1fe3e1-48ce-4c10-adfb-529b08aa3fec.png)
 
 - 물물교환 작성
 
