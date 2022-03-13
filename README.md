@@ -1,3 +1,5 @@
+![심부릉](https://user-images.githubusercontent.com/99272241/158043905-f754c9c4-042b-4710-9b63-fcf8dd6832b4.png)
+
 ## 우리할수있조!? 프로젝트명
 - 대학생 맞춤형 심부름 서비스
 
